@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Topper Study Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>📚 TOPPER STUDY HUB</h1>
+
+<p>Select a Subject</p>
+
+</header>
+
+
+<div class="subjects">
+
+<button onclick="openPopup('chemistry')">
+🧪 Chemistry
+</button>
+
+<button onclick="openPopup('geography')">
+🌍 Geography
+</button>
+
+<button onclick="openPopup('history')">
+📜 History
+</button>
+
+<button onclick="openPopup('polity')">
+🏛 Polity
+</button>
+
+<button onclick="openPopup('math')">
+🧮 Math
+</button>
+
+</div>
+
+
+<!-- Chemistry Popup -->
+
+<div id="chemistry" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup('chemistry')">
+&times;
+</span>
+
+<h2>Chemistry</h2>
+
+<a href="chemistry/inorganic.html" target="_blank">
+Inorganic Chemistry
+</a>
+
+<a href="chemistry/organic.html" target="_blank">
+Organic Chemistry
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- Geography Popup -->
+
+<div id="geography" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup('geography')">
+&times;
+</span>
+
+<h2>Geography</h2>
+
+<a href="geography/india.html" target="_blank">
+India Geography
+</a>
+
+<a href="geography/wb.html" target="_blank">
+West Bengal Geography
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- History Popup -->
+
+<div id="history" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup('history')">
+&times;
+</span>
+
+<h2>History</h2>
+
+<a href="history/ancient.html" target="_blank">
+Ancient History
+</a>
+
+</div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
