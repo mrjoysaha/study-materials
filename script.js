@@ -3,58 +3,211 @@
    JavaScript
 ========================== */
 
-// Open Popup
-function openPopup(id) {
-    document.getElementById(id).style.display = "block";
-    document.body.style.overflow = "hidden";
+const studyHub = {
+
+
+   "🧮 Mathematics":[
+
+{
+title:"Algebra",
+file:"math/algebra.html"
+},
+
+{
+title:"Geometry",
+file:"math/geometry.html"
 }
 
-// Close Popup
-function closePopup(id) {
-    document.getElementById(id).style.display = "none";
-    document.body.style.overflow = "auto";
+],
+
+
+   "👨‍🔬 Physics":[
+
+{
+title:"Heat",
+file:"physics/algebra.html"
+},
+
+{
+title:"Wave",
+file:"physics/geometry.html"
 }
 
-// Close popup when clicking outside
-window.onclick = function(event) {
+],
 
-    const popups = document.querySelectorAll(".popup");
+   
+   
 
-    popups.forEach(function(popup){
+    "🧪 Chemistry":[
 
-        if(event.target === popup){
+        {
+            title:"Inorganic Chemistry",
+            file:"chemistry/inorganic.html"
+        },
 
-            popup.style.display = "none";
-            document.body.style.overflow = "auto";
+        {
+            title:"Organic Chemistry",
+            file:"chemistry/organic.html"
+        },
 
+        {
+            title:"Physical Chemistry",
+            file:"chemistry/physical.html"
         }
 
-    });
+    ],
+
+
+
+   
+"🔬 Biology":[
+
+{
+title:"Sell",
+file:"biology/algebra.html"
+},
+
+{
+title:"Hormone",
+file:"biology/geometry.html"
+}
+
+],
+
+
+   
+
+
+    "🌍 Geography":[
+
+        {
+            title:"India Geography",
+            file:"geography/india.html"
+        },
+
+        {
+            title:"West Bengal Geography",
+            file:"geography/wb.html"
+        },
+
+        {
+            title:"Paschim Bardhaman",
+            file:"geography/paschim-bardhaman.html"
+        }
+
+    ],
+
+    "📜 History":[
+
+        {
+            title:"Ancient History",
+            file:"history/ancient.html"
+        },
+
+        {
+            title:"Medieval History",
+            file:"history/medieval.html"
+        },
+
+        {
+            title:"Modern History",
+            file:"history/modern.html"
+        }
+
+    ],
+
+    "🏛 Polity":[
+
+        {
+            title:"Indian Constitution",
+            file:"polity/constitution.html"
+        }
+
+    ]
 
 };
 
-// Close popup using ESC key
-document.addEventListener("keydown", function(event){
 
-    if(event.key === "Escape"){
+// Build Subject Buttons
 
-        const popups = document.querySelectorAll(".popup");
+const subjectContainer=document.getElementById("subjects");
 
-        popups.forEach(function(popup){
+Object.keys(studyHub).forEach(subject=>{
 
-            popup.style.display = "none";
+    let btn=document.createElement("button");
 
-        });
+    btn.innerHTML=subject;
 
-        document.body.style.overflow = "auto";
+    btn.onclick=()=>showSubject(subject);
 
-    }
+    subjectContainer.appendChild(btn);
 
 });
 
-// Optional Welcome Message
-window.onload = function(){
 
-    console.log("Topper Study Hub Loaded Successfully!");
+// Show Chapters
+
+function showSubject(subject){
+
+    document.getElementById("popup").style.display="block";
+
+    document.body.style.overflow="hidden";
+
+    document.getElementById("popupTitle").innerHTML=subject;
+
+    let list=document.getElementById("chapterList");
+
+    list.innerHTML="";
+
+    studyHub[subject].forEach(chapter=>{
+
+        let a=document.createElement("a");
+
+        a.href=chapter.file;
+
+        a.target="_blank";
+
+        a.innerHTML=chapter.title;
+
+        list.appendChild(a);
+
+    });
+
+}
+
+
+// Close Popup
+
+function closePopup(){
+
+    document.getElementById("popup").style.display="none";
+
+    document.body.style.overflow="auto";
+
+}
+
+
+// Click Outside
+
+window.onclick=function(e){
+
+if(e.target==document.getElementById("popup")){
+
+closePopup();
+
+}
 
 };
+
+
+// ESC Key
+
+document.addEventListener("keydown",function(e){
+
+if(e.key==="Escape"){
+
+closePopup();
+
+}
+
+});
