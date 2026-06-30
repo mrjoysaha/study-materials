@@ -22,27 +22,20 @@
 </header>
 
 
-<div class="subjects">
+<div id="subjects" class="subjects"></div>
 
-<button onclick="openPopup('chemistry')">
-🧪 Chemistry
-</button>
+<!-- Popup -->
+<div id="popup" class="popup">
 
-<button onclick="openPopup('geography')">
-🌍 Geography
-</button>
+<div class="popup-content">
 
-<button onclick="openPopup('history')">
-📜 History
-</button>
+<span class="close" onclick="closePopup()">&times;</span>
 
-<button onclick="openPopup('polity')">
-🏛 Polity
-</button>
+<h2 id="popupTitle"></h2>
 
-<button onclick="openPopup('math')">
-🧮 Math
-</button>
+<div id="chapterList"></div>
+
+</div>
 
 </div>
 
