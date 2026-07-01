@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inorganic Chemistry - Handwritten Study Notes</title>
+  
+  <!-- Google Fonts for Handwritten and Clean Aesthetic -->
+  <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600;700&family=Kalam:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- MathJax for rendering chemistry and math equations nicely -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            atma: ['Atma', 'system-ui', 'sans-serif'],
+            kalam: ['Kalam', 'cursive', 'sans-serif'],
+            siliguri: ['Hind Siliguri', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom CSS to mimic real handwriting and notebook aesthetics */
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+
+    /* Notebook Page Styling */
+    .notebook-page {
+      background: #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border-radius: 8px;
+      padding: 40px 50px;
+      min-height: 297mm; /* Standard A4 ratio height */
+      max-width: 210mm;  /* Standard A4 width */
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    /* Hand-drawn sketchy border effect */
+    .sketchy-border {
+      border: 3px solid #374151;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+
+    .sketchy-card {
+      border: 2px solid #4b5563;
+      border-radius: 20px 10px 30px 12px/14px 25px 12px 35px;
+      background: #fff;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .sketchy-card:hover {
+      transform: rotate(-0.5deg) scale(1.01);
+    }
+
+    /* Highlighter styles */
+    .highlight-yellow {
+      background: linear-gradient(104deg, rgba(254, 240, 138, 0.8) 0%, rgba(254, 240, 138, 0.9) 100%);
+      padding: 2px 6px;
+      border-radius: 5px 12px 4px 14px;
+      display: inline-block;
+    }
+
+    .highlight-green {
+      background: linear-gradient(104deg, rgba(187, 247, 208, 0.6) 0%, rgba(187, 247, 208, 0.8) 100%);
+      padding: 2px 6px;
+      border-radius: 4px 10px 5px 8px;
+      display: inline-block;
+    }
+
+    /* Handwriting colors mimicking pens */
+    .red-marker {
+      font-family: 'Atma', cursive;
+      color: #be123c; /* Red marker shade */
+      font-weight: 700;
+    }
+
+    .blue-gel-pen {
+      font-family: 'Hind Siliguri', sans-serif;
+      color: #1d4ed8; /* Blue gel pen color */
+      font-weight: 500;
+    }
+
+    .green-ink {
+      font-family: 'Atma', cursive;
+      color: #047857; /* Deep green ink */
+      font-weight: 600;
+    }
+
+    .pencil-lead {
+      color: #4b5563; /* Charcoal sketch color */
+    }
+
+    /* Grid background helper for math sheets */
+    .grid-bg {
+      background-size: 24px 24px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    }
+
+    /* Custom print layout */
+    @media print {
+      body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      .notebook-page {
+        box-shadow: none;
+        margin: 0 auto;
+        page-break-after: always;
+        padding: 20px 30px;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    /* Quick navigation pills */
+    .nav-pill {
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-pill:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="bg-slate-100 py-6 px-4">
+
+  <!-- Interactive Controls Toolbar (No-Print) -->
+  <div class="no-print max-w-5xl mx-auto mb-6 bg-white p-4 rounded-xl shadow-md border-2 border-slate-300">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h1 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+          🧪 <span>Inorganic Chemistry Handwritten Board</span>
+        </h1>
+        <p class="text-sm text-slate-500">Q908 - Q928 | ভিডিও লেকচারের ওপর ভিত্তি করে তৈরি ডিজিটাল ক্লাসরুম নোটস</p>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <button onclick="window.print()" class="px-4 py-2 bg-rose-600 text-white rounded-lg font-bold shadow hover:bg-rose-700 transition">
+          🖨️ প্রিন্ট করুন / PDF সংরক্ষণ করুন
+        </button>
+        <button id="toggleAnswers" onclick="toggleAnswers()" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-bold shadow hover:bg-blue-700 transition">
+          👁️ উত্তর লুকান / দেখান
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Filters -->
+    <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap gap-2 text-xs md:text-sm">
+      <span class="font-bold text-slate-700">দ্রুত খুঁজুন:</span>
+      <span onclick="filterTopic('all')" class="nav-pill px-2.5 py-1 bg-slate-200 rounded-full hover:bg-slate-300">সবগুলো</span>
+      <span onclick="filterTopic('acid-metal')" class="nav-pill px-2.5 py-1 bg-rose-100 text-rose-800 rounded-full hover:bg-rose-200">অ্যাসিড ও ধাতু</span>
+      <span onclick="filterTopic('structure')" class="nav-pill px-2.5 py-1 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200">পরমাণুর গঠন</span>
+      <span onclick="filterTopic('metallurgy')" class="nav-pill px-2.5 py-1 bg-green-100 text-green-800 rounded-full hover:bg-green-200">ধাতুবিদ্যা ও আকরিক</span>
+      <span onclick="filterTopic('chemical-reactions')" class="nav-pill px-2.5 py-1 bg-amber-100 text-amber-800 rounded-full hover:bg-amber-200">রাসায়নিক বিক্রিয়া ও লবণ</span>
+    </div>
+  </div>
+
+  <!-- MAIN NOTEBOOK CONTAINER -->
+  <div id="notebookContainer" class="flex flex-col gap-8 items-center">
+
+    <!-- PAGE 1: INTRODUCTION & BASIC CONCEPTS -->
+    <div class="notebook-page grid-bg shadow-2xl" data-topic="intro">
+      <!-- Notebook Ring holes mockup (Left margin) -->
+      <div class="absolute left-4 top-0 bottom-0 flex flex-col justify-around pointer-events-none opacity-40">
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+      </div>
+
+      <!-- Page Header -->
+      <div class="flex justify-between items-center border-b-2 border-dashed border-red-300 pb-4 mb-6">
+        <div>
+          <span class="red-marker text-3xl">Inorganic Chemistry Study Sheet</span>
+          <span class="block text-xs text-slate-400 font-mono">Date: 01-07-2026 | Topic: Q908 - Q928 Complete Notes</span>
+        </div>
+        <div class="text-right">
+          <span class="red-marker text-lg highlight-yellow">Page: 01</span>
+        </div>
+      </div>
+
+      <!-- Mind Map Sketch / Introduction Block -->
+      <div class="sketchy-card p-6 mb-8 bg-amber-50/30">
+        <h3 class="red-marker text-xl mb-3 flex items-center gap-2">
+          📌 <span class="underline decoration-wavy decoration-red-500">রসায়নের আজকের ক্লাসের রোডম্যাপ (Roadmap):</span>
+        </h3>
+        <p class="blue-gel-pen text-sm mb-4">
+          আজকের পর্বে আমরা মোট <span class="highlight-yellow font-bold">২১টি অতি গুরুত্বপূর্ণ অজৈব রসায়নের প্রশ্নোত্তর</span> সহজভাবে ও বিস্তারিত ধারণাসহ বিশ্লেষণ করব। প্রতিটি প্রশ্নের মূল ভিত্তি চিত্র এবং ফ্লোচার্টের মাধ্যমে নিচে চমৎকারভাবে সাজানো হলো।
+        </p>
+        
+        <!-- Interactive Visual Quick Sketch Area -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mt-2 text-xs">
+          <div class="border border-dashed border-slate-400 p-3 rounded bg-white">
+            <span class="red-marker block text-sm">১. সক্রিয়তা শ্রেণী</span>
+            <span class="blue-gel-pen block">ধাতুর সক্রিয়তার ক্রমানুযায়ী প্রতিস্থাপন এবং নিষ্কাশন পদ্ধতি নির্ধারণ।</span>
+          </div>
+          <div class="border border-dashed border-slate-400 p-3 rounded bg-white">
+            <span class="red-marker block text-sm">২. ধাতুবিদ্যা</span>
+            <span class="blue-gel-pen block">আকরিক গাঢ়ীকরণ (Concentration) $\rightarrow$ বিজারণ (Reduction) $\rightarrow$ শোধন (Refining)।</span>
+          </div>
+          <div class="border border-dashed border-slate-400 p-3 rounded bg-white">
+            <span class="red-marker block text-sm">৩. লবণের ধর্ম</span>
+            <span class="blue-gel-pen block">ব্লিচিং পাউডার প্রস্তুতি, কপার অক্সাইডের বর্ণ পরিবর্তন এবং অম্ল-ক্ষার বিক্রিয়া।</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUESTION NOTES SECTION -->
+      <div class="space-y-8">
+        
+        <!-- Q908 -->
+        <div class="question-block" data-topic="acid-metal">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q908</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Acids and Metals / অ্যাসিড এবং ধাতু</h4>
+              <p class="text-sm text-slate-600 italic">Consider the following statements / নিচের বিবৃতিগুলো বিবেচনা করো:</p>
+              <ol class="list-decimal pl-5 text-sm font-semibold text-slate-800 space-y-1 mt-2">
+                <li>Acids react with all metals to form hydrogen gas. / অ্যাসিড সমস্ত ধাতুর সাথে বিক্রিয়া করে হাইড্রোজেন গ্যাস উৎপন্ন করে।</li>
+                <li>Gold and platinum also react with acids and release hydrogen gas. / সোনা এবং প্ল্যাটিনামও অ্যাসিডের সাথে বিক্রিয়া করে হাইড্রোজেন গ্যাস নির্গত করে।</li>
+              </ol>
+            </div>
+            
+            <!-- Options Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Statement 1 is true, 2 is false</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Both Statement 1 and 2 are false ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Statement 1 is false, 2 is true</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Both are true</div>
+            </div>
+
+            <!-- Detailed Explanation & Core Concept -->
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                সব ধাতু অ্যাসিডের সাথে বিক্রিয়া করে হাইড্রোজেন গ্যাস উৎপন্ন করতে পারে না। সক্রিয়তা সিরিজে যে ধাতুগুলি হাইড্রোজেনের নিচে অবস্থিত (যেমন: কপার, সিলভার, সোনা, প্ল্যাটিনাম), তারা সাধারণ অ্যাসিড থেকে হাইড্রোজেন প্রতিস্থাপন করতে পারে না। 
+              </p>
+              <div class="green-ink text-sm mt-2 flex items-center gap-1.5">
+                💡 <span>মেমোরি ট্রিক (Reactivity Trick):</span> 
+                <span class="highlight-green">সোনা (Au) এবং প্ল্যাটিনাম (Pt) অত্যন্ত নিষ্ক্রিয় নোবেল মেটাল! এরা রাজঅম্ল (Aqua Regia) ছাড়া কোনো সাধারণ অ্যাসিডে দ্রবীভূত হয় না।</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q910 (Neutrons) -->
+        <div class="question-block" data-topic="structure">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q910 (A)</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Same Number of Neutrons / নিউট্রন সংখ্যা সমান</h4>
+              <p class="text-sm text-slate-600 italic">Which of the following pairs has the same number of neutrons? / নিচের কোন জোড়ায় নিউট্রন সংখ্যা সমান?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Beryllium and Boron</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Boron (5, 11) and Carbon (6, 12) ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Helium and Lithium</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Lithium and Beryllium</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                নিউট্রন সংখ্যা নির্ণয়ের সূত্র: <span class="highlight-yellow font-bold">নিউট্রন সংখ্যা ($N$) = ভর সংখ্যা ($A$) - পারমাণবিক সংখ্যা ($Z$)</span>
+              </p>
+              <div class="mt-2 text-xs font-mono bg-amber-50 p-3 rounded border border-amber-200">
+                ✏️ <span class="font-bold text-slate-800">গাণিতিক হিসাব:</span><br>
+                • বোরন ($^{11}_{5}B$): নিউট্রন সংখ্যা = $11 - 5 = \mathbf{6}$<br>
+                • কার্বন ($^{12}_{6}C$): নিউট্রন সংখ্যা = $12 - 6 = \mathbf{6}$
+              </div>
+              <p class="green-ink text-sm mt-2">💡 এই জোড়াকে আইসোটোন (Isotones) বলা হয়!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- PAGE 1 END -->
+
+
+    <!-- PAGE 2: DEHYDRATING & REFINING -->
+    <div class="notebook-page grid-bg shadow-2xl" data-topic="chemical-reactions">
+      <!-- Notebook Ring holes mockup (Left margin) -->
+      <div class="absolute left-4 top-0 bottom-0 flex flex-col justify-around pointer-events-none opacity-40">
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+      </div>
+
+      <!-- Page Header -->
+      <div class="flex justify-between items-center border-b-2 border-dashed border-red-300 pb-4 mb-6">
+        <div>
+          <span class="red-marker text-3xl">Inorganic Chemistry Study Sheet</span>
+          <span class="block text-xs text-slate-400 font-mono">Topic: Reactivity, Dehydration & Metallurgy</span>
+        </div>
+        <div class="text-right">
+          <span class="red-marker text-lg highlight-yellow">Page: 02</span>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        
+        <!-- Q910 (Dehydrating Agent) -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q910 (B)</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Dehydrating Agent / ডিহাইড্রেটিং এজেন্ট</h4>
+              <p class="text-sm text-slate-600 italic">Concentrated Sulphuric Acid ($H_2SO_4$) is a dehydrating agent because it removes water from: / ঘন সালফিউরিক অ্যাসিড একটি ডিহাইড্রেটিং এজেন্ট কারণ এটি কার থেকে জল অপসারণ করে?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Sodium Hydroxide / সোডিয়াম হাইড্রোক্সাইড</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Glucose ($C_6H_{12}O_6$) ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Ammonia / অ্যামোনিয়া</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Propane / প্রোপেন</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                ঘন সালফিউরিক অ্যাসিড ($H_2SO_4$) অত্যন্ত শক্তিশালী জলগ্রাহী বা পানিশোষক (Dehydrating agent)। এটি গ্লুকোজ বা চিনির মতো শর্করা থেকে তার উপাদান মৌল হাইড্রোজেন ও অক্সিজেনকে জলের অনুপাতে শোষণ করে নেয়, যার ফলে শুধু কালো কার্বন (Charcoal) অবশিষ্ট থাকে।
+              </p>
+              <div class="mt-2 text-sm font-mono bg-slate-50 p-2.5 rounded border border-dashed border-slate-400 text-slate-700">
+                🧪 <span class="font-bold">রাসায়নিক সমীকরণ:</span><br>
+                $$C_6H_{12}O_6 \xrightarrow{\text{Conc. } H_2SO_4} 6C (\text{Black Charcoal}) + 6H_2O$$
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q911 (Ore Enrichment) -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q911</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Ore Enrichment / আকরিক সমৃদ্ধকরণ</h4>
+              <p class="text-sm text-slate-600 italic">Which of the following is not used for ore enrichment? / আকরিক সমৃদ্ধকরণের জন্য নিচের কোনটি ব্যবহৃত হয় না?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Froth Flotation / ফ্রথ ফ্লোটেশন</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Dredging / ড্রেজিং ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Hydraulic Washing / হাইড্রোলিক ওয়াশিং</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Leaching / লিচিং</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                আকরিক সমৃদ্ধকরণ (Ore Enrichment/Concentration) হলো খনি থেকে উত্তোলিত আকরিক থেকে অপদ্রব্য বা গ্যাং (Gangue) দূর করার রাসায়নিক বা ভৌত ধাতব প্রক্রিয়া। 
+                <br>• <span class="font-bold">ড্রেজিং (Dredging)</span> কোনো ধাতব নিষ্কাশন প্রক্রিয়া নয়; এটি নদী বা সমুদ্রের তলদেশ থেকে কাদা, বালু বা পলি পরিষ্কার করার একটি যান্ত্রিক প্রকৌশল মাত্র।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q912 (Copper Oxide Color) -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q912</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Copper Oxide Color / কপার অক্সাইডের বর্ণ</h4>
+              <p class="text-sm text-slate-600 italic">What is the color of Copper Oxide ($CuO$) when it is added to dilute Sulphuric Acid to form a blue-green solution? / কপার অক্সাইডকে লঘু সালফিউরিক অ্যাসিডে যোগ করলে একটি নীল-সবুজ দ্রবণ তৈরি হয়; কপার অক্সাইডের নিজের রঙ কী?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Blue / নীল</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Black / কালো ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Green / সবুজ</div>
+              <div class="p-2 border rounded bg-slate-50">(D) White / সাদা</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                কপার অক্সাইড ($CuO$) নিজে একটি <span class="highlight-yellow">কালো রঙের গুড়ো</span>। যখন এটি লঘু $H_2SO_4$-এর সাথে বিক্রিয়া করে, তখন জল এবং কপার সালফেট ($CuSO_4$) উৎপন্ন হয়, যার ফলে দ্রবণটি চমৎকার নীল-সবুজ বর্ণ ধারণ করে।
+              </p>
+              <div class="mt-2 text-sm font-mono bg-slate-50 p-2 text-slate-700 rounded border">
+                🧪 $$CuO (\text{কালো}) + H_2SO_4 \rightarrow CuSO_4 (\text{নীল-সবুজ}) + H_2O$$
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- PAGE 2 END -->
+
+
+    <!-- PAGE 3: VALENCY, REACTIVITY AND HIGH RECTIVITY METALS -->
+    <div class="notebook-page grid-bg shadow-2xl" data-topic="chemical-reactions">
+      <!-- Notebook Ring holes mockup (Left margin) -->
+      <div class="absolute left-4 top-0 bottom-0 flex flex-col justify-around pointer-events-none opacity-40">
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+      </div>
+
+      <!-- Page Header -->
+      <div class="flex justify-between items-center border-b-2 border-dashed border-red-300 pb-4 mb-6">
+        <div>
+          <span class="red-marker text-3xl">Inorganic Chemistry Study Sheet</span>
+          <span class="block text-xs text-slate-400 font-mono">Topic: Polyatomic Ions, Reactivity, Electrolysis</span>
+        </div>
+        <div class="text-right">
+          <span class="red-marker text-lg highlight-yellow">Page: 03</span>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        
+        <!-- Q913 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q913</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Polyatomic Ion Valency / পলিঅ্যাটমিক আয়নের যোজ্যতা</h4>
+              <p class="text-sm text-slate-600 italic">Which polyatomic ion has a valency ($n$) equal to 3? / কোন পলিঅ্যাটমিক আয়নের যোজ্যতা ৩ এর সমান?</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Sulphate ($SO_4$)</div>
+              <div class="p-2 border rounded bg-slate-50">(B) Carbonate ($CO_3$)</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(C) Phosphate ($PO_4$) ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Nitrate ($NO_3$)</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                যৌগমূলক বা পলিঅ্যাটমিক আয়নের চার্জের পরম মানই হলো তার যোজ্যতা।
+              </p>
+              <div class="mt-2 grid grid-cols-2 gap-2 text-xs bg-amber-50 p-3 rounded">
+                <div>• $\text{Phosphate (ফসফেট)} \rightarrow PO_4^{3-} \rightarrow \text{যোজ্যতা} = 3$</div>
+                <div>• $\text{Sulphate (সালফেট)} \rightarrow SO_4^{2-} \rightarrow \text{যোজ্যতা} = 2$</div>
+                <div>• $\text{Carbonate (কার্বনেট)} \rightarrow CO_3^{2-} \rightarrow \text{যোজ্যতা} = 2$</div>
+                <div>• $\text{Nitrate (নাইট্রেট)} \rightarrow NO_3^{-} \rightarrow \text{যোজ্যতা} = 1$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q914 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q914</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Reactivity & Displacement / সক্রিয়তা এবং প্রতিস্থাপন</h4>
+              <p class="text-sm text-slate-600 italic">Which of the following reactions are correct? / নিচের কোন বিক্রিয়াগুলো সঠিক?</p>
+              <ul class="list-disc pl-5 text-xs text-slate-700 font-mono space-y-1 mt-2">
+                <li>(1) $Fe + CuSO_4 \rightarrow FeSO_4 + Cu$</li>
+                <li>(2) $Cu + FeSO_4 \rightarrow CuSO_4 + Fe$</li>
+                <li>(3) $Na_2SO_4 + BaCl_2 \rightarrow BaSO_4 + 2NaCl$</li>
+                <li>(4) $AgNO_3 + NaCl \rightarrow AgCl + NaNO_3$</li>
+              </ul>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) 1 and 2 only</div>
+              <div class="p-2 border rounded bg-slate-50">(B) 2 and 3 only</div>
+              <div class="p-2 border rounded bg-slate-50">(C) 1 and 4 only</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(D) 1, 3, and 4 only ✅</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                <span class="highlight-yellow">প্রতিস্থাপন বিক্রিয়ার মূল নিয়ম:</span> সক্রিয়তা সিরিজে উপরে অবস্থিত ধাতু নিচের ধাতুকে তার দ্রবণ থেকে প্রতিস্থাপিত করতে পারে। 
+                <br>• আয়রন ($Fe$) কপারের ($Cu$) চেয়ে বেশি সক্রিয় হওয়ায় বিক্রিয়া (1) সঠিক। কিন্তু কপার আয়রনের চেয়ে কম সক্রিয় বলে বিক্রিয়া (2) অসম্ভব। 
+                <br>• বিক্রিয়া (3) ও (4) হলো সাধারণ দ্বিপতিস্থাপন (Double Displacement) বা অধঃক্ষেপণ বিক্রিয়া যা সম্পূর্ণ সঠিক।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q915 -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q915</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Extraction of High Reactivity Metals / উচ্চ সক্রিয় ধাতুর নিষ্কাশন</h4>
+              <p class="text-sm text-slate-600 italic">Metals high in the reactivity series are extracted by: / সক্রিয়তা সিরিজের উপরের দিকের ধাতুগুলি কীভাবে নিষ্কাশন করা হয়?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Heating with Carbon / কার্বনের সাথে উত্তপ্ত করে</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Electrolysis of molten ore / বিগলিত আকরিকের তড়িৎ বিশ্লেষণ ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Calcination / ক্যালসিনেশন</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Roasting / তাপ জারণ</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                অত্যধিক সক্রিয় ধাতুগুলো (যেমন: $Na, K, Ca, Al$) অত্যন্ত শক্তিশালী তড়িৎ-ধনাত্মক মৌল। এদের অক্সিজেনের প্রতি তীব্র আসক্তি থাকে, যার ফলে কার্বন দ্বারা এদের বিজারণ করা অসম্ভব। তাই এদেরকে নিষ্কাশন করতে <span class="highlight-yellow font-bold">বিগলিত লবণের তড়িৎ বিশ্লেষণ (Electrolysis of molten ore)</span> করা হয়।
+              </p>
+              <p class="green-ink text-sm mt-1">💡 উদাহরণ: সোডিয়াম নিষ্কাশনে ক্যাথোড থেকে সোডিয়াম ধাতু নির্গত হয়।</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- PAGE 3 END -->
+
+
+    <!-- PAGE 4: REACTIONS WITH BASES, DIRECT HEATING, VALENCY -->
+    <div class="notebook-page grid-bg shadow-2xl" data-topic="chemical-reactions">
+      <!-- Notebook Ring holes mockup (Left margin) -->
+      <div class="absolute left-4 top-0 bottom-0 flex flex-col justify-around pointer-events-none opacity-40">
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+      </div>
+
+      <!-- Page Header -->
+      <div class="flex justify-between items-center border-b-2 border-dashed border-red-300 pb-4 mb-6">
+        <div>
+          <span class="red-marker text-3xl">Inorganic Chemistry Study Sheet</span>
+          <span class="block text-xs text-slate-400 font-mono">Topic: Acidic Oxides, Thermal Reduction & Radicals</span>
+        </div>
+        <div class="text-right">
+          <span class="red-marker text-lg highlight-yellow">Page: 04</span>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        
+        <!-- Q916 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q916</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Reacting with Base / ক্ষারের সাথে বিক্রিয়া</h4>
+              <p class="text-sm text-slate-600 italic">Which of the following reacts with a base to form salt and water? / নিচের কোনটি ক্ষারের সাথে বিক্রিয়া করে লবণ ও জল উৎপন্ন করে?</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Hydrogen gas / হাইড্রোজেন গ্যাস</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Carbon Dioxide / কার্বন ডাই অক্সাইড ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Oxygen / অক্সিজেন</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Nitrogen / নাইট্রোজেন</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                অধাতুর অক্সাইডসমূহ (যেমন: $CO_2, SO_2$) প্রকৃতিতে অম্লীয় বা অ্যাসিডিক হয়ে থাকে। আমরা জানি যে, অ্যাসিড এবং ক্ষারের বিক্রিয়ায় লবণ ও জল তৈরি হয় (প্রশমন বিক্রিয়া)। তাই ক্ষারের সাথে অ্যাসিডিক অক্সাইড $CO_2$-এর বিক্রিয়ায় লবণ ও জল উৎপন্ন হয়।
+              </p>
+              <div class="mt-2 text-xs font-mono bg-slate-50 p-2 text-slate-700 rounded border">
+                🧪 $$CO_2 (\text{অম্লীয় অক্সাইড}) + Ca(OH)_2 (\text{ক্ষার}) \rightarrow CaCO_3 (\text{লবণ}) + H_2O (\text{জল})$$
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q917 -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q917</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Reduction by Heating Alone / শুধু উত্তাপে বিজারণ</h4>
+              <p class="text-sm text-slate-600 italic">Which metallic oxide can be reduced to metal by heating alone? / কোন ধাতব অক্সাইডকে শুধুমাত্র উত্তপ্ত করে ধাতুতে বিজারিত করা যায়?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Zinc Oxide / জিঙ্ক অক্সাইড</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Mercuric Oxide ($HgO$) / মার্কিউরিক অক্সাইড ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Manganese Oxide / ম্যাঙ্গানিজ অক্সাইড</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Iron Oxide / আয়রন অক্সাইড</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                কম সক্রিয় ধাতুগুলো (যেমন: পারদ $Hg$, সিলভার $Ag$) অক্সিজেন বা অন্য কোনো যৌগের সাথে খুব দুর্বল বন্ধন তৈরি করে। তাই এদের অক্সাইডগুলো তাপীয়ভাবে অত্যন্ত অস্থায়ী। এদেরকে কোনো অতিরিক্ত বিজারক (যেমন কার্বন) ছাড়াই <span class="highlight-yellow">শুধুমাত্র তীব্রভাবে উত্তপ্ত করলেই</span> অক্সিজেন চলে যায় এবং বিশুদ্ধ ধাতু অবশিষ্ট থাকে।
+              </p>
+              <div class="mt-2 text-xs font-mono bg-slate-50 p-2 text-slate-700 rounded border">
+                🧪 $$2HgO (\text{ কঠিন }) \xrightarrow{\Delta} 2Hg (\text{ তরল }) + O_2 (\text{ গ্যাস })$$
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q918 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q918</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Valency of Two / দুই যোজ্যতা</h4>
+              <p class="text-sm text-slate-600 italic">Which pair shows a valency of 2? / কোন জোড়াটি ২ যোজ্যতা প্রদর্শন করে?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Ammonium and Sulphate / অ্যামোনিয়াম এবং সালফেট</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Sulphate ($SO_4^{2-}$) and Sulphite ($SO_3^{2-}$) ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Phosphate and Nitrate / ফসফেট এবং নাইট্রেট</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Nitrite and Sulphate / নাইট্রাইট এবং সালফেট</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                সালফেট ($SO_4^{2-}$) এবং সালফাইট ($SO_3^{2-}$) উভয় মূলকের উপর ২ একক ঋণাত্মক চার্জ থাকে। চার্জের চিহ্ন বর্জন করলে যোজ্যতা হয় <span class="highlight-yellow font-bold">২</span>।
+              </p>
+              <div class="green-ink text-sm mt-2">
+                💡 মনে রাখার ট্রিক: Ammonium ($NH_4^+$) এর যোজ্যতা ১, Phosphate ($PO_4^{3-}$) এর যোজ্যতা ৩ এবং Nitrite ($NO_2^-$) এর যোজ্যতা ১।
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- PAGE 4 END -->
+
+
+    <!-- PAGE 5: SMELTING, SYMBOLS, BLEACHING POWDER -->
+    <div class="notebook-page grid-bg shadow-2xl" data-topic="metallurgy">
+      <!-- Notebook Ring holes mockup (Left margin) -->
+      <div class="absolute left-4 top-0 bottom-0 flex flex-col justify-around pointer-events-none opacity-40">
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+      </div>
+
+      <!-- Page Header -->
+      <div class="flex justify-between items-center border-b-2 border-dashed border-red-300 pb-4 mb-6">
+        <div>
+          <span class="red-marker text-3xl">Inorganic Chemistry Study Sheet</span>
+          <span class="block text-xs text-slate-400 font-mono">Topic: Smelting, Symbols & Bleaching Powder Synthesis</span>
+        </div>
+        <div class="text-right">
+          <span class="red-marker text-lg highlight-yellow">Page: 05</span>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        
+        <!-- Q919 -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q919</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Smelting / স্মেল্টিং</h4>
+              <p class="text-sm text-slate-600 italic">Which process is used for extracting metals like Copper and Silver by heating with reducing agents like coke? / কোক-এর মতো বিজারক ব্যবহার করে তামা বা রূপার মতো ধাতু নিষ্কাশনের পদ্ধতিকে কী বলা হয়?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Calcination / ক্যালসিনেশন</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Smelting / স্মেল্টিং ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Roasting / তাপ জারণ</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Electrolysis / তড়িৎ বিশ্লেষণ</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                <span class="highlight-yellow">স্মেল্টিং (Smelting) বা ধাতু গলানো:</span> আকরিক থেকে প্রয়োজনীয় ধাতু মুক্ত করতে একে একটি চুল্লিতে অতিরিক্ত কার্বন (কোক বা কয়লা) এবং বিগালক (Flux)-এর সাথে গলনাঙ্কের চেয়ে বেশি তাপমাত্রায় উত্তপ্ত করে বিজারিত করা হয়। এটি কার্বন বিজারণেরই একটি উন্নত রূপ।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q920 -->
+        <div class="question-block" data-topic="intro">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q920</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Element Symbol / মৌলের প্রতীক</h4>
+              <p class="text-sm text-slate-600 italic">The symbol of an element represents: / একটি মৌলের প্রতীক কীসের প্রতিনিধিত্ব করে?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Full name of the element / মৌলের পুরো নাম</div>
+              <div class="p-2 border rounded bg-slate-50">(B) One mole of the element / মৌলের এক মোল</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Atomic and mass number / পারমাণবিক এবং ভর সংখ্যা</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(D) One atom of the element only / মৌলের শুধুমাত্র একটি পরমাণু ✅</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                মৌলের প্রতীক (যেমন: $O$ বা $H$) গুণগতভাবে সেই মৌলের পুরো নাম এবং পরিমাণগতভাবে মৌলটির <span class="highlight-yellow">শুধুমাত্র একটি পরমাণু</span> নির্দেশ করে। 
+                <br>• মৌলের পুরো অণু প্রকাশ করতে সংকেত (Formula, যেমন: $O_2$) ব্যবহার করা হয়।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q921 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q921</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Bleaching Powder Synthesis / ব্লিচিং পাউডার সংশ্লেষণ</h4>
+              <p class="text-sm text-slate-600 italic">Which reaction correctly represents the synthesis of Bleaching Powder? / ব্লিচিং পাউডার তৈরির সঠিক বিক্রিয়া কোনটি?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(A) $Ca(OH)_2 + Cl_2 \rightarrow CaOCl_2 + H_2O$ ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(B) $CaO + Cl_2 \rightarrow CaCl_2 + O_2$</div>
+              <div class="p-2 border rounded bg-slate-50">(C) $CaCO_3 + Cl_2 \rightarrow CaOCl_2 + CO_2$</div>
+              <div class="p-2 border rounded bg-slate-50">(D) $Ca + Cl_2 \rightarrow CaCl_2$</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                প্রায় $40^\circ \text{C}$ তাপমাত্রায় কঠিন শুকনো কলিচুনের বা ক্যালসিয়াম হাইড্রোক্সাইড [$Ca(OH)_2$] এর উপর দিয়ে ক্লোরিন গ্যাস ($Cl_2$) চালনা করলে <span class="highlight-yellow">ব্লিচিং পাউডার [$CaOCl_2$]</span> ও জল উৎপন্ন হয়।
+              </p>
+              <div class="green-ink text-sm mt-2">
+                💡 সংকেত মনে রাখুন: $CaOCl_2$ অথবা $Ca(OCl)Cl$ (Calcium Hypochlorite Chloride).
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- PAGE 5 END -->
+
+
+    <!-- PAGE 6: ACIDIC CO2, REFINING, OXIDATION -->
+    <div class="notebook-page grid-bg shadow-2xl" data-topic="chemical-reactions">
+      <!-- Notebook Ring holes mockup (Left margin) -->
+      <div class="absolute left-4 top-0 bottom-0 flex flex-col justify-around pointer-events-none opacity-40">
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+      </div>
+
+      <!-- Page Header -->
+      <div class="flex justify-between items-center border-b-2 border-dashed border-red-300 pb-4 mb-6">
+        <div>
+          <span class="red-marker text-3xl">Inorganic Chemistry Study Sheet</span>
+          <span class="block text-xs text-slate-400 font-mono">Topic: Acidic Properties, Electrolytic Refining & Oxidation</span>
+        </div>
+        <div class="text-right">
+          <span class="red-marker text-lg highlight-yellow">Page: 06</span>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        
+        <!-- Q922 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q922</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">$CO_2$ and Slaked Lime / $CO_2$ এবং কলিচুন</h4>
+              <p class="text-sm text-slate-600 italic">When $CO_2$ reacts with Calcium Hydroxide, it forms Calcium Carbonate and water. Which property of $CO_2$ is shown? / যখন $CO_2$ ক্যালসিয়াম হাইড্রোক্সাইডের সাথে বিক্রিয়া করে ক্যালসিয়াম কার্বনেট এবং জল তৈরি করে, তখন $CO_2$-এর কোন ধর্ম প্রকাশ পায়?</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Basic / ক্ষারীয়</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Acidic / অম্লীয় ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Neutral / প্রশমিত</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Metallic / ধাতব</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                কলিচুন বা ক্যালসিয়াম হাইড্রোক্সাইড [$Ca(OH)_2$] হলো একটি তীব্র ক্ষারীয় পদার্থ। যেহেতু অধাতব অক্সাইড $CO_2$ এর সাথে বিক্রিয়া করে লবণ ও জল তৈরি হচ্ছে, তাই ব্রনস্টেড-লাউরি বা লুইসের তত্ত্ব অনুসারে $CO_2$ এখানে একটি <span class="highlight-yellow">অম্ল বা অ্যাসিড</span> হিসেবে কাজ করেছে।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q923 -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q923</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Electrolytic Refining / তড়িৎ বিশ্লেষণ শোধন</h4>
+              <p class="text-sm text-slate-600 italic">During electrolytic refining, what is used as the Anode? / তড়িৎ বিশ্লেষণ শোধনের সময় অ্যানোড হিসেবে কী ব্যবহৃত হয়?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Pure metal / বিশুদ্ধ ধাতু</div>
+              <div class="p-2 border rounded bg-slate-50">(B) Graphite / গ্রাফাইট</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(C) Impure metal to be refined / অশুদ্ধ ধাতু যা শোধন করা হবে ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Platinum / প্ল্যাটিনাম</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                তড়িৎ-বিশ্লেষণীয় শোধন (Electrolytic Refining) পদ্ধতিতে:
+                <br>• <span class="highlight-yellow font-bold">অ্যানোড (Anode)</span> হিসেবে অশুদ্ধ ধাতুর মোটা পাত ব্যবহার করা হয় যা বিক্রিয়া চলাকালীন ক্ষয়প্রাপ্ত বা দ্রবীভূত হতে থাকে।
+                <br>• <span class="font-bold">ক্যাথোড (Cathode)</span> হিসেবে অতি বিশুদ্ধ ধাতুর পাতলা স্ট্রিপ ব্যবহার করা হয় যেখানে খাঁটি ধাতু জমা হতে থাকে।
+              </p>
+              
+              <!-- Simple Hand-drawn Style SVG diagram for Electrolysis -->
+              <div class="mt-4 p-3 bg-slate-50 rounded border border-dashed border-slate-400 text-center">
+                <span class="pencil-lead text-xs block font-bold mb-1">✏️ পেন্সিল স্কেচ: তড়িৎ শোধন সেল</span>
+                <svg viewBox="0 0 300 120" class="w-full max-w-xs mx-auto">
+                  <rect x="30" y="20" width="240" height="80" rx="5" fill="none" stroke="#4b5563" stroke-width="2" stroke-dasharray="3,3" />
+                  <!-- Solution line -->
+                  <line x1="30" y1="75" x2="270" y2="75" stroke="#93c5fd" stroke-width="3" />
+                  <!-- Anode -->
+                  <rect x="80" y="30" width="20" height="60" fill="#f87171" stroke="#374151" stroke-width="2" />
+                  <text x="75" y="25" class="text-[10px] font-mono" fill="#be123c">Anode (Impure)</text>
+                  <!-- Cathode -->
+                  <rect x="200" y="30" width="10" height="60" fill="#4ade80" stroke="#374151" stroke-width="2" />
+                  <text x="195" y="25" class="text-[10px] font-mono" fill="#15803d">Cathode (Pure)</text>
+                  <!-- Electrolyte Text -->
+                  <text x="110" y="105" class="text-[9px] italic" fill="#1d4ed8">ধাতব লবণের দ্রবণ (Electrolyte)</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q924 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q924</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Copper Oxidation / কপারের জারণ</h4>
+              <p class="text-sm text-slate-600 italic">In the reaction of Copper with Oxygen, Oxygen acts as a: / অক্সিজেনের সাথে কপারের বিক্রিয়ায় অক্সিজেন কী হিসেবে কাজ করে?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Reducing Agent / বিজারক</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Oxidizing Agent / জারক ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Catalyst / অনুঘটক</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Solvent / দ্রাবক</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                জারণ-বিজারণের ইলেকট্রনীয় মতবাদ অনুসারে, যে পদার্থ ইলেকট্রন গ্রহণ করে নিজে বিজারিত হয় এবং অন্যকে জারিত করে, তাকে <span class="highlight-yellow">জারক (Oxidizing Agent)</span> বলে। কপার অক্সিজেনের সাথে বিক্রিয়া করার সময় অক্সিজেন কপারের থেকে ইলেকট্রন গ্রহণ করে, ফলে অক্সিজেন একটি চমৎকার জারক পদার্থ।
+              </p>
+              <div class="mt-2 text-xs font-mono bg-slate-50 p-2 text-slate-700 rounded border">
+                🧪 $$2Cu^0 + O_2^0 \rightarrow 2Cu^{+2}O^{-2}$$ (কপার জারিত হয়েছে, অক্সিজেন জারক)
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- PAGE 6 END -->
+
+
+    <!-- PAGE 7: ROASTING, MODERATELY REACTIVE METALS, METALLURGY SEQUENCES -->
+    <div class="notebook-page grid-bg shadow-2xl" data-topic="metallurgy">
+      <!-- Notebook Ring holes mockup (Left margin) -->
+      <div class="absolute left-4 top-0 bottom-0 flex flex-col justify-around pointer-events-none opacity-40">
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+        <div class="w-4 h-4 bg-slate-300 rounded-full shadow-inner border border-slate-400"></div>
+      </div>
+
+      <!-- Page Header -->
+      <div class="flex justify-between items-center border-b-2 border-dashed border-red-300 pb-4 mb-6">
+        <div>
+          <span class="red-marker text-3xl">Inorganic Chemistry Study Sheet</span>
+          <span class="block text-xs text-slate-400 font-mono">Topic: Roasting, Carbon Reduction, Industrial Steps</span>
+        </div>
+        <div class="text-right">
+          <span class="red-marker text-lg highlight-yellow">Page: 07</span>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        
+        <!-- Q925 -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q925</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Roasting / তাপ জারণ</h4>
+              <p class="text-sm text-slate-600 italic">Sulphide ores of medium-reactivity metals are converted to oxides by heating in the: / মাঝারি সক্রিয় ধাতুর সালফাইড আকরিকগুলিকে কিসের উপস্থিতিতে উত্তপ্ত করে অক্সাইডে রূপান্তরিত করা হয়?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Absence of air / বায়ুর অনুপস্থিতিতে</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Presence of excess air / অতিরিক্ত বায়ুর উপস্থিতিতে ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Presence of Water / জলের উপস্থিতিতে</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Presence of Carbon / কার্বনের উপস্থিতিতে</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                সালফাইড আকরিক থেকে সালফারকে দূর করে অক্সাইডে পরিণত করতে <span class="highlight-yellow font-bold">অতিরিক্ত বাতাস বা অক্সিজেনের উপস্থিতিতে</span> আকরিকটিকে তার গলনাঙ্কের চেয়ে কম তাপমাত্রায় পোড়ানো হয়। এই প্রক্রিয়াকে <span class="font-bold">তাপ জারণ (Roasting)</span> বলে।
+              </p>
+              <div class="mt-2 text-xs font-mono bg-slate-50 p-2 text-slate-700 rounded border">
+                🧪 $$2ZnS (\text{সালফাইড আকরিক}) + 3O_2 (\text{অতিরিক্ত বায়ু}) \xrightarrow{\Delta} 2ZnO (\text{অক্সাইড}) + 2SO_2 (\text{গ্যাস})$$
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q926 -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q926</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Extracting Moderately Reactive Metals / মাঝারি সক্রিয় ধাতু নিষ্কাশন</h4>
+              <p class="text-sm text-slate-600 italic">Which method is used for extracting moderately reactive metals like Iron? / লোহার মতো মাঝারি সক্রিয় ধাতু নিষ্কাশনের জন্য কোন পদ্ধতি ব্যবহৃত হয়?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Electrolysis / তড়িৎ বিশ্লেষণ</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Chemical reduction using carbon-based agents / কার্বন ভিত্তিক বিজারক ব্যবহার করে রাসায়নিক বিজারণ ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Direct heating / সরাসরি উত্তপ্ত করে</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Leaching / লিচিং</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                সক্রিয়তা সিরিজের মাঝামাঝি অবস্থিত ধাতুসমূহ (যেমন: $Fe, Zn, Pb$) এর অক্সাইডসমূহ তড়িৎ বিশ্লেষণের মতো তীব্র শক্তির প্রয়োজন ছাড়াই সহজে <span class="highlight-yellow">কার্বন বা কোক কয়লা (Coke)</span> দ্বারা বিজারিত হয়ে মুক্ত ধাতুতে রূপান্তরিত হতে পারে। একে কার্বন বিজারণ পদ্ধতি বা ব্লাস্ট ফার্নেস প্রযুক্তি বলে।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q927 -->
+        <div class="question-block" data-topic="chemical-reactions">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q927</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Copper + Oxygen Product / কপার + অক্সিজেন বিক্রিয়াজাত পদার্থ</h4>
+              <p class="text-sm text-slate-600 italic">When Copper is heated in air, what is the product and its color? / কপারকে বায়ুতে উত্তপ্ত করলে উৎপন্ন পদার্থ এবং তার বর্ণ কী?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(A) Copper Oxide ($CuO$), Black / কপার অক্সাইড, কালো ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(B) Copper Oxide, Red / কপার অক্সাইড, লাল</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Copper Carbonate, Green / কপার কার্বনেট, সবুজ</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Copper Sulphate, Blue / কপার সালফেট, নীল</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                লালচে বর্ণের কপার পাতকে বাতাসে সরাসরি উত্তপ্ত করা হলে তার উপর একটি কালো আস্তরণ তৈরি হয়। এই কালো আবরণটি হলো <span class="highlight-yellow">কপার (II) অক্সাইড বা কিউপ্রিক অক্সাইড ($CuO$)</span>।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q928 -->
+        <div class="question-block" data-topic="metallurgy">
+          <div class="sketchy-card p-6 relative">
+            <div class="absolute -top-3 left-4 bg-rose-600 text-white text-xs px-2.5 py-1 rounded-full font-bold">Q928</div>
+            <div class="mb-4">
+              <h4 class="text-slate-800 font-bold mb-2">Sequence of Extraction / নিষ্কাশনের পর্যায়ক্রম</h4>
+              <p class="text-sm text-slate-600 italic">What is the correct sequence in the extraction of metals from ores? / আকরিক থেকে ধাতু নিষ্কাশনের সঠিক পর্যায়ক্রম কোনটি?</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-2 text-xs font-semibold mb-4">
+              <div class="p-2 border rounded bg-slate-50">(A) Reduction $\rightarrow$ Refining $\rightarrow$ Concentration</div>
+              <div class="p-2 border rounded border-green-400 bg-green-50 text-green-800 font-bold">(B) Concentration $\rightarrow$ Reduction $\rightarrow$ Refining ✅</div>
+              <div class="p-2 border rounded bg-slate-50">(C) Refining $\rightarrow$ Concentration $\rightarrow$ Reduction</div>
+              <div class="p-2 border rounded bg-slate-50">(D) Concentration $\rightarrow$ Refining $\rightarrow$ Reduction</div>
+            </div>
+
+            <div class="answer-section mt-3 pt-3 border-t border-dashed border-slate-300">
+              <p class="red-marker text-sm font-bold">🧠 Core Concept (মূল ধারণা):</p>
+              <p class="blue-gel-pen text-sm mt-1">
+                ধাতু নিষ্কাশনের শিল্পক্ষেত্রের ৩টি প্রধান ধাপ রয়েছে:
+                <br>১. <span class="highlight-yellow">গাঢ়ীকরণ বা সমৃদ্ধকরণ (Concentration):</span> ধূলিকণা বা অপ্রয়োজনীয় খনিজ মাটি অপসারণ করা।
+                <br>২. <span class="highlight-yellow">বিজারণ (Reduction):</span> অক্সাইড রূপ থেকে মুক্ত অপরিশোধিত ধাতুতে রূপান্তর।
+                <br>৩. <span class="highlight-yellow">শোধন (Refining):</span> ধাতুটিকে ৯৯.৯% খাঁটি ও বিশুদ্ধ করা।
+              </p>
+              <div class="green-ink text-sm mt-2 flex items-center gap-1.5">
+                💡 <span>মেমোরি ফ্লোচার্ট:</span> 
+                <span class="highlight-green">আকরিক ➔ গাঢ়ীকরণ ➔ ভস্মীকরণ/তাপজারণ ➔ কার্বন/তড়িৎ বিজারণ ➔ বিশুদ্ধ ধাতু শোধন।</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- PAGE 7 END -->
+
+  </div>
+
+  <script>
+    // Show/Hide Answers Functionality
+    let answersVisible = true;
+    function toggleAnswers() {
+      const sections = document.querySelectorAll('.answer-section');
+      const btn = document.getElementById('toggleAnswers');
+      
+      answersVisible = !answersVisible;
+      
+      sections.forEach(sec => {
+        if (answersVisible) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+      
+      btn.innerText = answersVisible ? "👁️ উত্তর লুকান / দেখান" : "👁️ উত্তর প্রদর্শন করুন";
+    }
+
+    // Filter Topics Functionality
+    function filterTopic(topic) {
+      const questions = document.querySelectorAll('.question-block');
+      const pages = document.querySelectorAll('.notebook-page');
+      
+      questions.forEach(q => {
+        const qTopic = q.getAttribute('data-topic');
+        if (topic === 'all') {
+          q.style.display = 'block';
+        } else if (qTopic === topic) {
+          q.style.display = 'block';
+        } else {
+          q.style.display = 'none';
+        }
+      });
+      
+      // Update page break views or alerts for optimal viewing
+      if (topic !== 'all') {
+        pages.forEach(p => {
+          const pTopic = p.getAttribute('data-topic');
+          if (pTopic !== 'intro' && pTopic !== topic) {
+            // we don't hide the whole page because it may contain mixed questions, 
+            // but we make sure the content layout is clean.
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
