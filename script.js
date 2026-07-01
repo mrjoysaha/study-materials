@@ -45,6 +45,26 @@ file:"physics/geometry.html"
             file:"chemistry/inorganic/RRB NTPC General Science - Inorganic Chemistry (Session 1).html"
         },
 
+       {
+            title:"Inorganic Chemistry (Session 2)",
+            file:"chemistry/inorganic/RRB NTPC General Science - Inorganic Chemistry (Session 2).html"
+        },
+
+       {
+            title:"Inorganic Chemistry (Session 3)",
+            file:"chemistry/inorganic/RRB NTPC General Science - Inorganic Chemistry (Session 3).html"
+        },
+
+       {
+            title:"Inorganic Chemistry (Session 4)",
+            file:"chemistry/inorganic/RRB NTPC General Science - Inorganic Chemistry (Session 4).html"
+        },
+
+       {
+            title:"Inorganic Chemistry (Session 5)",
+            file:"chemistry/inorganic/RRB NTPC General Science - Inorganic Chemistry (Session 5).html"
+        },
+
         {
             title:"Inorganic Chemistry (Session 6)",
             file:"chemistry/inorganic/RRB NTPC General Science - Inorganic Chemistry (Session 6).html"
