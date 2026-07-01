@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RRB NTPC/Group D Chemistry Topper Notes - Session 6</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=Playpen+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        :root {
+            --red-marker: #dc2626; /* headings, critical concepts */
+            --blue-gel: #2563eb;    /* detailed explanations */
+            --green-ink: #16a34a;   /* examples, memory tricks */
+            --pencil-gray: #4b5563; /* diagrams, labels */
+            --highlighter: rgba(253, 224, 71, 0.4); /* yellow highlight */
+        }
+
+        body {
+            font-family: 'Inter', 'Hind Siliguri', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        /* Handwritten mode styling toggled by class */
+        .handwritten-mode {
+            font-family: 'Playpen Sans', 'Hind Siliguri', cursive;
+        }
+
+        .handwritten-mode h1, 
+        .handwritten-mode h2, 
+        .handwritten-mode h3, 
+        .handwritten-mode h4 {
+            font-family: 'Architects Daughter', 'Hind Siliguri', cursive;
+        }
+
+        /* Paper textures and lines */
+        .notebook-page {
+            position: relative;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .notebook-line-left {
+            position: absolute;
+            left: 2.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: rgba(239, 68, 68, 0.4);
+            pointer-events: none;
+        }
+
+        /* Handwritten Pen colors */
+        .red-marker {
+            color: var(--red-marker);
+            font-weight: 700;
+        }
+
+        .blue-gel {
+            color: var(--blue-gel);
+        }
+
+        .green-ink {
+            color: var(--green-ink);
+            font-weight: 600;
+        }
+
+        .highlight-yellow {
+            background-color: var(--highlighter);
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* Pencil drawing look */
+        .pencil-box {
+            border: 2px dashed #9ca3af;
+            border-radius: 12px;
+            background-color: #fafafa;
+            position: relative;
+        }
+
+        .sticky-note {
+            background: #fef9c3;
+            transform: rotate(-1deg);
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #eab308;
+        }
+
+        /* Hide default scrollbars but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .notebook-page {
+                box-shadow: none;
+                margin: 0;
+                padding: 1.5rem;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 transition-all duration-300">
+<!-- Top Interactive Dashboard Controls -->
+<header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 no-print">
+<div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-amber-500 text-slate-900 rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg shadow-inner">
+                    ⚡
+                </div>
+<div>
+<h1 class="text-lg font-bold tracking-wide">RRB NTPC/Group D Topper Notes</h1>
+<p class="text-xs text-amber-400 font-medium">Session 6: Comprehensive Science Study Notes (Bilingual)</p>
+</div>
+</div>
+<!-- Interactivity Toolbox -->
+<div class="flex items-center gap-3 flex-wrap">
+<!-- Theme Toggle -->
+<button class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 border border-slate-700 transition" id="themeToggle" onclick="togglePaperTheme()" title="Change paper background texture">
+<i class="fas fa-palette text-amber-400"></i> Paper: <span class="font-bold" id="themeLabel">White Grid</span>
+</button>
+<!-- Font/Mode Toggle -->
+<button class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 border border-slate-700 transition" id="styleToggle" onclick="toggleHandwrittenStyle()" title="Toggle between topper handwriting and clean digital font">
+<i class="fas fa-pen-nib text-cyan-400"></i> Style: <span class="font-bold text-cyan-400" id="styleLabel">Handwritten Mode</span>
+</button>
+<!-- Quick Print -->
+<button class="bg-emerald-600 hover:bg-emerald-500 px-4 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition shadow-md" onclick="window.print()">
+<i class="fas fa-print"></i> PDF/Print
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-2 sm:px-4 py-6">
+<!-- Navigation Breadcrumbs & Revision Progress -->
+<div class="no-print bg-white rounded-xl p-4 mb-6 shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-sm text-slate-600">
+<span class="font-semibold text-slate-950">Ananya Roy (Rank 1 Topper Notes)</span>
+<span class="text-slate-300">|</span>
+<span class="bg-red-50 text-red-700 text-xs px-2 py-0.5 rounded font-bold">Inorganic Chemistry</span>
+<span class="text-slate-300">|</span>
+<span class="text-xs">Date: June 30, 2026</span>
+</div>
+<!-- Quick Link Buttons to Pages -->
+<div class="flex flex-wrap gap-2">
+<a class="text-xs px-3 py-1.5 bg-slate-100 hover:bg-amber-100 rounded-full transition font-semibold text-slate-700" href="#section1">1. Atoms &amp; Compounds</a>
+<a class="text-xs px-3 py-1.5 bg-slate-100 hover:bg-amber-100 rounded-full transition font-semibold text-slate-700" href="#section2">2. Reactions &amp; Anodization</a>
+<a class="text-xs px-3 py-1.5 bg-slate-100 hover:bg-amber-100 rounded-full transition font-semibold text-slate-700" href="#section3">3. Acids, Bases &amp; Metals</a>
+<a class="text-xs px-3 py-1.5 bg-rose-600 text-white rounded-full transition font-bold shadow-sm" href="#section4">4. PYQ Practice Board</a>
+</div>
+</div>
+<!-- Notebook Area -->
+<div class="handwritten-mode space-y-8" id="notebookContainer">
+<!-- PAGE 1: ATOMIC STRUCTURE & PROPERTIES -->
+<section class="notebook-page rounded-2xl p-6 sm:p-10 border border-slate-200" id="section1">
+<!-- Red margin line on left -->
+<div class="notebook-line-left"></div>
+<div class="pl-6 sm:pl-12">
+<!-- Title block -->
+<div class="border-b-2 border-dashed border-red-300 pb-4 mb-6 relative">
+<span class="absolute -top-3 right-0 text-xs text-rose-500 font-bold tracking-widest no-print">🎓 PAGE-01 / TOPPER REVISION</span>
+<h2 class="text-3xl font-black tracking-tight text-red-600 flex items-center gap-3">
+<span class="border-2 border-red-600 rounded-lg px-2 text-xl">CH-1</span>
+                            Atomic Structure &amp; Properties <span class="text-xl text-slate-500 font-normal block md:inline">(পরমাণুর গঠন এবং বৈশিষ্ট্য)</span>
+</h2>
+</div>
+<!-- Intro Box -->
+<p class="blue-gel mb-6 leading-relaxed text-base italic">
+                        "এই টপিক থেকে প্রতি বছর RRB NTPC ও Group D তে অন্ততঃ ২-৩ নম্বর নিশ্চিত থাকে। মূলত Atomic Number, Mass Number, Isotopes এবং Isobars-এর ধারণার উপর ভিত্তি করে অঙ্ক বা ব্যাখ্যামূলক প্রশ্ন আসে।"
+                    </p>
+<!-- Key Definitions with grid layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<!-- Atomic Number Card -->
+<div class="pencil-box p-4 bg-amber-50/40 hover:bg-amber-50/70 transition shadow-sm">
+<h3 class="red-marker text-lg mb-2 flex items-center gap-2">
+<span class="text-2xl">⚡</span> Atomic Number / পারমাণবিক সংখ্যা (Z)
+                            </h3>
+<p class="blue-gel text-sm leading-relaxed">
+                                এটি হলো একটি পরমাণুর নিউক্লিয়াসে উপস্থিত <span class="highlight-yellow font-bold">প্রোটন সংখ্যা (Number of Protons)</span>। 
+                                <br/><span class="green-ink text-xs">* মনে রাখবে: নিস্তড়িৎ (neutral) পরমাণুতে প্রোটন সংখ্যা = ইলেকট্রন সংখ্যা।</span>
+</p>
+<div class="mt-3 border-t border-dashed border-gray-300 pt-2 flex justify-between items-center">
+<span class="text-xs text-slate-400">Formula:</span>
+<span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full font-bold">Z = Protons</span>
+</div>
+</div>
+<!-- Mass Number Card -->
+<div class="pencil-box p-4 bg-amber-50/40 hover:bg-amber-50/70 transition shadow-sm">
+<h3 class="red-marker text-lg mb-2 flex items-center gap-2">
+<span class="text-2xl">⚖️</span> Mass Number / ভর সংখ্যা (A)
+                            </h3>
+<p class="blue-gel text-sm leading-relaxed">
+                                নিউক্লিয়াসের ভেতরে থাকা মোট <span class="highlight-yellow font-bold">প্রোটন এবং নিউট্রনের সমষ্টি</span> (Nucleons)।
+                                <br/><span class="green-ink text-xs">* মনে রাখবে: নিউট্রন সংখ্যা = Mass Number (A) - Atomic Number (Z)</span>
+</p>
+<div class="mt-3 border-t border-dashed border-gray-300 pt-2 flex justify-between items-center">
+<span class="text-xs text-slate-400">Formula:</span>
+<span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full font-bold">A = P + N</span>
+</div>
+</div>
+</div>
+<!-- Beautiful Atom SVG and Interactive Mass Calculator Widget -->
+<div class="pencil-box p-6 mb-8 bg-slate-50 relative overflow-hidden">
+<span class="absolute top-2 right-2 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">Topper Interactive Widget 🛠️</span>
+<h4 class="text-md font-bold text-slate-700 mb-4 flex items-center gap-2">
+<i class="fa-solid fa-calculator text-amber-500"></i> Interactive Atomic Model &amp; Mass unit Builder
+                        </h4>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+<!-- Left: Interactive sliders to construct Atom -->
+<div class="lg:col-span-7 space-y-4">
+<div>
+<label class="block text-xs font-semibold text-slate-600 mb-1 flex justify-between">
+<span>Protons (Z)</span>
+<span class="text-rose-600 font-bold bg-rose-100 px-2 py-0.5 rounded" id="protonCountVal">6</span>
+</label>
+<input class="w-full accent-rose-600" id="protonRange" max="12" min="1" oninput="updateAtomicVisuals()" type="range" value="6"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-600 mb-1 flex justify-between">
+<span>Neutrons (N)</span>
+<span class="text-blue-600 font-bold bg-blue-100 px-2 py-0.5 rounded" id="neutronCountVal">6</span>
+</label>
+<input class="w-full accent-blue-600" id="neutronRange" max="14" min="1" oninput="updateAtomicVisuals()" type="range" value="6"/>
+</div>
+<div class="bg-white p-3 rounded-lg border border-slate-200 text-xs space-y-1">
+<div class="flex justify-between">
+<span class="text-slate-500">পরমাণুটির নাম (Element Name):</span>
+<span class="font-extrabold text-indigo-700" id="elementName">Carbon-12</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">ভর সংখ্যা (Mass Number A):</span>
+<span class="font-extrabold text-slate-800" id="massNumberVal">12 u</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">ইলেকট্রন সংখ্যা (নিস্তড়িৎ অবস্থায়):</span>
+<span class="font-extrabold text-emerald-600" id="electronCountVal">6</span>
+</div>
+</div>
+</div>
+<!-- Right: SVG Visualizer of Atomic Shell -->
+<div class="lg:col-span-5 flex justify-center">
+<svg class="filter drop-shadow-md" height="180" viewbox="0 0 200 200" width="180">
+<!-- Orbit lines -->
+<ellipse cx="100" cy="100" fill="none" rx="80" ry="25" stroke="#d1d5db" stroke-dasharray="4" stroke-width="1.5" transform="rotate(30 100 100)"></ellipse>
+<ellipse cx="100" cy="100" fill="none" rx="80" ry="25" stroke="#d1d5db" stroke-dasharray="4" stroke-width="1.5" transform="rotate(110 100 100)"></ellipse>
+<ellipse cx="100" cy="100" fill="none" rx="80" ry="25" stroke="#d1d5db" stroke-dasharray="4" stroke-width="1.5" transform="rotate(150 100 100)"></ellipse>
+<!-- Electrons running in orbit -->
+<circle cx="30" cy="60" fill="#10b981" id="e-dot-1" r="4.5"></circle>
+<circle cx="170" cy="140" fill="#10b981" id="e-dot-2" r="4.5"></circle>
+<circle cx="100" cy="20" fill="#10b981" id="e-dot-3" r="4.5"></circle>
+<!-- Nucleus cloud -->
+<circle cx="100" cy="100" fill="#fee2e2" r="28" stroke="#fecaca" stroke-width="1.5"></circle>
+<!-- Nucleus details inside -->
+<g id="nucleusGroup">
+<circle cx="95" cy="95" fill="#dc2626" r="5"></circle> <!-- Proton -->
+<circle cx="105" cy="105" fill="#2563eb" r="5"></circle> <!-- Neutron -->
+<circle cx="105" cy="92" fill="#dc2626" r="5"></circle>
+<circle cx="92" cy="105" fill="#2563eb" r="5"></circle>
+</g>
+<text fill="#000" font-size="8" font-weight="bold" text-anchor="middle" x="100" y="103">Nucleus</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- Isotopes vs Isobars Comparison Notebook Card -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="border-2 border-dashed border-teal-500 rounded-xl p-5 bg-teal-50/20">
+<span class="bg-teal-600 text-white text-xs px-2 py-0.5 rounded font-bold uppercase">Topper's Concept Check</span>
+<h3 class="text-lg font-bold text-teal-800 mt-2 mb-3">Isotopes (আইসোটোপ)</h3>
+<ul class="space-y-2 text-sm text-slate-700">
+<li class="flex items-start gap-1">
+<span class="text-teal-600">🎯</span>
+<span><strong>একই পারমাণবিক সংখ্যা (Z)</strong> কিন্তু ভিন্ন ভর সংখ্যা (A)।</span>
+</li>
+<li class="flex items-start gap-1">
+<span class="text-teal-600">🎯</span>
+<span>যেহেতু প্রোটন সংখ্যা সমান, তাই রাসায়নিক ধর্ম একদম এক হয়।</span>
+</li>
+<li class="flex items-start gap-1">
+<span class="text-teal-600">🎯</span>
+<span><strong>উদাহরণ:</strong> Protium ($^1_1H$), Deuterium ($^2_1H$), Tritium ($^3_1H$).</span>
+</li>
+</ul>
+</div>
+<div class="border-2 border-dashed border-orange-500 rounded-xl p-5 bg-orange-50/20">
+<span class="bg-orange-600 text-white text-xs px-2 py-0.5 rounded font-bold uppercase">Topper's Concept Check</span>
+<h3 class="text-lg font-bold text-orange-800 mt-2 mb-3">Isobars (আইসোবার)</h3>
+<ul class="space-y-2 text-sm text-slate-700">
+<li class="flex items-start gap-1">
+<span class="text-orange-600">🎯</span>
+<span><strong>ভিন্ন পারমাণবিক সংখ্যা (Z)</strong> কিন্তু একই ভর সংখ্যা (A)।</span>
+</li>
+<li class="flex items-start gap-1">
+<span class="text-orange-600">🎯</span>
+<span>রাসায়নিক ধর্ম সম্পূর্ণ আলাদা হয় কারণ ইলেকট্রন বিন্যাস আলাদা।</span>
+</li>
+<li class="flex items-start gap-1">
+<span class="text-orange-600">🎯</span>
+<span><strong>উদাহরণ:</strong> Argon ($^{40}_{18}Ar$) এবং Calcium ($^{40}_{20}Ca$).</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Formula Unit Mass Section -->
+<div class="pencil-box p-6 bg-yellow-50/50 mb-8 border-l-4 border-l-yellow-400">
+<h3 class="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">
+<span class="bg-yellow-400 text-slate-900 px-2 py-0.5 rounded text-xs font-black">IMPORTANT</span>
+                            Formula Unit Mass (ফর্মুলা ইউনিট ভর)
+                        </h3>
+<p class="blue-gel text-sm leading-relaxed mb-4">
+                            একটি যৌগের সংকেত এককে (Formula Unit) উপস্থিত সকল পরমাণুর পারমাণবিক ভরের সমষ্টিকে ফর্মুলা ইউনিট ভর বলে।
+                        </p>
+<div class="bg-white p-4 rounded-lg border border-yellow-200">
+<div class="flex items-center justify-between mb-2">
+<span class="green-ink text-sm">★ Solved Topper Example: $NaCl$ এর ফর্মুলা ইউনিট ভর</span>
+<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded font-bold">Frequently Asked in ALP/Group D</span>
+</div>
+<div class="text-sm space-y-2 font-mono">
+<p>🧪 $NaCl$ = Sodium (Na) + Chlorine (Cl)</p>
+<p>⚡ $Na$ এর পারমাণবিক ভর = 23 u</p>
+<p>⚡ $Cl$ এর পারমাণবিক ভর = 35.5 u</p>
+<p class="text-rose-600 font-extrabold border-t border-dashed border-gray-300 pt-1">
+                                    👉 মোট সংকেত ভর = 23 u + 35.5 u = 58.5 u
+                                </p>
+</div>
+</div>
+</div>
+<!-- Page 1 Topper Revision Box -->
+<div class="sticky-note p-4 rounded-lg mb-4 text-sm">
+<h4 class="font-extrabold text-amber-950 mb-1">💡 Memory Hacks &amp; Quick Tips</h4>
+<ul class="list-disc list-inside space-y-1 text-amber-900 text-xs">
+<li><strong>P</strong> is for <strong>P</strong>rotons and <strong>P</strong>aramanubik (পারমাণবিক) Number -- They are ALWAYS same!</li>
+<li>Isotopes have identical chemical properties but different physical properties (like mass!).</li>
+<li>নিউক্লিয়ন (Nucleon) বললে বুঝবে প্রোটন + নিউট্রন।</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- PAGE 2: CHEMICAL REACTIONS & PROCESSES -->
+<section class="notebook-page rounded-2xl p-6 sm:p-10 border border-slate-200" id="section2">
+<div class="notebook-line-left"></div>
+<div class="pl-6 sm:pl-12">
+<div class="border-b-2 border-dashed border-red-300 pb-4 mb-6 relative">
+<span class="absolute -top-3 right-0 text-xs text-rose-500 font-bold tracking-widest no-print">🎓 PAGE-02 / TOPPER REVISION</span>
+<h2 class="text-3xl font-black tracking-tight text-red-600 flex items-center gap-3">
+<span class="border-2 border-red-600 rounded-lg px-2 text-xl">CH-2</span>
+                            Chemical Reactions &amp; Processes <span class="text-xl text-slate-500 font-normal block md:inline">(রাসায়নিক বিক্রিয়া এবং প্রক্রিয়া)</span>
+</h2>
+</div>
+<!-- Section Content: Anodization of Aluminum -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+<div class="lg:col-span-7">
+<h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+<span class="text-indigo-600 text-2xl">⚡</span> Anodization of Aluminum (অ্যালুমিনিয়ামের অ্যানোডাইজেশন)
+                            </h3>
+<p class="blue-gel text-sm leading-relaxed mb-4">
+                                এটি এমন একটি তড়িৎ-রাসায়নিক প্রক্রিয়া যেখানে অ্যালুমিনিয়ামের উপর <span class="highlight-yellow font-bold">অ্যালুমিনিয়াম অক্সাইডের ($Al_2O_3$)</span> একটি পুরু ও মজবুত প্রতিরক্ষামূলক আস্তরণ তৈরি করা হয়। 
+                            </p>
+<div class="space-y-3 bg-indigo-50/40 p-4 rounded-xl border border-indigo-100 text-sm">
+<div>
+<span class="red-marker font-bold">Role of $H_2SO_4$:</span>
+<span class="blue-gel"> লঘু সালফিউরিক অ্যাসিড তড়িৎ বিশ্লেষক (Electrolyte) হিসেবে কাজ করে মোটা অক্সাইড স্তর তৈরি করতে ত্বরান্বিত করে।</span>
+</div>
+<div>
+<span class="green-ink font-bold">মূল সুবিধা:</span>
+<span class="blue-gel"> এই অক্সাইড স্তরটি অত্যন্ত আঠালো এবং ধাতুকে ভবিষ্যতে আরও ক্ষয়প্রাপ্ত বা জারিত হওয়া থেকে পুরোপুরি রক্ষা করে।</span>
+</div>
+</div>
+</div>
+<!-- Anodization Setup Diagram Mock (Pencil sketch style) -->
+<div class="lg:col-span-5 pencil-box p-4 bg-white flex flex-col justify-between">
+<span class="text-xs text-slate-400 font-semibold uppercase tracking-wider text-center border-b border-dashed border-gray-200 pb-1 mb-2 block">
+                                Fig 1. Anodization Cell Diagram
+                            </span>
+<!-- SVG Cell Diagram -->
+<div class="flex justify-center">
+<svg height="130" viewbox="0 0 200 130" width="200">
+<!-- Beaker -->
+<path d="M40,20 L40,110 Q40,120 50,120 L150,120 Q160,120 160,110 L160,20" fill="none" stroke="#4b5563" stroke-width="2.5"></path>
+<!-- Electrolyte level -->
+<line stroke="#93c5fd" stroke-dasharray="4" stroke-width="2" x1="42" x2="158" y1="40" y2="40"></line>
+<!-- Anode (Al) -->
+<rect fill="#cbd5e1" height="70" stroke="#4b5563" stroke-width="2" width="15" x="70" y="25"></rect>
+<!-- Cathode -->
+<rect fill="#94a3b8" height="70" stroke="#4b5563" stroke-width="2" width="15" x="115" y="25"></rect>
+<!-- Connective wires -->
+<path d="M77.5,25 L77.5,10 L117.5,10 L117.5,25" fill="none" stroke="#4b5563" stroke-width="1.5"></path>
+<circle cx="97.5" cy="10" fill="#f59e0b" r="5"></circle>
+<text font-size="6" font-weight="bold" text-anchor="middle" x="97.5" y="8">DC Source</text>
+<!-- Text Labels -->
+<text fill="#2563eb" font-size="7" font-weight="bold" x="50" y="60">Electrolyte (dil. H₂SO₄)</text>
+<text fill="#dc2626" font-size="7" font-weight="bold" x="58" y="105">Al (Anode)</text>
+</svg>
+</div>
+<p class="text-[10px] text-gray-500 text-center mt-2 italic">
+                                * অ্যালুমিনিয়ামকে <strong>Anode (+)</strong> হিসেবে রেখে সালফিউরিক অ্যাসিডে তড়িৎ প্রবাহ চালানো হয়।
+                            </p>
+</div>
+</div>
+<!-- Reactivity Series Section -->
+<div class="pencil-box p-6 bg-emerald-50/30 mb-8 border-l-4 border-l-emerald-500">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+<div>
+<h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+<span class="text-emerald-600 text-2xl">⚡</span> Reactivity Series (ধাতুর সক্রিয়তা শ্রেণী)
+                                </h3>
+<p class="text-xs text-slate-500">সবচেয়ে বেশি সক্রিয় ধাতু থেকে কম সক্রিয় ধাতুর ক্রম।</p>
+</div>
+<!-- Memory Mnemonic sticker -->
+<div class="bg-amber-100 border border-amber-300 rounded px-3 py-1 text-xs text-amber-900 font-bold animate-pulse">
+                                🔥 TOPPER TRICK / সহজে মনে রাখার উপায়!
+                            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<!-- Left: The Ladder List -->
+<div class="md:col-span-5 bg-white p-3 rounded-xl border border-slate-200">
+<div class="space-y-1 text-xs font-mono">
+<div class="flex justify-between items-center bg-red-50 p-1.5 rounded text-red-800 font-bold">
+<span>Potassium (K)</span>
+<span class="text-[10px] uppercase">Most Reactive</span>
+</div>
+<div class="flex justify-between items-center p-1 border-b border-dashed">
+<span>Sodium (Na)</span>
+</div>
+<div class="flex justify-between items-center p-1 border-b border-dashed">
+<span>Calcium (Ca)</span>
+</div>
+<div class="flex justify-between items-center p-1 border-b border-dashed">
+<span>Magnesium (Mg)</span>
+</div>
+<div class="flex justify-between items-center p-1 border-b border-dashed">
+<span>Aluminum (Al)</span>
+</div>
+<div class="flex justify-between items-center p-1 border-b border-dashed">
+<span>Zinc (Zn)</span>
+</div>
+<div class="flex justify-between items-center p-1 border-b border-dashed">
+<span>Iron (Fe)</span>
+</div>
+<div class="flex justify-between items-center bg-blue-50 p-1.5 rounded text-blue-800 font-bold">
+<span>Copper (Cu)</span>
+<span class="text-[10px] uppercase">Less Reactive</span>
+</div>
+</div>
+</div>
+<!-- Right: The Mnemonic Concept details -->
+<div class="md:col-span-7 space-y-4">
+<div class="bg-yellow-100/70 p-4 rounded-lg border border-yellow-300">
+<span class="font-black text-rose-700 block mb-1">Mnemonic Trick:</span>
+<p class="text-sm text-slate-800 italic leading-relaxed">
+<span class="font-extrabold text-indigo-700">"কে না কেবিন থেকে ম্যাগাজিন এনে জানালো ফিরেছে কুলাঙ্গার!"</span>
+<br/>
+<span class="text-xs text-slate-500 mt-1 block">
+                                            👉 <strong>কে</strong> (K) &gt; <strong>না</strong> (Na) &gt; <strong>কেবিন</strong> (Ca) &gt; <strong>ম্যাগাজিন</strong> (Mg) &gt; <strong>এনে</strong> (Al) &gt; <strong>জানালো</strong> (Zn) &gt; <strong>ফিরেছে</strong> (Fe) &gt; <strong>কুলাঙ্গার</strong> (Cu)
+                                        </span>
+</p>
+</div>
+<div class="bg-emerald-50 p-4 rounded-lg border border-emerald-200">
+<span class="font-black text-emerald-800 block text-xs mb-1 uppercase">Displacement Rule (বাস্তব উদাহরণ):</span>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                        সরকারের "চাকরিজীবী" অ্যানালজি—যে ধাতুর "ভালো চাকরি" (বেশি সক্রিয়তা) সে সবসময় দুর্বল ধাতুর সঙ্গীকে (Sulfate/Chloride) ছিনিয়ে নেয়।
+                                        <br/><strong class="text-emerald-700">$Zn + CuSO_4 \rightarrow ZnSO_4 + Cu$</strong> (যেহেতু Zn-এর চাকরি Cu-এর চেয়ে ভালো!)
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Reactions Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<!-- Double Displacement Reaction Card -->
+<div class="pencil-box p-5 bg-orange-50/20">
+<h4 class="text-md font-bold text-orange-950 mb-2 flex items-center gap-2">
+<span class="text-orange-600">⚡</span> Double Displacement (দ্বি-প্রতিস্থাপন)
+                            </h4>
+<p class="text-xs text-slate-600 mb-3">
+                                দুটি যৌগের মধ্যে আয়ন বিনিময়ের মাধ্যমে নতুন যৌগ গঠন হওয়ার প্রক্রিয়া।
+                            </p>
+<div class="bg-white p-3 rounded border border-orange-200 text-xs font-mono">
+<p class="font-bold text-indigo-700">$BaCl_2 + Na_2SO_4 \rightarrow BaSO_4 \downarrow + 2NaCl$</p>
+<p class="text-amber-700 mt-2 font-sans italic">* এখানে $BaSO_4$ এর সাদা অধঃক্ষেপ (White Precipitate) পড়ে।</p>
+</div>
+</div>
+<!-- White Washing Card -->
+<div class="pencil-box p-5 bg-rose-50/20">
+<h4 class="text-md font-bold text-rose-950 mb-2 flex items-center gap-2">
+<span class="text-rose-600">⚡</span> White Washing (চুনকাম বিক্রিয়া)
+                            </h4>
+<p class="text-xs text-slate-600 mb-3">
+                                দেয়ালে চুনকাম করার সময় ক্যালসিয়াম হাইড্রোক্সাইড বায়ুর কার্বন ডাই-অক্সাইডের সাথে বিক্রিয়া করে।
+                            </p>
+<div class="bg-white p-3 rounded border border-rose-200 text-xs font-mono">
+<p class="font-bold text-rose-700">$Ca(OH)_2 + CO_2 \rightarrow CaCO_3 \downarrow + H_2O$</p>
+<p class="text-slate-600 mt-2 font-sans italic">* উৎপন্ন ক্যালসিয়াম কার্বোনেট ($CaCO_3$) দেয়ালে চকচকে ভাব এনে দেয়।</p>
+</div>
+</div>
+</div>
+<!-- Revision Summary Sticker -->
+<div class="sticky-note p-4 rounded-lg mb-4 text-sm">
+<h4 class="font-extrabold text-amber-950 mb-1">💡 Exam Alert!</h4>
+<p class="text-amber-900 text-xs">
+                            অ্যানোডাইজেশন প্রক্রিয়ায় <strong>অক্সিজেন</strong> গ্যাস অ্যানোডের অ্যালুমিনিয়ামের সাথে বিক্রিয়া করে অ্যালুমিনিয়াম অক্সাইডের পুরু প্রতিরক্ষামূলক আস্তরণ তৈরি করে। ভুল করে এটি বিজারিত স্তর চিহ্নিত করো না!
+                        </p>
+</div>
+</div>
+</section>
+<!-- PAGE 3: ACIDS, BASES, SALTS, METALS & IMPORTANT SCIENTISTS -->
+<section class="notebook-page rounded-2xl p-6 sm:p-10 border border-slate-200" id="section3">
+<div class="notebook-line-left"></div>
+<div class="pl-6 sm:pl-12">
+<div class="border-b-2 border-dashed border-red-300 pb-4 mb-6 relative">
+<span class="absolute -top-3 right-0 text-xs text-rose-500 font-bold tracking-widest no-print">🎓 PAGE-03 / TOPPER REVISION</span>
+<h2 class="text-3xl font-black tracking-tight text-red-600 flex items-center gap-3">
+<span class="border-2 border-red-600 rounded-lg px-2 text-xl">CH-3</span>
+                            Acids, Bases &amp; Metals <span class="text-xl text-slate-500 font-normal block md:inline">(অ্যাসিড, ক্ষার, ধাতু এবং বিজ্ঞানী তথ্য)</span>
+</h2>
+</div>
+<!-- Acids and Bases Concepts Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<!-- Non-Metallic Oxides Card -->
+<div class="pencil-box p-5 bg-sky-50/30">
+<h3 class="text-lg font-bold text-sky-950 mb-2 flex items-center gap-2">
+<span class="text-sky-600">🛡️</span> Non-Metallic Oxides (অধাতুর অক্সাইড)
+                            </h3>
+<p class="blue-gel text-sm leading-relaxed mb-3">
+                                অধাতব অক্সাইডগুলি সাধারণত <span class="highlight-yellow font-bold">আম্লিক প্রকৃতির (Acidic nature)</span> হয়। 
+                            </p>
+<div class="bg-white p-3 rounded-lg border border-sky-200 text-xs font-mono space-y-1">
+<p class="text-indigo-600 font-bold">Acidic Oxide + Base → Salt + Water</p>
+<p class="text-slate-500">Ex: $CO_2 + 2NaOH \rightarrow Na_2CO_3 + H_2O$</p>
+</div>
+</div>
+<!-- Lustrous Non-Metals Card -->
+<div class="pencil-box p-5 bg-amber-50/20">
+<h3 class="text-lg font-bold text-amber-950 mb-2 flex items-center gap-2">
+<span class="text-amber-600">✨</span> Lustrous Non-Metal (উজ্জ্বল অধাতু)
+                            </h3>
+<p class="blue-gel text-sm leading-relaxed mb-2">
+                                অধিকাংশ অধাতু অনুজ্জ্বল বা নিস্তেজ হয়। কিন্তু ব্যতিক্রম হিসেবে <span class="highlight-yellow font-bold">আয়োডিন (Iodine)</span>-এর ধাতুর মতো তীব্র চকচকে দ্যুতি থাকে।
+                            </p>
+<span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">👉 Highly repeated PYQ!</span>
+</div>
+</div>
+<!-- Metallurgy Terms Box -->
+<div class="pencil-box p-6 bg-rose-50/20 mb-8">
+<h3 class="text-lg font-bold text-rose-950 mb-3 flex items-center gap-2">
+<span class="text-rose-600">⛏️</span> Metallurgy Concepts (ধাতু নিষ্কাশনের গুরুত্বপূর্ণ পরিভাষা)
+                        </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+<div class="bg-white p-3 rounded-lg border border-rose-100 shadow-sm">
+<span class="font-bold text-red-600 uppercase block mb-1">1. Gangue (গ্যাঙ্গু)</span>
+<p class="blue-gel">আকরিকের মধ্যে থাকা অবাঞ্ছিত মাটি, বালি ও পাথরের মতো অপদ্রব্যসমূহ।</p>
+</div>
+<div class="bg-white p-3 rounded-lg border border-rose-100 shadow-sm">
+<span class="font-bold text-amber-600 uppercase block mb-1">2. Flux (ফ্লাক্স)</span>
+<p class="blue-gel">এমন এক রাসায়নিক যা গ্যাঙ্গুকে দ্রবীভূত করে আকরিক থেকে সরিয়ে ফেলতে সাহায্য করে।</p>
+</div>
+<div class="bg-white p-3 rounded-lg border border-rose-100 shadow-sm">
+<span class="font-bold text-emerald-600 uppercase block mb-1">3. Slag (স্ল্যাগ)</span>
+<p class="blue-gel">গ্যাঙ্গু এবং ফ্লাক্স-এর রাসায়নিক বিক্রিয়ার ফলে তৈরি হালকা বর্জ্য পদার্থ।</p>
+</div>
+</div>
+</div>
+<!-- Important Scientists & Discoveries Mindmap (SVG interactive structure) -->
+<div class="pencil-box p-6 bg-slate-50 relative overflow-hidden mb-8">
+<span class="absolute top-2 right-2 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">Scientist Mindmap 🗺️</span>
+<h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+<i class="fa-solid fa-users text-indigo-500"></i> Scientists &amp; Chemical Laws (বিজ্ঞানীদের অবদান)
+                        </h3>
+<!-- Mini Mind Map -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-white border border-slate-200 p-3 rounded-xl hover:shadow-md transition">
+<span class="text-rose-600 font-extrabold text-sm block">Antoine Lavoisier</span>
+<p class="text-xs text-slate-500 mt-1">Father of Modern Chemistry. রাসায়নিক বিক্রিয়া দ্বারা পরমাণুকে আর ভাঙা সম্ভব নয় বলে মৌলের আধুনিক সংজ্ঞা দেন।</p>
+</div>
+<div class="bg-white border border-slate-200 p-3 rounded-xl hover:shadow-md transition">
+<span class="text-indigo-600 font-extrabold text-sm block">Robert Boyle</span>
+<p class="text-xs text-slate-500 mt-1">Boyle's Law-এর জনক। স্থির তাপমাত্রায় গ্যাসের চাপ ও আয়তনের সম্পর্ক নির্ধারণ করেন।</p>
+</div>
+<div class="bg-white border border-slate-200 p-3 rounded-xl hover:shadow-md transition">
+<span class="text-emerald-600 font-extrabold text-sm block">Robert Hooke</span>
+<p class="text-xs text-slate-500 mt-1">কোশ (Cell) আবিষ্কার করেন এবং স্থিতিস্থাপকতার সূত্র (Hooke's Law) তৈরি করেন।</p>
+</div>
+<div class="bg-white border border-slate-200 p-3 rounded-xl hover:shadow-md transition">
+<span class="text-amber-600 font-extrabold text-sm block">Charles Darwin</span>
+<p class="text-xs text-slate-500 mt-1">বিবর্তনবাদের জনক (Theory of Evolution) এবং প্রাকৃতিক নির্বাচনবাদের প্রবক্তা।</p>
+</div>
+</div>
+</div>
+<!-- Common Mistakes Box -->
+<div class="bg-rose-100/60 border-2 border-dashed border-rose-300 rounded-xl p-5 mb-4 text-sm">
+<h4 class="font-extrabold text-rose-900 mb-2 flex items-center gap-2">
+<i class="fa-solid fa-triangle-exclamation text-rose-600"></i> পরীক্ষার সাধারণ ভুলসমূহ (Common Mistakes)
+                        </h4>
+<ul class="list-disc list-inside space-y-1 text-rose-800 text-xs">
+<li><strong>ভুল:</strong> অনেকে মনে করে অধাতুর অক্সাইড ক্ষারীয়। <strong>সঠিক:</strong> অধাতুর অক্সাইড সর্বদা <span class="font-bold underline">আম্লিক</span> প্রকৃতির হয়, এবং ধাতুর অক্সাইড ক্ষারীয়।</li>
+<li><strong>ভুল:</strong> সংকেত ভর নির্ণয় করার সময় অনেকে পারমাণবিক ভরের পরিবর্তে পারমাণবিক সংখ্যা যোগ করে দেয়। <strong>সঠিক:</strong> অবশ্যই পারমাণবিক ভর (যেমন Na=23) যোগ করতে হবে।</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- PAGE 4: PYQ PRACTICE BOARD & CBT CBT ENGINE -->
+<section class="notebook-page rounded-2xl p-6 sm:p-10 border border-slate-200" id="section4">
+<div class="notebook-line-left"></div>
+<div class="pl-6 sm:pl-12">
+<div class="border-b-2 border-dashed border-red-300 pb-4 mb-6 relative">
+<span class="absolute -top-3 right-0 text-xs text-rose-500 font-bold tracking-widest no-print">🎓 PAGE-04 / CBT ENGINE</span>
+<h2 class="text-3xl font-black tracking-tight text-red-600 flex items-center gap-3">
+<span class="border-2 border-red-600 rounded-lg px-2 text-xl">CH-4</span>
+                            Interactive CBT Practice Arena <span class="text-xl text-slate-500 font-normal block md:inline">(অনলাইন পরীক্ষা প্রস্তুতি বোর্ড)</span>
+</h2>
+</div>
+<!-- Intro and Scoreboard -->
+<div class="no-print bg-slate-900 text-white rounded-xl p-5 mb-8 flex flex-col md:flex-row justify-between items-center gap-4 shadow-lg">
+<div class="text-left">
+<span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">RRB Practice Engine v1.6</span>
+<h3 class="text-md font-extrabold">বাস্তব পরীক্ষার অভিজ্ঞতা পাওয়ার জন্য নিচে দেওয়া PYQs গুলিতে ক্লিক করুন!</h3>
+</div>
+<div class="flex items-center gap-4 bg-slate-800 px-4 py-2.5 rounded-lg border border-slate-700">
+<div class="text-center border-r border-slate-700 pr-4">
+<span class="text-[10px] text-slate-400 block uppercase font-bold">Solved</span>
+<span class="text-xl font-extrabold text-amber-400" id="solvedCount">0</span> / 17
+                            </div>
+<div class="text-center">
+<span class="text-lg font-black text-emerald-400" id="scoreText">0%</span>
+<span class="text-[10px] text-slate-400 block uppercase font-bold">Accuracy</span>
+</div>
+</div>
+</div>
+<!-- Interactive PYQ MCQ Container -->
+<div class="space-y-4">
+<!-- Q1 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q1 · RRB Group D</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                What is the role of sulfuric acid in the anodization process of aluminium? / অ্যালুমিনিয়ামের অ্যানোডাইজেশন প্রক্রিয়ায় সালফিউরিক অ্যাসিডের ভূমিকা কী?
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q1-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(1, 'A')">A. It reacts with aluminium / এটি অ্যালুমিনিয়ামের সাথে বিক্রিয়া করে</button>
+<button class="option-btn q1-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(1, 'B')">B. It prevents oxidization of aluminium / এটি অ্যালুমিনিয়ামের জারণ রোধ করে</button>
+<button class="option-btn q1-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(1, 'C')">C. It dissolves aluminium completely / এটি অ্যালুমিনিয়ামকে সম্পূর্ণ দ্রবীভূত করে</button>
+<button class="option-btn q1-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(1, 'D')">D. It acts as an electrolyte to help form a thicker oxidized layer / এটি একটি ইলেকট্রোলাইট হিসাবে কাজ করে যা মোটা অক্সাইড স্তর তৈরি করতে সাহায্য করে</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর D:</strong> লঘু সালফিউরিক অ্যাসিড চমৎকার তড়িৎ-বিশ্লেষক হিসেবে কাজ করে অ্যালুমিনিয়াম অক্সাইডের পুরু প্রতিরক্ষামূলক আস্তরণ গঠনে সাহায্য করে।
+                            </div>
+</div>
+<!-- Q2 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q2 · RRB NTPC</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                Which of the following statements correctly defines atomic number? / নিচের কোন বিবৃতিটি পারমাণবিক সংখ্যাকে সঠিক ভাবে সংজ্ঞায়িত করে?
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q2-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(2, 'A')">A. The number of neutrons / নিউট্রন সংখ্যা</button>
+<button class="option-btn q2-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(2, 'B')">B. The number of protons in the nucleus / নিউক্লিয়াসে প্রোটন সংখ্যা</button>
+<button class="option-btn q2-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(2, 'C')">C. The number of electrons and neutrons / ইলেকট্রন ও নিউট্রন সংখ্যা</button>
+<button class="option-btn q2-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(2, 'D')">D. The total mass of the atom / পরমাণুর মোট ভর</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর B:</strong> আধুনিক বিজ্ঞান অনুসারে, মৌলের নিউক্লিয়াসে অবস্থিত প্রোটন সংখ্যা দিয়েই পারমাণবিক সংখ্যাকে চূড়ান্ত সংজ্ঞায়িত করা হয়।
+                            </div>
+</div>
+<!-- Q3 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q3 · RRB ALP</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                Which of the following is the correct reactivity order? / নিচের কোনটি সঠিক সক্রিয়তা ক্রম?
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q3-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(3, 'A')">A. Al &gt; Ca &gt; K</button>
+<button class="option-btn q3-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(3, 'B')">B. K &gt; Al &gt; Ca</button>
+<button class="option-btn q3-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(3, 'C')">C. Ca &gt; K &gt; Al</button>
+<button class="option-btn q3-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(3, 'D')">D. K &gt; Ca &gt; Al</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর D:</strong> ট্রিক অনুযায়ী "কে না কেবিন থেকে ম্যাগাজিন এনে..." অর্থাৎ Potassium (K) সবচেয়ে সক্রিয়, তারপর Calcium (Ca), তারপর Aluminum (Al)।
+                            </div>
+</div>
+<!-- Q4 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q4 · RRB Group D</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                Find the formula unit mass of NaCl. / NaCl-এর ফর্মুলা ইউনিট ভর নির্ণয় করো।
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q4-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(4, 'A')">A. 23 u</button>
+<button class="option-btn q4-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(4, 'B')">B. 35.5 u</button>
+<button class="option-btn q4-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(4, 'C')">C. 58.5 u</button>
+<button class="option-btn q4-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(4, 'D')">D. 71 u</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর C:</strong> Sodium (23) + Chlorine (35.5) = 58.5 u.
+                            </div>
+</div>
+<!-- Q5 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q5 · RRB NTPC</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                Atomic number of an element equals to which of the following? / একটি মৌলের পারমাণবিক সংখ্যা নিচের কোনটির সমান?
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q5-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(5, 'A')">A. Number of electrons / ইলেকট্রন সংখ্যা</button>
+<button class="option-btn q5-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(5, 'B')">B. Number of neutrons / নিউট্রন সংখ্যা</button>
+<button class="option-btn q5-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(5, 'C')">C. Neutrons + Protons / নিউট্রন + প্রোটন</button>
+<button class="option-btn q5-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(5, 'D')">D. Number of Protons / প্রোটন সংখ্যা</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর D:</strong> পারমাণবিক সংখ্যা মৌলের মৌলিক বৈশিষ্ট্য নির্ধারণ করে এবং এটি সর্বদা নিউক্লিয়াসের প্রোটন সংখ্যার সাথে সমান হয়।
+                            </div>
+</div>
+<!-- Q6 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q6 · RRB Group D</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                Zinc displaces copper from copper sulfate solution because? / জিঙ্ক কপার সালফেট দ্রবণ থেকে কপারকে প্রতিস্থাপিত করে কারণ?
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q6-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(6, 'A')">A. Zinc is less reactive than copper / জিঙ্ক কপারের চেয়ে কম সক্রিয়</button>
+<button class="option-btn q6-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(6, 'B')">B. Zinc is more reactive than copper / জিঙ্ক কপারের চেয়ে বেশি সক্রিয়</button>
+<button class="option-btn q6-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(6, 'C')">C. Zinc is a noble metal / জিঙ্ক একটি নোবেল ধাতু</button>
+<button class="option-btn q6-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(6, 'D')">D. Copper is more reactive / কপার বেশি সক্রিয়</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর B:</strong> জিঙ্ক অধিক সক্রিয় ধাতু হওয়ায় কপার সালফেটের কপারকে দ্রুত প্রতিস্থাপিত করতে পারে।
+                            </div>
+</div>
+<!-- Q7 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q7 · RRB NTPC</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                Which substance forms a thin layer during white-washing? / চুনকামের সময় কোন পদার্থটি একটি পাতলা স্তর তৈরি করে?
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q7-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(7, 'A')">A. Calcium Oxide / ক্যালসিয়াম অক্সাইড</button>
+<button class="option-btn q7-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(7, 'B')">B. Calcium Carbonate / ক্যালসিয়াম কার্বোনেট</button>
+<button class="option-btn q7-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(7, 'C')">C. Calcium Hydroxide / ক্যালসিয়াম হাইড্রোক্সাইড</button>
+<button class="option-btn q7-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(7, 'D')">D. Calcium Sulfate / ক্যালসিয়াম সালফেট</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর B:</strong> বাতাসে থাকা $CO_2$ গ্যাস ক্যালসিয়াম হাইড্রোক্সাইডের সাথে বিক্রিয়া করে দেয়ালে ক্যালসিয়াম কার্বোনেটের ($CaCO_3$) একটি সুন্দর সাদা চকচকে আস্তরণ সৃষ্টি করে।
+                            </div>
+</div>
+<!-- Q8 -->
+<div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm transition-all hover:border-slate-300">
+<span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase">Q8 · RRB Group D</span>
+<h4 class="text-sm font-bold mt-2 text-slate-800 leading-relaxed">
+                                What happens to Iron in the reaction Fe + CuSO₄ → FeSO₄ + Cu? / Fe + CuSO₄ → FeSO₄ + Cu বিক্রিয়াটিতে আয়রনের কী ঘটে?
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs">
+<button class="option-btn q8-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(8, 'A')">A. It is reduced / এটি বিজারিত হয়</button>
+<button class="option-btn q8-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" data-correct="true" onclick="checkAnswer(8, 'B')">B. It is oxidized / এটি জারিত হয়</button>
+<button class="option-btn q8-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(8, 'C')">C. It remains unchanged / এটি অপরিবর্তিত থাকে</button>
+<button class="option-btn q8-btn w-full text-left p-2.5 bg-slate-50 hover:bg-slate-100 rounded border border-slate-200 transition" onclick="checkAnswer(8, 'D')">D. It acts as a catalyst / এটি অনুঘটক হিসেবে কাজ করে</button>
+</div>
+<div class="feedback hidden mt-3 p-3 bg-emerald-50 text-emerald-800 rounded text-xs leading-relaxed border border-emerald-200">
+<strong>সঠিক উত্তর B:</strong> আয়রন ইলেকট্রন ত্যাগ করে জারিত হয় এবং কপার সালফেট থেকে কপার মুক্ত হয়।
+                            </div>
+</div>
+<!-- Q9 to Q17 Collapsed Toggle List for easy reading -->
+<div class="bg-amber-50/50 p-4 rounded-xl border border-dashed border-amber-300">
+<h5 class="text-sm font-bold text-slate-800 mb-3 flex items-center justify-between">
+<span>📚 Quick PYQ Cards (Q9 - Q17)</span>
+<span class="text-xs text-slate-500 font-normal">Click answers to see fast solutions</span>
+</h5>
+<div class="space-y-3">
+<!-- Q9 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q9. An atom has 17 electrons and 18 neutrons. Find the number of protons.</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-slate-100 px-2 py-1 rounded text-slate-700 font-bold">Ans: 17</span>
+<p class="text-[11px] text-slate-500 self-center">যেহেতু এটি একটি নিস্তড়িৎ পরমাণু, তাই ইলেকট্রন ও প্রোটন সংখ্যা সমান হবে।</p>
+</div>
+</div>
+<!-- Q10 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q10. Name the scientist who defined an element as a substance that cannot be broken down by chemical reactions.</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-slate-100 px-2 py-1 rounded text-slate-700 font-bold">Ans: Antoine Lavoisier</span>
+<p class="text-[11px] text-slate-500 self-center">অ্যান্টোইন ল্যাভয়সিয়ে প্রথম যৌগের সাপেক্ষে মৌলের আধুনিক স্পষ্ট সংজ্ঞা দিয়েছিলেন।</p>
+</div>
+</div>
+<!-- Q11 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q11. Reaction of a non-metallic oxide with a base produces?</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-slate-100 px-2 py-1 rounded text-slate-700 font-bold">Ans: Salt and Water</span>
+<p class="text-[11px] text-slate-500 self-center">আম্লিক অধাতব অক্সাইডের ক্ষারের সাথে প্রশমন বিক্রিয়ায় লবণ ও জল উৎপন্ন হয়।</p>
+</div>
+</div>
+<!-- Q12 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q12. Which non-metal exhibits a lustrous shine like metals?</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-slate-100 px-2 py-1 rounded text-slate-700 font-bold">Ans: Iodine / আয়োডিন</span>
+<p class="text-[11px] text-slate-500 self-center">আয়োডিনের অনুগুলোর ধাতব স্ফটিকের ন্যায় চকচকে ভাব থাকে।</p>
+</div>
+</div>
+<!-- Q13 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q13. Why do isobars have different chemical properties despite having same mass number?</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-teal-50 text-teal-800 px-2 py-1 rounded font-bold">Ans: Different atomic numbers &amp; config.</span>
+</div>
+</div>
+<!-- Q14 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q14. Molecules of an element are constituted by?</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-teal-50 text-teal-800 px-2 py-1 rounded font-bold">Ans: Same type of atoms / একই পরমাণু</span>
+</div>
+</div>
+<!-- Q15 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q15. Isotopes of an element have the same number of?</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-teal-50 text-teal-800 px-2 py-1 rounded font-bold">Ans: Protons / প্রোটন</span>
+</div>
+</div>
+<!-- Q16 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q16. What type of reaction occurs between Barium Chloride and Sodium Sulfate?</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-teal-50 text-teal-800 px-2 py-1 rounded font-bold">Ans: Double Displacement</span>
+</div>
+</div>
+<!-- Q17 -->
+<div class="bg-white p-3 rounded border border-slate-200 text-xs">
+<p class="font-bold">Q17. Unwanted impurities like soil and sand in ore are called?</p>
+<div class="mt-2 flex gap-2">
+<span class="bg-teal-50 text-teal-800 px-2 py-1 rounded font-bold">Ans: Gangue / গ্যাঙ্গু</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EXTRA TOPPER GRADE CHALLENGE SECTION -->
+<section class="notebook-page rounded-2xl p-6 sm:p-10 border border-slate-200">
+<div class="notebook-line-left"></div>
+<div class="pl-6 sm:pl-12">
+<div class="border-b-2 border-dashed border-red-300 pb-4 mb-6">
+<h2 class="text-2xl font-black tracking-tight text-red-600 flex items-center gap-2">
+<span class="border-2 border-red-600 rounded-lg px-2 text-lg">💡</span>
+                            Topper's Self-Test Challenge <span class="text-xs bg-red-100 text-red-800 px-2 py-0.5 rounded font-bold uppercase">Critical Thinking</span>
+</h2>
+</div>
+<!-- 5 MCQs Formulated for Deep Revision -->
+<div class="space-y-6">
+<div class="pencil-box p-5 bg-indigo-50/10">
+<h4 class="font-bold text-sm text-slate-800 mb-3">T1. আলুর টক বা তামার পাত্রে সবুজ স্তর পড়ার ঘটনার সাথে নিচের কোন বিক্রিয়াটির মিল আছে?</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T1', false)">A. Combination Reaction</button>
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T1', true)">B. Oxidation / জারণ (Corrosion)</button>
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T1', false)">C. Displacement Reaction</button>
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T1', false)">D. None of the above</button>
+</div>
+<div class="hidden mt-2 text-xs text-emerald-800 bg-emerald-50 p-2 rounded" id="t1-answer">
+<strong>সঠিক উত্তর B:</strong> ক্ষয় বা মরচে পড়া এক প্রকারের জারণ বিক্রিয়া।
+                            </div>
+</div>
+<div class="pencil-box p-5 bg-indigo-50/10">
+<h4 class="font-bold text-sm text-slate-800 mb-3">T2. $CaCO_3$-এর সংকেত ভর নির্ণয় করো। (Ca = 40, C = 12, O = 16)</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T2', false)">A. 56 u</button>
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T2', false)">B. 84 u</button>
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T2', true)">C. 100 u</button>
+<button class="p-2.5 bg-white hover:bg-slate-50 border rounded text-left" onclick="alertTopper('T2', false)">D. 120 u</button>
+</div>
+<div class="hidden mt-2 text-xs text-emerald-800 bg-emerald-50 p-2 rounded" id="t2-answer">
+<strong>সঠিক উত্তর C:</strong> $40 + 12 + (16 \times 3) = 100\text{ u}$.
+                            </div>
+</div>
+</div>
+<!-- 3 Short Answer Questions with Expandable Answers -->
+<div class="mt-8 space-y-4">
+<h4 class="font-bold text-md text-slate-800 border-b border-dashed pb-2">✏️ Short Answer Questions (হাতেকলমে প্র্যাকটিস)</h4>
+<div class="bg-amber-50/30 p-4 rounded-xl border border-slate-200">
+<p class="text-xs font-bold text-slate-700">Q1. অ্যানোডাইজেশন প্রক্রিয়ায় বিদ্যুৎ প্রবাহের সাথে সাথে অ্যালুমিনিয়াম অক্সাইডের স্তরটি কীভাবে সাহায্য করে?</p>
+<button class="mt-2 text-[10px] bg-slate-900 text-white px-3 py-1 rounded hover:bg-slate-800 transition" onclick="toggleAnswer('sa1')">Topper's Answer Key</button>
+<div class="hidden mt-2 p-3 bg-white rounded border border-slate-200 text-xs text-slate-600 leading-relaxed" id="sa1">
+                                অ্যানোডাইজেশনের ফলে উৎপন্ন $Al_2O_3$-র পুরু স্তরটি অ্যালুমিনিয়ামকে বায়ু বা আর্দ্রতার সংস্পর্শে আসতে বাধা দেয়, ফলে এটি আর নতুন করে ক্ষয় হতে পারে না।
+                            </div>
+</div>
+<div class="bg-amber-50/30 p-4 rounded-xl border border-slate-200">
+<p class="text-xs font-bold text-slate-700">Q2. আইসোবারগুলি কেন রাসায়নিক বিক্রিয়াগুলোতে ভিন্ন ভিন্ন আচরণ করে?</p>
+<button class="mt-2 text-[10px] bg-slate-900 text-white px-3 py-1 rounded hover:bg-slate-800 transition" onclick="toggleAnswer('sa2')">Topper's Answer Key</button>
+<div class="hidden mt-2 p-3 bg-white rounded border border-slate-200 text-xs text-slate-600 leading-relaxed" id="sa2">
+                                আইসোবারগুলির ভর সংখ্যা এক হলেও তাদের <strong>পারমাণবিক সংখ্যা ও ইলেকট্রন বিন্যাস ভিন্ন হয়</strong>। যেহেতু রাসায়নিক ধর্ম মূলত ভ্যালেন্স ইলেকট্রন বিন্যাসের উপর নির্ভর করে, তাই এদের রাসায়নিক ধর্ম আলাদা।
+                            </div>
+</div>
+<div class="bg-amber-50/30 p-4 rounded-xl border border-slate-200">
+<p class="text-xs font-bold text-slate-700">Q3. সালফিউরিক অ্যাসিড ছাড়া অ্যানোডাইজেশন প্রক্রিয়া সফলভাবে করা সম্ভব কি?</p>
+<button class="mt-2 text-[10px] bg-slate-900 text-white px-3 py-1 rounded hover:bg-slate-800 transition" onclick="toggleAnswer('sa3')">Topper's Answer Key</button>
+<div class="hidden mt-2 p-3 bg-white rounded border border-slate-200 text-xs text-slate-600 leading-relaxed" id="sa3">
+                                না, সালফিউরিক অ্যাসিড উপযুক্ত তড়িৎ বিশ্লেষক হিসেবে কাজ করে আয়ন সংবহন করতে সাহায্য করে। এটি ছাড়া তড়িৎ বিশ্লেষণ ঘটবে না এবং অক্সাইড স্তর দ্রুত তৈরি হবে না।
+                            </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-8 px-4 mt-12 border-t border-slate-800 no-print">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<div>
+<p class="font-bold text-white mb-1">RRB NTPC/Group D Exam Study Engine</p>
+<p>Designed with ❤️ for top-tier government job preparation.</p>
+</div>
+<div class="flex gap-4">
+<a class="hover:underline hover:text-white" href="#section1">Atoms</a>
+<a class="hover:underline hover:text-white" href="#section2">Reactions</a>
+<a class="hover:underline hover:text-white" href="#section3">Metals</a>
+<a class="hover:underline hover:text-white" href="#section4">Test Engine</a>
+</div>
+</div>
+</footer>
+<script>
+        // Track CBT statistics
+        let solvedQuestions = {};
+        const totalQuestions = 8; // Number of interactive buttons available
+        
+        // Active visual state for chemistry interactive atom models
+        const elementsData = [
+            { name: "Hydrogen-1", protons: 1, neutrons: 0, symbol: "H" },
+            { name: "Helium-4", protons: 2, neutrons: 2, symbol: "He" },
+            { name: "Lithium-7", protons: 3, neutrons: 4, symbol: "Li" },
+            { name: "Beryllium-9", protons: 4, neutrons: 5, symbol: "Be" },
+            { name: "Boron-11", protons: 5, neutrons: 6, symbol: "B" },
+            { name: "Carbon-12", protons: 6, neutrons: 6, symbol: "C" },
+            { name: "Nitrogen-14", protons: 7, neutrons: 7, symbol: "N" },
+            { name: "Oxygen-16", protons: 8, neutrons: 8, symbol: "O" },
+            { name: "Fluorine-19", protons: 9, neutrons: 10, symbol: "F" },
+            { name: "Neon-20", protons: 10, neutrons: 10, symbol: "Ne" },
+            { name: "Sodium-23", protons: 11, neutrons: 12, symbol: "Na" },
+            { name: "Magnesium-24", protons: 12, neutrons: 12, symbol: "Mg" }
+        ];
+
+        function updateAtomicVisuals() {
+            const protons = parseInt(document.getElementById('protonRange').value);
+            const neutrons = parseInt(document.getElementById('neutronRange').value);
+            
+            // Update labels
+            document.getElementById('protonCountVal').textContent = protons;
+            document.getElementById('neutronCountVal').textContent = neutrons;
+            document.getElementById('electronCountVal').textContent = protons; // Neutral atom
+            
+            const totalMass = protons + neutrons;
+            document.getElementById('massNumberVal').textContent = totalMass + " u";
+            
+            // Find element name
+            let matchedElement = elementsData.find(el => el.protons === protons) || { name: "Unknown Isotope", symbol: "?" };
+            document.getElementById('elementName').textContent = `${matchedElement.name} (A = ${totalMass})`;
+
+            // Dynamically redraw Nucleus dots inside SVG
+            const nucleusGroup = document.getElementById('nucleusGroup');
+            nucleusGroup.innerHTML = '';
+            
+            // Render random protons (red) and neutrons (blue)
+            for (let i = 0; i < protons; i++) {
+                const cx = 100 + (Math.random() * 20 - 10);
+                const cy = 100 + (Math.random() * 20 - 10);
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute("cx", cx);
+                circle.setAttribute("cy", cy);
+                circle.setAttribute("r", "5.5");
+                circle.setAttribute("fill", "#dc2626"); // Red for Proton
+                circle.setAttribute("stroke", "#991b1b");
+                circle.setAttribute("stroke-width", "0.5");
+                nucleusGroup.appendChild(circle);
+            }
+            for (let i = 0; i < neutrons; i++) {
+                const cx = 100 + (Math.random() * 20 - 10);
+                const cy = 100 + (Math.random() * 20 - 10);
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute("cx", cx);
+                circle.setAttribute("cy", cy);
+                circle.setAttribute("r", "5.5");
+                circle.setAttribute("fill", "#2563eb"); // Blue for Neutron
+                circle.setAttribute("stroke", "#1e3a8a");
+                circle.setAttribute("stroke-width", "0.5");
+                nucleusGroup.appendChild(circle);
+            }
+        }
+
+        // Toggle Handwritten Mode fonts
+        function toggleHandwrittenStyle() {
+            const container = document.getElementById('notebookContainer');
+            const label = document.getElementById('styleLabel');
+            
+            if (container.classList.contains('handwritten-mode')) {
+                container.classList.remove('handwritten-mode');
+                label.textContent = "Clean Print";
+                label.className = "font-bold text-amber-400";
+            } else {
+                container.classList.add('handwritten-mode');
+                label.textContent = "Handwritten Mode";
+                label.className = "font-bold text-cyan-400";
+            }
+        }
+
+        // Cycle through paper textures
+        let currentThemeIndex = 0;
+        const themes = [
+            { name: "White Grid", bgClass: "bg-white", styleClass: "background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 24px 24px;" },
+            { name: "Soft Amber", bgClass: "bg-amber-50/70", styleClass: "background-image: radial-gradient(#d97706 0.5px, transparent 0.5px); background-size: 20px 20px;" },
+            { name: "Pure White", bgClass: "bg-white", styleClass: "" }
+        ];
+
+        function togglePaperTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            const theme = themes[currentThemeIndex];
+            
+            // Apply theme to all pages
+            const pages = document.querySelectorAll('.notebook-page');
+            pages.forEach(page => {
+                // Clear old bg classes
+                page.className = "notebook-page rounded-2xl p-6 sm:p-10 border border-slate-200 " + theme.bgClass;
+                page.setAttribute("style", theme.styleClass);
+            });
+            
+            document.getElementById('themeLabel').textContent = theme.name;
+        }
+
+        // Solve and evaluate dynamic quiz state
+        function checkAnswer(qId, selectedOption) {
+            const parent = event.currentTarget.parentNode;
+            const buttons = parent.querySelectorAll('.option-btn');
+            
+            // Visual check
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                if (btn.getAttribute('data-correct') === 'true') {
+                    btn.classList.add('bg-emerald-100', 'text-emerald-950', 'border-emerald-500', 'font-extrabold');
+                } else {
+                    btn.classList.add('opacity-50');
+                }
+            });
+
+            // Mark user choice red if wrong
+            const clickedBtn = event.currentTarget;
+            if (clickedBtn.getAttribute('data-correct') !== 'true') {
+                clickedBtn.classList.add('bg-rose-100', 'text-rose-950', 'border-rose-500', 'font-extrabold');
+            }
+
+            // Show feedback explain block
+            const card = parent.parentNode;
+            const feedback = card.querySelector('.feedback');
+            if (feedback) {
+                feedback.classList.remove('hidden');
+            }
+
+            // Update stats
+            if (!solvedQuestions[qId]) {
+                solvedQuestions[qId] = clickedBtn.getAttribute('data-correct') === 'true' ? 'correct' : 'wrong';
+                updateScoreboard();
+            }
+        }
+
+        function updateScoreboard() {
+            const solvedCount = Object.keys(solvedQuestions).length;
+            const correctCount = Object.values(solvedQuestions).filter(status => status === 'correct').length;
+            
+            document.getElementById('solvedCount').textContent = solvedCount;
+            
+            const accuracy = solvedCount > 0 ? Math.round((correctCount / solvedCount) * 100) : 0;
+            document.getElementById('scoreText').textContent = accuracy + "%";
+        }
+
+        // Topper short-answer toggling
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
+
+        function alertTopper(id, isCorrect) {
+            const answerBox = document.getElementById(`${id.toLowerCase()}-answer`);
+            answerBox.classList.remove('hidden');
+            
+            const clickedBtn = event.currentTarget;
+            const parent = clickedBtn.parentNode;
+            const buttons = parent.querySelectorAll('button');
+            
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('opacity-50');
+            });
+            
+            if (isCorrect) {
+                clickedBtn.classList.remove('opacity-50');
+                clickedBtn.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900', 'font-bold');
+            } else {
+                clickedBtn.classList.remove('opacity-50');
+                clickedBtn.classList.add('bg-rose-100', 'border-rose-500', 'text-rose-900', 'font-bold');
+            }
+        }
+
+        // Initialize state inside window load hook
+        window.onload = function() {
+            updateAtomicVisuals();
+        }
+    </script>
+<hr/><h1>Part 2</h1>
+<section class="a4-page">
+<h1>📝 রসায়ন রিভিশন বোর্ড নোটস (প্রশ্নোত্তর ও মূল ধারণা)</h1>
+<h2>অধ্যায় ১: ধাতুর অ্যানোডাইজেশন ও রাসায়নিক বিক্রিয়া</h2>
+<div class="qna-box">
+<p class="question">Question 1 / প্রশ্ন ১: অ্যালুমিনিয়ামের অ্যানোডাইজেশন (Anodization) প্রক্রিয়ায় সালফিউরিক অ্যাসিডের ভূমিকা কী?</p>
+<p class="options">(A) এটি অ্যালুমিনিয়াম ক্লোরাইডের সাথে বিক্রিয়া করে | (B) এটি অ্যালুমিনিয়ামের জারণ রোধ করে | (C) এটি অ্যালুমিনিয়ামকে সম্পূর্ণভাবে দ্রবীভূত করে | (D) এটি একটি ইলেকট্রোলাইট হিসেবে কাজ করে যা একটি মোটা অক্সিডাইজড স্তর তৈরি করতে সাহায্য করে</p>
+<p class="answer">✓ উত্তর: D</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> অ্যানোডাইজিং হলো একটি তড়িৎ-রাসায়নিক প্রক্রিয়া যেখানে লঘু সালফিউরিক অ্যাসিড তড়িৎ-বিশ্লেষ্য (Electrolyte) হিসেবে কাজ করে অ্যালুমিনিয়ামের উপর একটি নিয়ন্ত্রিত এবং মোটা অ্যালুমিনিয়াম অক্সাইডের ($Al_2O_3$) সুরক্ষামূলক স্তর তৈরি করে।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 8 / প্রশ্ন ৮: অ্যালুমিনিয়াম ধাতুকে অ্যানোডাইজিং করার উদ্দেশ্য কী?</p>
+<p class="options">(A) একে উজ্জ্বল করা | (B) এর ওজন কমানো | (C) একটি সুরক্ষামূলক অক্সিডাইজড স্তর তৈরি করা | (D) এর পরিবাহিতা বৃদ্ধি করা</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> অ্যানোডাইজিং করার মাধ্যমে অ্যালুমিনিয়ামের উপর অ্যালুমিনিয়াম অক্সাইডের একটি প্রলেপ দেওয়া হয় যা ধাতুকে ক্ষয় থেকে রক্ষা করে।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 11 / প্রশ্ন ১১: বাতাসের সংস্পর্শে এলে কোন ধাতুর উপরিভাগে সুরক্ষামূলক অক্সাইড স্তর তৈরি হয়?</p>
+<p class="options">(A) অ্যালুমিনিয়াম | (B) লোহা | (C) তামা | (D) রূপা</p>
+<p class="answer">✓ উত্তর: A</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> অ্যালুমিনিয়াম বাতাসের অক্সিজেনের সাথে দ্রুত বিক্রিয়া করে $Al_2O_3$-এর একটি অদৃশ্য ও শক্ত স্তর তৈরি করে যা ভেতরের ধাতুকে আর জারিত হতে দেয় না।</p>
+</div>
+<div class="concept-section">
+<h3>🧠 গভীর ধারণা ১: অ্যালুমিনিয়াম অ্যানোডাইজেশন (Anodization)</h3>
+<p class="explanation">অ্যানোডাইজেশন হলো এমন একটি প্রক্রিয়া যার মাধ্যমে ধাতুর (প্রধানত অ্যালুমিনিয়াম) উপরিভাগে প্রকৃতির স্বাভাবিক জারণ প্রক্রিয়ার চেয়েও অনেক গুণ মোটা এবং স্থায়ী <span class="highlight">অক্সাইড স্তর ($Al_2O_3$)</span> তৈরি করা হয়। এর ফলে ধাতুটির ক্ষয়রোধ ক্ষমতা বহুগুণ বৃদ্ধি পায়।</p>
+<div class="sketch-container">
+<div class="flowchart">
+<span class="flow-step">অ্যালুমিনিয়াম (অ্যানোড)</span>
+<span class="arrow">➔</span>
+<span class="flow-step">লঘু $H_2SO_4$ (তড়িৎ-বিশ্লেষ্য)</span>
+<span class="arrow">➔</span>
+<span class="highlight">মোটা $Al_2O_3$ সুরক্ষামূলক স্তর</span>
+</div>
+</div>
+<p class="example-box">💡 মনে রাখার ট্রিক: অ্যানোডাইজেশন = অ্যানোড হিসেবে অ্যালুমিনিয়াম ব্যবহার করে অক্সাইডের প্রলেপ তৈরি করা!</p>
+</div>
+</section>
+<section class="a4-page">
+<h2>অধ্যায় ২: পরমাণুর গঠন ও পর্যায় সারণির প্রাথমিক ধারণা</h2>
+<div class="qna-box">
+<p class="question">Question 2 / প্রশ্ন ২: নিচের কোনটি একটি মৌলের পারমাণবিক সংখ্যাকে (Atomic Number) সঠিকভাবে সংজ্ঞায়িত করে?</p>
+<p class="options">(A) নিউট্রন সংখ্যা | (B) নিউক্লিয়াসে প্রোটন সংখ্যা | (C) পরমাণুর মোট ভর | (D) প্রোটন এবং নিউট্রনের যোগফল</p>
+<p class="answer">✓ উত্তর: B</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 5 / প্রশ্ন ৫: একটি মৌলের পারমাণবিক সংখ্যা নিচের কোনটির সমান?</p>
+<p class="options">(A) ইলেকট্রন সংখ্যা | (B) নিউট্রন + প্রোটন সংখ্যা | (C) নিউট্রন সংখ্যা | (D) প্রোটন সংখ্যা</p>
+<p class="answer">✓ উত্তর: D</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> কোনো পরমাণুর নিউক্লিয়াসে উপস্থিত প্রোটন সংখ্যাই হলো তার পারমাণবিক সংখ্যা। পারমাণবিক সংখ্যা সর্বদা নিউক্লিয়াসের প্রোটন সংখ্যার সমান হয়।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 10 / প্রশ্ন ১০: একটি পরমাণুতে ১৭টি ইলেকট্রন এবং ১৮টি নিউট্রন আছে। প্রোটন সংখ্যা কত?</p>
+<p class="options">(A) 17 | (B) 18 | (C) 35 | (D) 1</p>
+<p class="answer">✓ উত্তর: A</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> নিস্তড়িৎ পরমাণুতে ইলেকট্রন সংখ্যা এবং প্রোটন সংখ্যা সর্বদা সমান থাকে। এখানে ১৭টি ইলেকট্রন মানে ১৭টি প্রোটন আছে, যা <span class="highlight">ক্লোরিন ($_{17}Cl$)</span> মৌলকে নির্দেশ করে।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 15 / প্রশ্ন ১৫: একটি মৌলের পারমাণবিক সংখ্যা কী প্রকাশ করে?</p>
+<p class="options">(A) নিউট্রন সংখ্যা | (B) নিউক্লিয়ন সংখ্যা | (C) ভর সংখ্যা | (D) পরমাণুতে প্রোটন সংখ্যা</p>
+<p class="answer">✓ উত্তর: D</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 20 / প্রশ্ন ২০: মৌল শনাক্ত করুন: মৌল A-তে ২০টি প্রোটন এবং B-তে ১৯টি প্রোটন আছে।</p>
+<p class="options">(A) A = Potassium, B = Calcium | (B) A = Calcium, B = Potassium | (C) A = Argon, B = Potassium | (D) A = Calcium, B = Argon</p>
+<p class="answer">✓ উত্তর: B</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> পারমাণবিক সংখ্যা ২০ হলো <span class="highlight">ক্যালসিয়াম (Ca)</span> এবং ১৯ হলো <span class="highlight">পটাশিয়াম (K)</span>।</p>
+</div>
+<div class="concept-section">
+<h3>🧠 গভীর ধারণা ২: পারমাণবিক কাঠামোর মূল সূত্রসমূহ</h3>
+<p class="explanation">পরমাণুর কেন্দ্রস্থলে থাকে নিউক্লিয়াস, যেখানে প্রোটন ও নিউট্রন অবস্থান করে। নিস্তড়িৎ বা সাধারণ অবস্থায় পরমাণুর প্রোটন সংখ্যা ও ইলেকট্রন সংখ্যা সমান হয়।</p>
+<div class="example-box">
+                📌 <strong>গুরুত্বপূর্ণ সূত্রাবলী:</strong><br/>
+                ১. পারমাণবিক সংখ্যা ($Z$) = প্রোটন সংখ্যা = ইলেকট্রন সংখ্যা (নিস্তড়িৎ পরমাণুর জন্য)<br/>
+                ২. ভর সংখ্যা ($A$) = প্রোটন সংখ্যা + নিউট্রন সংখ্যা<br/>
+                ৩. নিউট্রন সংখ্যা = $A - Z$
+            </div>
+</div>
+</section>
+<section class="a4-page">
+<h2>অধ্যায় ৩: সক্রিয়তা সিরিজ (Reactivity Series) ও প্রতিস্থাপন বিক্রিয়া</h2>
+<div class="qna-box">
+<p class="question">Question 3 / প্রশ্ন ৩: সক্রিয়তা সিরিজে ক্যালসিয়াম, পটাশিয়াম এবং অ্যালুমিনিয়ামের মধ্যে কোনটি সবচেয়ে বেশি সক্রিয়?</p>
+<p class="options">(A) অ্যালুমিনিয়াম | (B) ক্যালসিয়াম | (C) পটাশিয়াম | (D) সবগুলি সমানভাবে সক্রিয়</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> সক্রিয়তা বা রিঅ্যাক্টিভিটি সিরিজে পটাশিয়াম সবচেয়ে উপরের দিকে থাকে, তাই এটি এদের মধ্যে সবচেয়ে বেশি সক্রিয়।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 6 / প্রশ্ন ৬: জিংক কপার সালফেট দ্রবণ থেকে কপারকে প্রতিস্থাপিত করে কারণ?</p>
+<p class="options">(A) জিংক কপারের চেয়ে কম সক্রিয় | (B) জিংক কপারের চেয়ে বেশি সক্রিয় | (C) কপার বেশি স্থিতিশীল | (D) উভয়ই সমান সক্রিয়</p>
+<p class="answer">✓ উত্তর: B</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> এটি একটি সিঙ্গেল ডিসপ্লেসমেন্ট রিঅ্যাকশন (Single Displacement Reaction), যেখানে বেশি সক্রিয় ধাতু (জিংক) কম সক্রিয় ধাতুকে (কপার) তার লবণ থেকে সরিয়ে দেয়।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 21 / প্রশ্ন ২১: ধাতুর সক্রিয়তা সিরিজ কী প্রকাশ করে?</p>
+<p class="options">(A) গলনাঙ্কের উর্ধ্বক্রম | (B) ঘনত্বের উর্ধ্বক্রম | (C) সক্রিয়তার নিম্নক্রম | (D) পরিবাহিতার উর্ধ্বক্রম</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> সক্রিয়তা সিরিজ ধাতুর রাসায়নিক সক্রিয়তার উপর ভিত্তি করে তাদের উপর থেকে নিচে (নিম্নক্রমে) সাজায়।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 24 / প্রশ্ন ২৪: কোন ধাতু আয়রন সালফাইড থেকে আয়রনকে প্রতিস্থাপিত করবে?</p>
+<p class="options">(A) তামা | (B) রূপা | (C) ক্রোমিয়াম | (D) জিংক (দস্তা)</p>
+<p class="answer">✓ উত্তর: D</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> সক্রিয়তা সিরিজে জিংক আয়রনের উপরে অবস্থান করায় এটি আয়রনকে তার যৌগ থেকে সরিয়ে দিতে পারে।</p>
+</div>
+<div class="concept-section">
+<h3>🧠 গভীর ধারণা ৩: ধাতুর সক্রিয়তা সিরিজ ও প্রতিস্থাপন</h3>
+<p class="explanation">ধাতুসমূহের সক্রিয়তার অবরোহী বা নিম্নক্রমকে সক্রিয়তা সিরিজ বলা হয়। এই সিরিজে উপরে থাকা ধাতু নিচে থাকা ধাতুকে তার লবণের দ্রবণ থেকে তাড়িয়ে নিজে জায়গা দখল করে।</p>
+<table style="margin-top: 10px;">
+<tr>
+<th>ধাতু (চিহ্ন)</th>
+<th>সক্রিয়তার অবস্থান</th>
+<th>বিক্রিয়ার প্রকৃতি</th>
+</tr>
+<tr style="color: var(--red-marker);">
+<td>Potassium (K), Sodium (Na), Calcium (Ca)</td>
+<td>সর্বোচ্চ সক্রিয় (Top)</td>
+<td>তীব্র বিক্রিয়াশীল</td>
+</tr>
+<tr style="color: var(--blue-gel);">
+<td>Zinc (Zn), Iron (Fe)</td>
+<td>মাঝারি সক্রিয় (Middle)</td>
+<td>ধীরে বিক্রিয়া করে</td>
+</tr>
+<tr style="color: var(--pencil-gray);">
+<td>Copper (Cu), Silver (Ag), Gold (Au)</td>
+<td>সর্বনিম্ন সক্রিয় (Bottom)</td>
+<td>সাধারণত বিক্রিয়া করে না</td>
+</tr>
+</table>
+<div class="example-box">
+                🔬 <strong>বিক্রিয়ার উদাহরণ:</strong><br/>
+                $Zn + CuSO_4 \rightarrow ZnSO_4 + Cu$ (জিংক কপারকে তাড়িয়ে দিল, কারণ $Zn &gt; Cu$)<br/>
+                $Cu + ZnSO_4 \rightarrow$ ❌ কোনো বিক্রিয়া হবে না!
+            </div>
+</div>
+</section>
+<section class="a4-page">
+<h2>অধ্যায় ৪: রাসায়নিক গণনা, সংকেত ভর ও বিক্রিয়ার প্রকারভেদ</h2>
+<div class="qna-box">
+<p class="question">Question 4 / প্রশ্ন ৪: সোডিয়াম ক্লোরাইডের (NaCl) ফর্মুলা ইউনিট ভর কত?</p>
+<p class="options">(A) 23 units | (B) 35.5 units | (C) 58.5 units | (D) 40 units</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> সোডিয়ামের পারমাণবিক ভর ২৩ এবং ক্লোরিনের ৩৫.৫। যেহেতু NaCl একটি আয়নীয় যৌগ, তাই এদের যোগফল <span class="highlight">(২৩ + ৩৫.৫) = ৫৮.৫ ইউনিট</span> হলো এর ফর্মুলা ইউনিট ভর।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 9 / প্রশ্ন ৯: $Fe + CuSO_4 \rightarrow FeSO_4 + Cu$, বিক্রিয়াটিতে আয়রনের (Fe) কী ঘটে?</p>
+<p class="options">(A) এটি অপরিবর্তিত থাকে | (B) এটি অনুঘটক হিসেবে কাজ করে | (C) এটি জারিত হয় | (D) এটি বিজারিত হয়</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> আয়রন যখন কপার সালফেট থেকে সালফেট মূলককে গ্রহণ করে আয়রন সালফেট তৈরি করে, তখন এতে ইলেকট্রন বর্জন বা অক্সিজেন সমৃদ্ধ মূলক ($SO_4^{2-}$) যুক্ত হওয়ায় এটি <span class="highlight">জারিত (Oxidized)</span> হয়।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 23 / প্রশ্ন ২৩: বেরিয়াম ক্লোরাইড এবং সোডিয়াম সালফেটের বিক্রিয়ায় কোন ধরণের বিক্রিয়া ঘটে?</p>
+<p class="options">(A) প্রতিস্থাপন বিক্রিয়া | (B) সংযোগ বিক্রিয়া | (C) দ্বিপতিস্থাপন বিক্রিয়া | (D) বিয়োজন বিক্রিয়া</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> $BaCl_2 + Na_2SO_4 \rightarrow BaSO_4 \downarrow + 2NaCl$। এখানে আয়ন বিনিময়ের মাধ্যমে সাদা বেরিয়াম সালফেটের অদক্ষেপ পড়ে, তাই এটি দ্বিপতিস্থাপন বিক্রিয়া (Double Displacement Reaction)।</p>
+</div>
+<div class="concept-section">
+<h3>🧠 গভীর ধারণা ৪: ফর্মুলা ইউনিট ভর বনাম আণবিক ভর</h3>
+<p class="explanation">যেসব যৌগ কঠিন অবস্থায় স্বাধীন অণু হিসেবে থাকে না বরং ত্রিমাত্রিক আয়নীয় ল্যাটিস গঠন করে (যেমন $NaCl$), তাদের ক্ষেত্রে আণবিক ভর শব্দের পরিবর্তে <strong>"ফর্মুলা ইউনিট ভর"</strong> ব্যবহার করা যুক্তিযুক্ত।</p>
+<h3>🧠 গভীর ধারণা ৫: দ্বিপতিস্থাপন বিক্রিয়া (Double Displacement)</h3>
+<p class="explanation">যে বিক্রিয়ায় দুটি যৌগের উপাদান বা আয়নসমূহ একে অপরের সাথে স্থান বিনিময় করে নতুন দুটি যৌগ উৎপন্ন করে, তাকে দ্বিপতিস্থাপন বিক্রিয়া বলে। সাধারণত এতে অধঃক্ষেপ (Precipitate) তৈরি হয়।</p>
+<div class="example-box">
+                💚 <strong>স্মরণীয় সমীকরণ:</strong><br/>
+                $\overset{\color{red}{Ba^{2+}}}{\color{red}{BaCl_2}} + \overset{\color{blue}{SO_4^{2-}}}{\color{blue}{Na_2SO_4}} \rightarrow \color{purple}{BaSO_4 \downarrow} \text{ (সাদা অধঃক্ষেপ)} + 2NaCl$
+            </div>
+</div>
+</section>
+<section class="a4-page">
+<h2>অধ্যায় ৫: অ্যাসিড, ক্ষারক এবং চুনকামের রসায়ন</h2>
+<div class="qna-box">
+<p class="question">Question 7 / প্রশ্ন ৭: ক্যালসিয়াম হাইড্রোক্সাইড বাতাসের $CO_2$-এর সাথে ধীরে ধীরে বিক্রিয়া করে চুনকামের জন্য কোন পদার্থের পাতলা স্তর তৈরি করে?</p>
+<p class="options">(A) ক্যালসিয়াম অক্সাইড | (B) ক্যালসিয়াম কার্বোনেট | (C) ক্যালসিয়াম ক্লোরাইড | (D) ক্যালসিয়াম সালফেট</p>
+<p class="answer">✓ উত্তর: B</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> $Ca(OH)_2 + CO_2 \rightarrow CaCO_3 + H_2O$। উৎপন্ন <span class="highlight">ক্যালসিয়াম কার্বোনেট ($CaCO_3$)</span> দেয়ালের উপর সাদা উজ্জ্বল আস্তরণ তৈরি করে।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 13 / প্রশ্ন ১৩: একটি অধাতব অক্সাইড এবং ক্ষারের বিক্রিয়ায় কী উৎপন্ন হয়?</p>
+<p class="options">(A) অ্যাসিড এবং জল | (B) লবণ এবং জল | (C) হাইড্রোজেন গ্যাস | (D) Metal oxide</p>
+<p class="answer">✓ উত্তর: B</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> অধাতব অক্সাইডগুলি (যেমন $CO_2$) আম্লিক প্রকৃতির হয়, তাই ক্ষারের সাথে বিক্রিয়ায় এরা লবণ ও জল উৎপন্ন করে (প্রশমন বিক্রিয়া)।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 17 / প্রশ্ন ১৭: চুন জলের (Lime water) সাথে কার্বন ডাইঅক্সাইড বিক্রিয়া করলে কী উৎপন্ন হয়?</p>
+<p class="options">(A) ক্যালসিয়াম কার্বোনেট | (B) ক্যালসিয়াম hydroxide | (C) ক্যালসিয়াম ক্লোরাইড | (D) সোডিয়াম কার্বোনেট</p>
+<p class="answer">✓ উত্তর: A</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 26 / প্রশ্ন ২৬: সঠিক ভূমিকা অনুযায়ী মেলাও: Copper Oxide ($CuO$), $HCl$, $CuCl_2$, $H_2O$</p>
+<p class="options">Option C (1-Basic Oxide, 2-Acid, 3-Salt, 4-Water/Neutralization)</p>
+<p class="answer">✓ উত্তর: Option C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> ধাতব অক্সাইড ($CuO$) ক্ষারীয় প্রকৃতির। এটি অ্যাসিডের ($HCl$) সাথে বিক্রিয়া করে লবণ ($CuCl_2$) ও জল ($H_2O$) উৎপন্ন করে। এটি একটি আদর্শ প্রশমন বিক্রিয়া (Neutralization Reaction)।</p>
+</div>
+<div class="concept-section">
+<h3>🧠 গভীর ধারণা ৬: চুনকাম ও দেয়াল উজ্জ্বল হওয়ার রসায়ন</h3>
+<p class="explanation">পোড়াচুন বা ক্যালসিয়াম অক্সাইডে ($CaO$) জল দিলে কলিচুন বা ক্যালসিয়াম হাইড্রোক্সাইড [$Ca(OH)_2$] তৈরি হয়। এটি যখন দেয়ালে লাগানো হয়, তখন বাতাসের কার্বন ডাইঅক্সাইডের সাথে ২-৩ দিনে ধীর বিক্রিয়া করে শক্ত চকচকে মার্বেল পাথর বা ক্যালসিয়াম কার্বোনেটের প্রলেপ সৃষ্টি করে।</p>
+<div class="example-box">
+                📝 <strong>ধাপসমূহ:</strong><br/>
+                ১. $CaO + H_2O \rightarrow Ca(OH)_2$ (কলিচুন প্রস্তুতকরণ)<br/>
+                ২. $Ca(OH)_2 + CO_2 \rightarrow \color{red}{CaCO_3} + H_2O$ (দেয়ালে চকচকে ভাব আনা)
+            </div>
+</div>
+</section>
+<section class="a4-page">
+<h2>অধ্যায় ৬: আইসোটোপ, আইসোবার এবং সমযোজী বন্ধন</h2>
+<div class="qna-box">
+<p class="question">Question 14 / প্রশ্ন ১৪: কোন অধাতুটি ধাতুর মতো উজ্জ্বলতা প্রদর্শন করে?</p>
+<p class="options">(A) সালফার | (B) ফ্লোরিন | (C) ক্লোরিন | (D) আয়োডিন</p>
+<p class="answer">✓ উত্তর: D</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> সাধারণত অধাতুগুলি অনুজ্জ্বল হলেও <span class="highlight">আয়োডিন (Iodine)</span> একটি ব্যতিক্রমী অধাতু যা ধাতুর মতো চকচকে ও দ্যুতিময় হয়।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 16 / প্রশ্ন ১৬: আইসোবারগুলির ভর সংখ্যা একই হওয়া সত্ত্বেও কেন তারা বিভিন্ন রাসায়নিক ধর্ম প্রদর্শন করে?</p>
+<p class="options">(A) নিউট্রন সংখ্যা আলাদা | (B) একই পারমাণবিক সংখ্যা | (C) কারণ তাদের পারমাণবিক সংখ্যা এবং ইলেকট্রন বিন্যাস আলাদা | (D) তাদের ইলেকট্রন বিন্যাস একই</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> আইসোবারদের ভর সংখ্যা এক হলেও পারমাণবিক সংখ্যা (প্রোটন সংখ্যা) আলাদা হয়, যার ফলে তাদের ইলেকট্রন বিন্যাস ভিন্ন হয় এবং তারা ভিন্ন রাসায়নিক ধর্ম দেখায়। যেহেতু রাসায়নিক ধর্ম মূলত ভ্যালেন্স ইলেকট্রন বিন্যাসের উপর নির্ভরশীল।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 18 / প্রশ্ন ১৮: নিচের কোন সমযোজী যৌগে সবচেয়ে কম সংখ্যক শেয়ার্ড ইলেকট্রন জোড় থাকবে?</p>
+<p class="options">(A) হাইড্রোজেন ($H_2$) | (B) অক্সিজেন ($O_2$) | (C) নাইট্রোজেন ($N_2$) | (D) মিথেন ($CH_4$)</p>
+<p class="answer">✓ উত্তর: A</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> হাইড্রোজেন অণুতে মাত্র একটি একক বন্ধন (Single Bond) থাকে অর্থাৎ ২টিক ইলেকট্রন বা ১টি জোড় শেয়ার হয়। বাকিদের ক্ষেত্রে: $O_2$ তে ২টি জোড় (দ্বিবন্ধন), $N_2$ তে ৩টি জোড় (ত্রিবন্ধন), এবং $CH_4$ এ ৪টি একক বন্ধন (৪টি জোড়) থাকে।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 19 / প্রশ্ন ১৯: একটি মৌলের অণু কী দিয়ে গঠিত হয়?</p>
+<p class="options">(A) বিভিন্ন ধরণের পরমাণু | (B) একই ধরণের পরমাণু | (C) জটিল পরমাণু | (D) শুধুমাত্র প্রোটন</p>
+<p class="answer">✓ উত্তর: B</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> মৌলের অণু (যেমন $O_2$, $H_2$) একই ধরণের পরমাণু দিয়ে গঠিত হয়, অন্যদিকে যৌগের অণু (যেমন $H_2O$, $CH_4$) বিভিন্ন ধরণের পরমাণু দিয়ে গঠিত হয়।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 22 / প্রশ্ন ২২: একটি মৌলের আইসোটোপগুলির কীসের সংখ্যা সমান থাকে?</p>
+<p class="options">(A) প্রোটন | (B) নিউট্রন | (C) নিউক্লিয়াস | (D) ভর সংখ্যা</p>
+<p class="answer">✓ উত্তর: A</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> আইসোটোপের ক্ষেত্রে পারমাণবিক সংখ্যা বা প্রোটন সংখ্যা সমান থাকে কিন্তু নিউট্রন সংখ্যা বা ভর সংখ্যা আলাদা হয়। (যেমন: $_{1}^{1}H, _{1}^{2}H, _{1}^{3}H$)</p>
+</div>
+</section>
+<section class="a4-page">
+<h2>অধ্যায় ৭: রসায়নের ইতিহাস ও ধাতুবিদ্যার প্রাথমিক পরিভাষা</h2>
+<div class="qna-box">
+<p class="question">Question 12 / প্রশ্ন ১২: সেই বিজ্ঞানীর নাম বলুন যিনি মৌলকে এমন পদার্থ হিসেবে সংজ্ঞায়িত করেছিলেন যা রাসায়নিক বিক্রিয়ার মাধ্যমে সহজ কোনো রূপে ভেঙে ফেলা যায় না?</p>
+<p class="options">(A) রবার্ট বয়েল | (B) চার্লস ডারউইন | (C) অ্যান্টনি ল্যাভয়েশিয়ে | (D) রবার্ট হুক</p>
+<p class="answer">✓ উত্তর: C</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> আধুনিক রসায়নের জনক <span class="highlight">অ্যান্টনি ল্যাভয়েশিয়ে (Antoine Lavoisier)</span> মৌলের এই আধুনিক ও বৈজ্ঞানিক সংজ্ঞাটি প্রদান করেছিলেন।</p>
+</div>
+<div class="qna-box">
+<p class="question">Question 25 / প্রশ্ন ২৫: আকরিকের মধ্যে থাকা বালি, মাটির মতো অবাঞ্ছিত অপদ্রব্যগুলিকে কী বলা হয়?</p>
+<p class="options">(A) স্ল্যাগ | (B) ফ্লাক্স | (C) সংকর ধাতু | (D) গ্যাঙ্গু</p>
+<p class="answer">✓ উত্তর: D</p>
+<p class="explanation"><strong>ব্যাখ্যা:</strong> খনি থেকে উত্তোলিত আকরিকের সাথে মিশে থাকা কাদা, বালি, পাথর ইত্যাদি প্রাকৃতিক অপদ্রব্য বা অশুদ্ধিগুলিকে সামগ্রিকভাবে <span class="highlight">গ্যাঙ্গু (Gangue)</span> বা খনিজ মল বলা হয়।</p>
+</div>
+<div class="concept-section">
+<h3>📊 সংক্ষিপ্ত সারসংক্ষেপ টেবিল (Quick Revision Matrix)</h3>
+<table>
+<thead>
+<tr>
+<th>বিষয় / টার্ম</th>
+<th>মূল কথা (Key Concept)</th>
+<th>সহজ উদাহরণ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong style="color:var(--red-marker);">আইসোটোপ</strong></td>
+<td>প্রোটন সংখ্যা সমান, ভর সংখ্যা ভিন্ন</td>
+<td>প্লোটিয়াম, ডিউটেরিয়াম ($^1H, ^2H$)</td>
+</tr>
+<tr>
+<td><strong style="color:var(--red-marker);">আইসোবার</strong></td>
+<td>ভর সংখ্যা সমান, প্রোটন সংখ্যা ভিন্ন</td>
+<td>$_{18}^{40}Ar$ এবং $_{20}^{40}Ca$</td>
+</tr>
+<tr>
+<td><strong style="color:var(--red-marker);">গ্যাঙ্গু</strong></td>
+<td>আকরিকে থাকা বালি-মাটির অশুদ্ধি</td>
+<td>আকরিকের সাথে থাকা সিলিকা ($SiO_2$)</td>
+</tr>
+<tr>
+<td><strong style="color:var(--red-marker);">সমযোজী বন্ধন</strong></td>
+<td>ইলেকট্রন জোড় ভাগাভাগি (Sharing)</td>
+<td>$H-H$ ($H_2$ অণুতে ১ জোড় ইলেকট্রন)</td>
+</tr>
+</tbody>
+</table>
+<div class="example-box" style="text-align: center; font-size: 18px; border-style: dotted;">
+                🎯 পরীক্ষার জন্য সেরা টিপস: সংকেত লেখার সময় যোজ্যতা ঠিকভাবে বিনিময় করো এবং বিক্রিয়া সমতা বিধান (Balancing) করতে ভুলো না!
+            </div>
+</div>
+<p style="text-align: center; color: var(--pencil-gray); font-family: 'Caveat', cursive; margin-top: 50px; font-size: 20px;">--- End of Study Board Notes ---</p>
+</section>
+</body>
+</html>
