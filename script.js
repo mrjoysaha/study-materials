@@ -39,6 +39,11 @@ file:"physics/geometry.html"
    
 
     "🧪 Chemistry":[
+       
+        {
+            title:"Inorganic Chemistry (Session 1)",
+            file:"chemistry/inorganic/RRB NTPC General Science - Inorganic Chemistry (Session 1).html"
+        },
 
         {
             title:"Inorganic Chemistry (Session 6)",
