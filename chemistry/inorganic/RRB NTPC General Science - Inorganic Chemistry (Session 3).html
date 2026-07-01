@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Science PYQ Board (Q947 - Q980) - Handwritten Study Notes</title>
+  
+  <!-- TailWind CSS for base layout utility -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for organic handwriting doodles & utility icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Atma (Playful Bengali Handwriting), Kalam (Exquisite English Handwriting), Hind Siliguri (Clean Bengali fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;600;700&family=Kalam:wght@300;400;700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global Styles & Handwriting Typography Setup */
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+    
+    .font-handwritten {
+      font-family: 'Atma', 'Kalam', cursive, sans-serif;
+    }
+
+    .font-kalam {
+      font-family: 'Kalam', cursive, sans-serif;
+    }
+
+    /* Paper/Notebook Styling */
+    .notebook-page {
+      background-color: #ffffff;
+      background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+      background-size: 24px 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border-radius: 8px;
+    }
+
+    /* Red vertical margin line mimicking real notebooks */
+    .notebook-page::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 45px;
+      width: 2px;
+      height: 100%;
+      background-color: rgba(239, 68, 68, 0.4);
+    }
+
+    /* Color Palette Styles */
+    .marker-red {
+      color: #dc2626; /* Deep Red Marker */
+      font-weight: 700;
+    }
+    
+    .gel-blue {
+      color: #1d4ed8; /* Indigo/Royal Blue Gel Pen */
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .ink-green {
+      color: #047857; /* Rich Emerald Green Ink */
+      font-weight: 600;
+    }
+
+    .highlight-yellow {
+      background: linear-gradient(104deg, rgba(254, 240, 138, 0.85) 0%, rgba(254, 240, 138, 0.7) 100%);
+      border-radius: 4px 15px 4px 15px;
+      padding: 2px 8px;
+      display: inline;
+    }
+
+    .highlight-green {
+      background: linear-gradient(104deg, rgba(187, 247, 208, 0.85) 0%, rgba(187, 247, 208, 0.7) 100%);
+      border-radius: 12px 4px 12px 4px;
+      padding: 2px 8px;
+      display: inline;
+    }
+
+    /* Custom Borders for Doodles */
+    .hand-drawn-border {
+      border: 3px solid #4b5563;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+
+    .sketch-bg {
+      background-color: #fafaf9;
+    }
+
+    /* Print-ready adjustments */
+    @media print {
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .notebook-page {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 20px !important;
+        page-break-after: always;
+      }
+      .notebook-page::before {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-stone-100 min-h-screen text-stone-800 antialiased font-sans">
+
+  <!-- Interactive Navigation / Header -->
+  <header class="bg-gradient-to-r from-teal-700 via-emerald-700 to-cyan-800 text-white shadow-md py-6 px-4 md:px-8 no-print sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold font-handwritten tracking-wide flex items-center gap-3">
+          <i class="fa-solid fa-graduation-cap text-yellow-300"></i> General Science PYQ Analysis
+        </h1>
+        <p class="text-sm md:text-base opacity-90 mt-1 font-kalam">Q947 to Q980 • অধ্যায়ভিত্তিক হাতে লেখা ডিজিটাল স্টাডি নোট ও কুইজ বোর্ড</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <button id="btnNotes" class="bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold px-4 py-2 rounded-lg transition shadow flex items-center gap-2">
+          <i class="fa-solid fa-book-open"></i> স্টাডি নোটস
+        </button>
+        <button id="btnQuiz" class="bg-stone-800 hover:bg-stone-700 text-white font-semibold px-4 py-2 rounded-lg transition shadow border border-stone-600 flex items-center gap-2">
+          <i class="fa-solid fa-circle-question"></i> রিভিশন কুইজ
+        </button>
+        <button id="btnCheatSheet" class="bg-stone-800 hover:bg-stone-700 text-white font-semibold px-4 py-2 rounded-lg transition shadow border border-stone-600 flex items-center gap-2">
+          <i class="fa-solid fa-diagram-project"></i> কুইক মাইন্ডম্যাপ
+        </button>
+        <button onclick="window.print()" class="bg-white hover:bg-stone-100 text-teal-800 font-bold px-4 py-2 rounded-lg transition shadow flex items-center gap-2">
+          <i class="fa-solid fa-print"></i> প্রিন্ট নিন (A4)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="max-w-7xl mx-auto px-4 md:px-8 py-8">
+    
+    <!-- Top Progress Tracker & Dynamic Controls -->
+    <div class="bg-white rounded-xl shadow p-5 mb-8 flex flex-col lg:flex-row justify-between items-center gap-6 border-2 border-stone-200 no-print">
+      <div class="w-full lg:w-1/3">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-semibold text-stone-600">আপনার আজকের অধ্যায়ন অগ্রগতি:</span>
+          <span id="txtProgress" class="text-sm font-bold text-emerald-600">0 / 26 সম্পন্ন</span>
+        </div>
+        <div class="w-full bg-stone-200 rounded-full h-3">
+          <div id="barProgress" class="bg-emerald-500 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Quick Filter System -->
+      <div class="w-full lg:w-2/3 flex flex-wrap gap-2 justify-end">
+        <span class="text-xs font-bold text-stone-500 uppercase tracking-wider self-center mr-2">ফিল্টার করুন:</span>
+        <button onclick="filterCategory('all')" class="cat-btn bg-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-bold transition shadow-sm">সব প্রশ্ন</button>
+        <button onclick="filterCategory('reactions')" class="cat-btn bg-stone-200 hover:bg-stone-300 text-stone-700 px-3 py-1.5 rounded-full text-xs font-semibold transition">রাসায়নিক বিক্রিয়া</button>
+        <button onclick="filterCategory('acids')" class="cat-btn bg-stone-200 hover:bg-stone-300 text-stone-700 px-3 py-1.5 rounded-full text-xs font-semibold transition">অম্ল, ক্ষার ও লবণ</button>
+        <button onclick="filterCategory('carbon')" class="cat-btn bg-stone-200 hover:bg-stone-300 text-stone-700 px-3 py-1.5 rounded-full text-xs font-semibold transition">কার্বন ও তার যৌগ</button>
+        <button onclick="filterCategory('metallurgy')" class="cat-btn bg-stone-200 hover:bg-stone-300 text-stone-700 px-3 py-1.5 rounded-full text-xs font-semibold transition">ধাতুবিদ্যা ও নিষ্কাশন</button>
+        <button onclick="filterCategory('general')" class="cat-btn bg-stone-200 hover:bg-stone-300 text-stone-700 px-3 py-1.5 rounded-full text-xs font-semibold transition">সাধারণ রসায়ন</button>
+      </div>
+    </div>
+
+    <!-- Quick Search System -->
+    <div class="mb-6 relative max-w-md no-print">
+      <input type="text" id="searchInput" onkeyup="searchQuestions()" placeholder="প্রশ্ন নম্বর বা কীওয়ার্ড দিয়ে খুঁজুন (উদাঃ Chlorine, আয়রন)..." class="w-full px-4 py-2.5 rounded-xl border-2 border-stone-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 font-handwritten">
+      <i class="fa-solid fa-magnifying-glass absolute right-4 top-3.5 text-stone-400"></i>
+    </div>
+
+    <!-- VIEW 1: DYNAMIC HANDWRITTEN NOTES (Default View) -->
+    <div id="notesContainer" class="space-y-12">
+      
+      <!-- PAGE START: Reactivity & Displacement Reactions -->
+      <div class="notebook-page p-6 md:p-12" data-category="reactions">
+        <!-- Floating Visual Clip -->
+        <div class="absolute -top-3 left-10 bg-amber-200 text-amber-900 px-3 py-1 rounded shadow-sm text-xs font-bold tracking-wider font-kalam transform rotate-1 no-print">Displacement Series</div>
+        
+        <div class="pl-12">
+          <div class="border-b-2 border-stone-200 pb-4 mb-8">
+            <h2 class="text-3xl font-bold font-handwritten text-emerald-800">📌 Topic: Single & Double Displacement Reactions (প্রতিস্থাপন ও দ্বি-প্রতিস্থাপন বিক্রিয়া)</h2>
+            <p class="text-xs text-stone-400 font-kalam">Study Section: Metal Activity Series | precipitation</p>
+          </div>
+
+          <!-- Q947 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q947">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q947 (Homework Question)</span>
+              <button onclick="toggleStudyProgress('q947')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: What are the noticeable changes observed when an iron nail is placed in a copper sulphate solution? (একটি লোহার পেরেক কপার সালফেট দ্রবণে রাখলে কী কী লক্ষণীয় পরিবর্তন দেখা যায়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Iron remains as it is; blue color remains.</div>
+              <div class="highlight-green font-bold text-green-800">B) The iron nail becomes brownish; the blue color of the solution fades. ✔</div>
+              <div>C) Blue color changes to yellow.</div>
+              <div>D) No reaction occurs.</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">ব্যাখ্যা (Explanation):</strong> এটি একটি অত্যন্ত গুরুত্বপূর্ণ <span class="highlight-yellow">Single Displacement (একক প্রতিস্থাপন)</span> বিক্রিয়ার উৎকৃষ্ট উদাহরণ। সক্রিয়তা শ্রেণীতে লোহা বা আয়রন (<span class="font-kalam">Fe</span>) কপারের (<span class="font-kalam">Cu</span>) ওপরে অবস্থান করার কারণে এটি বেশি সক্রিয়।
+              </p>
+              <div class="my-4 flex justify-center">
+                <div class="hand-drawn-border sketch-bg p-4 max-w-md w-full text-center">
+                  <div class="font-bold text-red-600 font-kalam mb-2">CHEMICAL EQUATION:</div>
+                  <div class="text-xl font-bold font-kalam tracking-wide">
+                    Fe<sub>(s)</sub> + CuSO<sub>4(aq)</sub> <span class="text-red-500">→</span> FeSO<sub>4(aq)</sub> + Cu<sub>(s)</sub>
+                  </div>
+                  <div class="text-xs text-stone-500 mt-2">(লোহার পেরেক) + (নীল দ্রবণ) → (হালকা সবুজ দ্রবণ) + (বাদামী তামা)</div>
+                </div>
+              </div>
+              <p class="ink-green flex items-center gap-2">
+                <i class="fa-solid fa-lightbulb"></i> <span><strong>মনে রাখার টেকনিক (Memory Trick):</strong> 'নীল কপার সালফেট' বনে গিয়ে 'সবুজ আয়রন সালফেট' হলো আর লোহার গায়ে তামার পোঁচ পড়লো!</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Q958 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q958">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q958</span>
+              <button onclick="toggleStudyProgress('q958')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: The reaction between Sodium sulphate and Barium chloride is an example of: (সোডিয়াম সালফেট এবং বেরিয়াম ক্লোরাইডের মধ্যে বিক্রিয়াটি কিসের উদাহরণ?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Combination reaction</div>
+              <div class="highlight-green font-bold text-green-800">B) Precipitation reaction ✔</div>
+              <div>C) Decomposition reaction</div>
+              <div>D) Displacement reaction</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">মূল তত্ত্ব (Key Concept):</strong> এটি একই সাথে একটি <span class="highlight-yellow">Double Displacement (দ্বি-প্রতিস্থাপন)</span> এবং <span class="highlight-yellow">Precipitation (অধঃক্ষেপণ)</span> বিক্রিয়া। যখন দুটি জলীয় দ্রবণ মিশে একটি অদ্রবণীয় কঠিন পদার্থ তৈরি করে, তখন তাকে অধঃক্ষেপ বলে।
+              </p>
+              <div class="my-4 flex justify-center">
+                <div class="hand-drawn-border sketch-bg p-4 max-w-md w-full text-center">
+                  <div class="text-lg font-bold font-kalam">Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> → BaSO<sub>4</sub>↓ (সাদা অধঃক্ষেপ) + 2NaCl</div>
+                </div>
+              </div>
+              <p class="ink-green">
+                <i class="fa-solid fa-flask"></i> <strong>ল্যাব নোট:</strong> বেরিয়াম সালফেটের (<span class="font-kalam">BaSO<sub>4</sub></span>) সাদা অধঃক্ষেপটি জলে একেবারেই অদ্রবণীয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q962 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q962">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q962</span>
+              <button onclick="toggleStudyProgress('q962')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which reaction is an example of a precipitation reaction? (কোন বিক্রিয়াটি অধঃক্ষেপণ বিক্রিয়ার উদাহরণ?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) CaCO<sub>3</sub> → CaO + CO<sub>2</sub></div>
+              <div>B) Zn + H<sub>2</sub>SO<sub>4</sub> → ZnSO<sub>4</sub> + H<sub>2</sub></div>
+              <div>C) NaOH + HCl → NaCl + H<sub>2</sub>O</div>
+              <div class="highlight-green font-bold text-green-800">D) AgNO<sub>3</sub> + NaCl → AgCl↓ + NaNO<sub>3</sub> ✔</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">ব্যাখ্যা:</strong> সিলভার নাইট্রেট (<span class="font-kalam">AgNO<sub>3</sub></span>) ও সাধারণ লবণের (<span class="font-kalam">NaCl</span>) বিক্রিয়ায় সিলভার ক্লোরাইডের (<span class="highlight-yellow">AgCl</span>) দইয়ের মতো সাদা অদ্রবণীয় অধঃক্ষেপ পড়ে। এটি অধঃক্ষেপণ বিক্রিয়ার সবচেয়ে ক্লাসিক উদাহরণ।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q969 -->
+          <div class="question-block mb-4" id="q969">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q969</span>
+              <button onclick="toggleStudyProgress('q969')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: When an iron nail is placed in copper sulphate solution, what is observed? (লোহার পেরেক কপার সালফেট দ্রবণে রাখলে কী দেখা যায়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div class="highlight-green font-bold text-green-800">A) Iron dissolves and copper deposits on the nail. ✔</div>
+              <div>B) Hydrogen gas is released.</div>
+              <div>C) Copper dissolves and iron deposits.</div>
+              <div>D) No reaction occurs.</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500">
+              <p>
+                <strong class="marker-red">সূক্ষ্ম পর্যবেক্ষণ:</strong> বিক্রিয়া চলাকালীন লোহার পরমাণুগুলো ইলেকট্রন বর্জন করে আয়রন আয়নে (<span class="font-kalam">Fe<sup>2+</sup></span>) পরিণত হয়ে দ্রবণে দ্রবীভূত হয় এবং দ্রবণের কপার আয়নগুলো (<span class="font-kalam">Cu<sup>2+</sup></span>) ইলেকট্রন গ্রহণ করে তামার ধাতব স্তর হিসেবে পেরেকের ওপর জমা হয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Pencil Sketch Doodle for Displacement -->
+          <div class="mt-8 flex justify-center no-print">
+            <svg viewBox="0 0 500 220" class="w-full max-w-md hand-drawn-border sketch-bg p-2">
+              <text x="150" y="25" font-family="Kalam" font-size="14" fill="#dc2626" font-weight="bold">✏️ LAB SKETCH: Displacement Reaction</text>
+              
+              <!-- Beaker 1 -->
+              <rect x="50" y="50" width="120" height="130" rx="5" fill="none" stroke="#4b5563" stroke-width="3" />
+              <path d="M 50,110 Q 110,115 170,110" fill="none" stroke="#2563eb" stroke-width="4" /> <!-- Blue Liquid -->
+              <text x="60" y="105" font-family="Kalam" font-size="11" fill="#1d4ed8">CuSO4 (Blue)</text>
+              <line x1="110" y1="40" x2="110" y2="160" stroke="#9ca3af" stroke-width="8" stroke-linecap="round" /> <!-- Grey Iron Nail -->
+              <text x="100" y="195" font-family="Atma" font-size="12" fill="#4b5563">শুরুতে (নীল দ্রবণ)</text>
+
+              <!-- Arrow -->
+              <path d="M 210,110 L 280,110" fill="none" stroke="#4b5563" stroke-width="3" marker-end="url(#arrow)" />
+              <text x="220" y="95" font-family="Atma" font-size="12" fill="#047857">কয়েক ঘন্টা পর</text>
+
+              <!-- Beaker 2 -->
+              <rect x="320" y="50" width="120" height="130" rx="5" fill="none" stroke="#4b5563" stroke-width="3" />
+              <path d="M 320,110 Q 380,115 440,110" fill="none" stroke="#10b981" stroke-width="4" opacity="0.6"/> <!-- Green Liquid -->
+              <text x="330" y="105" font-family="Kalam" font-size="11" fill="#047857">FeSO4 (Light Green)</text>
+              <line x1="380" y1="40" x2="380" y2="160" stroke="#b45309" stroke-width="8" stroke-linecap="round" /> <!-- Brown Coated Nail -->
+              <text x="350" y="195" font-family="Atma" font-size="12" fill="#047857">শেষে (সবুজ দ্রবণ + বাদামী তামা)</text>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+      <!-- PAGE END: Reactivity -->
+
+      <!-- PAGE START: Acids, Bases, Salts & Bleaching Powder -->
+      <div class="notebook-page p-6 md:p-12" data-category="acids">
+        <div class="absolute -top-3 left-10 bg-amber-200 text-amber-900 px-3 py-1 rounded shadow-sm text-xs font-bold tracking-wider font-kalam transform rotate-1 no-print">Acid-Base Laboratory</div>
+
+        <div class="pl-12">
+          <div class="border-b-2 border-stone-200 pb-4 mb-8">
+            <h2 class="text-3xl font-bold font-handwritten text-emerald-800">📌 Topic: Acids, Bases, Salts & Bleaching Powder (অম্ল, ক্ষার, লবণ ও ব্লিচিং পাউডার)</h2>
+            <p class="text-xs text-stone-400 font-kalam">Study Section: Bleaching Powder | Gas Releases | Reactions</p>
+          </div>
+
+          <!-- Q956 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q956">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q956</span>
+              <button onclick="toggleStudyProgress('q956')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which compound is used to prepare bleaching powder? (ব্লিচিং পাউডার তৈরি করতে কোন যৌগটি ব্যবহৃত হয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Sodium carbonate</div>
+              <div class="highlight-green font-bold text-green-800">B) Calcium hydroxide ✔</div>
+              <div>C) Calcium chloride</div>
+              <div>D) Ammonium hydroxide</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">প্রস্তুতি পদ্ধতি (Preparation):</strong> শুষ্ক কলিচুন বা ক্যালসিয়াম হাইড্রোক্সাইড [<span class="highlight-yellow">Ca(OH)<sub>2</sub></span>]-এর ওপর দিয়ে প্রায় <span class="font-kalam">40°C</span> উষ্ণতায় ক্লোরিন (<span class="font-kalam">Cl<sub>2</sub></span>) গ্যাস চালনা করলে <span class="highlight-yellow">Bleaching Powder (CaOCl<sub>2</sub>)</span> উৎপন্ন হয়।
+              </p>
+              <div class="my-4 flex justify-center">
+                <div class="hand-drawn-border sketch-bg p-4 max-w-md w-full text-center">
+                  <div class="text-xl font-bold font-kalam">Ca(OH)<sub>2</sub> + Cl<sub>2</sub> → CaOCl<sub>2</sub> + H<sub>2</sub>O</div>
+                </div>
+              </div>
+              <p class="ink-green">
+                <i class="fa-solid fa-circle-exclamation"></i> <strong>সতর্কতা:</strong> ব্লিচিং পাউডারের তীব্র ঝাঁঝালো গন্ধের উৎস মূলত এতে উপস্থিত ক্লোরিন গ্যাস।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q959 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q959">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q959</span>
+              <button onclick="toggleStudyProgress('q959')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: What is common between the reaction of metal sodium carbonate and sodium bicarbonate with hydrochloric acid? (সোডিয়াম কার্বনেট এবং সোডিয়াম বাইকার্বনেটের সাথে হাইড্রোক্লোরিক অ্যাসিডের বিক্রিয়ার মধ্যে মিল কী?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Release of Hydrogen gas</div>
+              <div>B) Release of Carbon monoxide</div>
+              <div class="highlight-green font-bold text-green-800">C) Release of Carbon dioxide and formation of Sodium chloride ✔</div>
+              <div>D) Formation of Hydrogen carbonate</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">মূল সূত্র (General Rule):</strong> যেকোনো ধাতব কার্বনেট বা বাইকার্বনেট যখন অ্যাসিডের সাথে বিক্রিয়া করে, তখন সর্বদা <span class="highlight-yellow">লবণ (Salt)</span>, <span class="highlight-yellow">জল (Water)</span> এবং <span class="highlight-yellow">কার্বন ডাই অক্সাইড (CO<sub>2</sub>)</span> গ্যাস উৎপন্ন হয়।
+              </p>
+              <div class="my-4 hand-drawn-border sketch-bg p-4 max-w-lg mx-auto text-sm space-y-2 font-kalam">
+                <div>1. Na<sub>2</sub>CO<sub>3</sub> + 2HCl → 2NaCl + H<sub>2</sub>O + CO<sub>2</sub>↑</div>
+                <div>2. NaHCO<sub>3</sub> + HCl → NaCl + H<sub>2</sub>O + CO<sub>2</sub>↑</div>
+              </div>
+              <p class="ink-green">
+                <i class="fa-solid fa-fire-extinguisher"></i> <strong>পরীক্ষা:</strong> উৎপন্ন <span class="font-kalam">CO<sub>2</sub></span> গ্যাসকে চুনজলের মধ্য দিয়ে পাঠালে চুনজল ঘোলাটে হয়ে যায়, এবং এটি জ্বলন্ত কাঠিকে নিভিয়ে দেয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q974 -->
+          <div class="question-block mb-4" id="q974">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q974</span>
+              <button onclick="toggleStudyProgress('q974')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: When a solution of Lead(II) nitrate reacts with Potassium iodide, what is produced? (লেড(II) নাইট্রেট পটাশিয়াম আয়োডাইডের সাথে বিক্রিয়া করলে কী উৎপন্ন হয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) White precipitate of Lead sulphate</div>
+              <div>B) Orange precipitate</div>
+              <div class="highlight-green font-bold text-green-800">C) Yellow precipitate of Lead iodide ✔</div>
+              <div>D) No precipitate</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">ব্যাখ্যা:</strong> লেড নাইট্রেট ও পটাশিয়াম আয়োডাইডের তীব্র রাসায়নিক বিক্রিয়ায় উজ্জ্বল হলুদ রঙের <span class="highlight-yellow">লেড আয়োডাইড (PbI<sub>2</sub>)</span> অধঃক্ষিপ্ত হয়।
+              </p>
+              <div class="my-2 text-center font-bold font-kalam text-lg">
+                Pb(NO<sub>3</sub>)<sub>2</sub> + 2KI → PbI<sub>2</sub>↓ (হলুদ অধঃক্ষেপ) + 2KNO<sub>3</sub>
+              </div>
+              <p class="ink-green">
+                <i class="fa-solid fa-palette"></i> <strong>ম্যাজিক ট্রিক:</strong> দুটি বর্ণহীন তরল মেশালে ম্যাজিকের মতো ঘন হলুদ রঙের দানা তৈরি হয়! একে গোল্ডেন রেইন (Golden Rain) পরীক্ষাতেও ব্যবহার করা হয়।
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- PAGE END: Acids, Bases, Salts -->
+
+      <!-- PAGE START: Carbon & Its Allotropes -->
+      <div class="notebook-page p-6 md:p-12" data-category="carbon">
+        <div class="absolute -top-3 left-10 bg-amber-200 text-amber-900 px-3 py-1 rounded shadow-sm text-xs font-bold tracking-wider font-kalam transform rotate-1 no-print">Organic & Carbon Lab</div>
+
+        <div class="pl-12">
+          <div class="border-b-2 border-stone-200 pb-4 mb-8">
+            <h2 class="text-3xl font-bold font-handwritten text-emerald-800">📌 Topic: Carbon Compounds & Allotropes (কার্বন ও তার রূপভেদসমূহ)</h2>
+            <p class="text-xs text-stone-400 font-kalam">Study Section: Graphite | Fullerene | Covalent Bonds | Reactions</p>
+          </div>
+
+          <!-- Q964 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q964">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q964</span>
+              <button onclick="toggleStudyProgress('q964')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: In which carbon allotrope are atoms arranged in hexagonal layers with weak forces between them? (কার্বনের কোন রূপভেদে পরমাণুগুলি ষড়ভুজাকার স্তরে সাজানো থাকে এবং স্তরগুলির মধ্যে দুর্বল বল থাকে?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Diamond</div>
+              <div>B) Fullerene</div>
+              <div class="highlight-green font-bold text-green-800">C) Graphite ✔</div>
+              <div>D) Charcoal</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">গ্রাফাইটের গঠন (Graphite Structure):</strong> গ্রাফাইটে প্রতিটি কার্বন পরমাণু একই সমতলে তিনটি অন্য কার্বন পরমাণুর সাথে যুক্ত হয়ে ষড়ভুজাকার বলয় গঠন করে। এই স্তরগুলির মধ্যে অত্যন্ত দুর্বল <span class="highlight-yellow">ভ্যান ডার ওয়ালস বল (Van der Waals forces)</span> কাজ করায় স্তরগুলি একটি অপরটির উপর পিছলে যেতে পারে। এই কারণেই গ্রাফাইট নরম ও পিচ্ছিল হয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q968 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q968">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q968</span>
+              <button onclick="toggleStudyProgress('q968')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Why does carbon form covalent bonds instead of ionic bonds? (কার্বন কেন আয়নীয় বন্ধনের পরিবর্তে সমযোজী বন্ধন গঠন করে?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div class="highlight-green font-bold text-green-800">A) It is energetically unfavorable to lose or gain four electrons. ✔</div>
+              <div>B) It can easily gain four electrons.</div>
+              <div>C) It has a very large atomic radius.</div>
+              <div>D) It has only two valence electrons.</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">মূল বৈজ্ঞানিক কারণ (Core Logic):</strong> কার্বনের সবচেয়ে বাইরের কক্ষে <span class="font-kalam">4</span> টি ইলেকট্রন থাকে। অষ্টক পূর্তির জন্য হয় ৪টি ইলেকট্রন ত্যাগ করতে হবে (<span class="font-kalam">C<sup>4+</sup></span> গঠন) অথবা ৪টি ইলেকট্রন গ্রহণ করতে হবে (<span class="font-kalam">C<sup>4-</sup></span> গঠন)। কিন্তু ৪টি ইলেকট্রন বর্জন বা গ্রহণের জন্য যে অতি বিশাল শক্তির প্রয়োজন, তা সাধারণ রাসায়নিক প্রক্রিয়ায় পাওয়া সম্ভব নয়। তাই কার্বন কেবল তার যোগ্যতা কক্ষের ইলেকট্রনগুলি <span class="highlight-yellow">শেয়ার (Share) বা সহভাজন</span> করে সমযোজী বন্ধন তৈরি করে।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q973 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q973">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q973</span>
+              <button onclick="toggleStudyProgress('q973')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which of the following allotropes of carbon has a cage-like structure? (কার্বনের নিচের কোন রূপভেদে খাঁচার মতো গঠন রয়েছে?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Diamond</div>
+              <div class="highlight-green font-bold text-green-800">B) Fullerene ✔</div>
+              <div>C) Graphite</div>
+              <div>D) Charcoal</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">ফুলারিন পরিচয়:</strong> ফুলারিন হলো কার্বনের তুলনামূলকভাবে নতুন আবিষ্কৃত একটি কৃত্রিম রূপভেদ। এর মধ্যে সবচেয়ে সুপরিচিত ফুটবল আকৃতির <span class="highlight-yellow">C<sub>60</sub> (Buckminsterfullerene)</span>। এতে ৬০টি কার্বন পরমাণু খাঁচার বা জালের আকারে বিন্যস্ত থাকে।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q977 -->
+          <div class="question-block mb-4" id="q977">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q977</span>
+              <button onclick="toggleStudyProgress('q977')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: In graphite, each carbon atom is bonded to ______ other carbon atoms. (গ্রাফাইটে প্রতিটি কার্বন পরমাণু অন্য ______ টি কার্বন পরমাণুর সাথে যুক্ত থাকে।)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) 4</div>
+              <div class="highlight-green font-bold text-green-800">B) 3 ✔</div>
+              <div>C) 2</div>
+              <div>D) 6</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">তড়িৎ পরিবাহিতার রহস্য:</strong> যেহেতু গ্রাফাইটের প্রতিটি কার্বন পরমাণু অন্য ৩টি কার্বন পরমাণুর সাথে সমযোজী বন্ধনে যুক্ত থাকে, সেহেতু তার চতুর্থ যোগ্যতা ইলেকট্রনটি মুক্ত বা অস্থানিক (<span class="highlight-yellow">Delocalized electron</span>) অবস্থায় ঘুরে বেড়ায়। এই মুক্ত ইলেকট্রনের উপস্থিতির জন্য অধাতু হওয়া সত্ত্বেও গ্রাফাইট চমৎকার তড়িৎ পরিবহন করতে পারে।
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- PAGE END: Carbon -->
+
+      <!-- PAGE START: Metallurgy, Extraction & Reactivity -->
+      <div class="notebook-page p-6 md:p-12" data-category="metallurgy">
+        <div class="absolute -top-3 left-10 bg-amber-200 text-amber-900 px-3 py-1 rounded shadow-sm text-xs font-bold tracking-wider font-kalam transform rotate-1 no-print">Metallurgy Field Notes</div>
+
+        <div class="pl-12">
+          <div class="border-b-2 border-stone-200 pb-4 mb-8">
+            <h2 class="text-3xl font-bold font-handwritten text-emerald-800">📌 Topic: Metallurgy & Metal Extraction (ধাতুবিদ্যা ও আকরিক নিষ্কাশন)</h2>
+            <p class="text-xs text-stone-400 font-kalam">Study Section: Roasting vs Calcination | Reactivity Series | Chlor-Alkali</p>
+          </div>
+
+          <!-- Q961 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q961">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q961</span>
+              <button onclick="toggleStudyProgress('q961')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which ores are converted into their respective oxides by the process of Roasting? (কোন আকরিককে 'রোস্টিং' প্রক্রিয়ার মাধ্যমে অক্সাইডে রূপান্তরিত করা হয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Carbonate ores</div>
+              <div>B) Oxide ores</div>
+              <div>C) Chloride ores</div>
+              <div class="highlight-green font-bold text-green-800">D) Sulphide ores ✔</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">পার্থক্য বিশ্লেষণ (Contrast Study):</strong> 
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><span class="highlight-yellow">Roasting (তাপজারণ):</span> অতিরিক্ত বায়ুর উপস্থিতিতে <span class="highlight-yellow">সালফাইড আকরিককে (Sulphide Ores)</span> তীব্রভাবে উত্তপ্ত করার প্রক্রিয়া। (যেমন: <span class="font-kalam">2ZnS + 3O<sub>2</sub> → 2ZnO + 2SO<sub>2</sub></span>)</li>
+                <li><span class="highlight-yellow">Calcination (ভস্মীকরণ):</span> বায়ুহীন বা সীমিত বায়ুর উপস্থিতিতে <span class="highlight-yellow">কার্বনেট আকরিককে (Carbonate Ores)</span> উত্তপ্ত করার প্রক্রিয়া। (যেমন: <span class="font-kalam">ZnCO<sub>3</sub> → ZnO + CO<sub>2</sub></span>)</li>
+              </ul>
+              <p class="ink-green">
+                <i class="fa-solid fa-brain"></i> <strong>মনে রাখার সুপার টেকনিক:</strong> <span class="font-bold underline">S</span>ulphide = <span class="font-bold underline">S</span>econd O<sub>2</sub> (<span class="font-bold">Roasting</span>) এবং <span class="font-bold underline">C</span>arbonate = <span class="font-bold underline">C</span>alcination! দুটি নামের প্রথম অক্ষর মাথায় রাখুন।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q965 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q965">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q965</span>
+              <button onclick="toggleStudyProgress('q965')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which process is used to prepare Sodium hydroxide from Brine? (ব্রাইন থেকে সোডিয়াম হাইড্রোক্সাইড তৈরি করতে কোন পদ্ধতি ব্যবহৃত হয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Solvay process</div>
+              <div>B) Haber process</div>
+              <div class="highlight-green font-bold text-green-800">C) Chlor-alkali process ✔</div>
+              <div>D) Calcination</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">ক্লোর-অ্যালকালি পদ্ধতি (Chlor-Alkali Process):</strong> সোডিয়াম ক্লোরাইডের ঘন জলীয় দ্রবণকে <span class="highlight-yellow">Brine (ব্রাইন)</span> বলে। ব্রাইনের মধ্য দিয়ে তড়িৎ বিশ্লেষণ (Electrolysis) চালালে অ্যানোডে ক্লোরিন গ্যাস (<span class="font-kalam">Cl<sub>2</sub></span>), ক্যাথোডে হাইড্রোজেন গ্যাস (<span class="font-kalam">H<sub>2</sub></span>) এবং দ্রবণে অতি মূল্যবান ক্ষার সোডিয়াম হাইড্রোক্সাইড (<span class="font-kalam">NaOH</span>) উৎপন্ন হয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q978 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q978">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q978</span>
+              <button onclick="toggleStudyProgress('q978')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: How are metals like gold and silver, which have low reactivity, extracted? (সোনা এবং রূপার মতো ধাতু যাদের সক্রিয়তা কম, তাদের কীভাবে নিষ্কাশন করা হয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Electrolysis</div>
+              <div class="highlight-green font-bold text-green-800">B) Simple heating or found in native state ✔</div>
+              <div>C) Roasting followed by reduction</div>
+              <div>D) Reaction with highly reactive metals</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500">
+              <p>
+                <strong class="marker-red">প্রকৃতির দান:</strong> সোনা (<span class="font-kalam">Au</span>) ও রূপা (<span class="font-kalam">Ag</span>) ধাতুগুলি সক্রিয়তা শ্রেণীর একেবারে নিচে থাকায় বাতাস, জল বা অ্যাসিডের সাথে সহজে কোনো বিক্রিয়া করে না। তাই প্রকৃতিতে এদের মুক্ত বা বিশুদ্ধ <span class="highlight-yellow">Native State (মুক্ত ধাতু রূপ)</span>-এ পাওয়া যায়। এদের আকরিককে কেবল সামান্য উত্তপ্ত করেই সহজে বিশুদ্ধ করা যায়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q979 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q979">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q979</span>
+              <button onclick="toggleStudyProgress('q979')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: In the Chlor-alkali process, what is released at the anode? (ক্লোর-অ্যালকালি পদ্ধতিতে অ্যানোডে কী নির্গত হয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Hydrogen gas</div>
+              <div>B) Sodium hydroxide</div>
+              <div class="highlight-green font-bold text-green-800">C) Chlorine gas ✔</div>
+              <div>D) Oxygen gas</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500">
+              <p>
+                <strong class="marker-red">অ্যানোড ও ক্যাথোড বিক্রিয়া:</strong> ঋণাত্মক ক্লোরাইড আয়ন (<span class="font-kalam">Cl<sup>-</sup></span>) ধনাত্মক ইলেকট্রোড তথা <span class="highlight-yellow">Anode (অ্যানোড)</span>-এর দিকে আকর্ষিত হয় এবং ইলেকট্রন বর্জন করে জারিত হয়ে <span class="highlight-yellow">ক্লোরিন গ্যাস (Cl<sub>2</sub>)</span> হিসেবে বুদবুদ আকারে মুক্ত হয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q980 -->
+          <div class="question-block mb-4" id="q980">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q980</span>
+              <button onclick="toggleStudyProgress('q980')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which of the following metals is extracted in the middle of the activity series? (সক্রিয়তা সিরিজের মাঝখানে থাকা নিচের কোন ধাতুটি নিষ্কাশন করা হয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div class="highlight-green font-bold text-green-800">A) Iron ✔</div>
+              <div>B) Potassium</div>
+              <div>C) Sodium</div>
+              <div>D) Gold</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500">
+              <p>
+                <strong class="marker-red">বিশ্লেষণ:</strong> পটাসিয়াম ও সোডিয়াম অতি সক্রিয় হওয়ায় তালিকার শীর্ষে অবস্থান করে (নিষ্কাশন করা হয় গলিত তড়িৎ বিশ্লেষণের সাহায্যে)। গোল্ড একেবারেই কম সক্রিয় হওয়ায় নিচে থাকে। মাঝারি সক্রিয়তার ধাতু যেমন <span class="highlight-yellow">আয়রন (Fe), জিঙ্ক (Zn), লেড (Pb)</span> ইত্যাদিকে কার্বন বিজারণ (Carbon Reduction) পদ্ধতির মাধ্যমে মধ্যম পর্যায় থেকে নিষ্কাশন করা হয়।
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- PAGE END: Metallurgy -->
+
+      <!-- PAGE START: General Chemistry Concept Mix -->
+      <div class="notebook-page p-6 md:p-12" data-category="general">
+        <div class="absolute -top-3 left-10 bg-amber-200 text-amber-900 px-3 py-1 rounded shadow-sm text-xs font-bold tracking-wider font-kalam transform rotate-1 no-print">Atomic & Fundamental Mix</div>
+
+        <div class="pl-12">
+          <div class="border-b-2 border-stone-200 pb-4 mb-8">
+            <h2 class="text-3xl font-bold font-handwritten text-emerald-800">📌 Topic: Fundamentals of Matter & Atoms (পদার্থ ও পরমাণুর প্রাথমিক ধারণা)</h2>
+            <p class="text-xs text-stone-400 font-kalam">Study Section: Atomic Number | Compounds | Brass Alloys | Ionic Properties</p>
+          </div>
+
+          <!-- Q957 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q957">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q957</span>
+              <button onclick="toggleStudyProgress('q957')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which of the following statements about ions is correct? (আয়ন সম্পর্কে নিচের কোন উক্তিটি সঠিক?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div class="highlight-green font-bold text-green-800">A) A group of atoms carrying a net charge is called a polyatomic ion. ✔</div>
+              <div>B) A cation is negatively charged.</div>
+              <div>C) Ions are formed only from non-metal atoms.</div>
+              <div>D) Sodium chloride consists of neutral atoms.</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">আয়নীয় বিজ্ঞান (Ionic Science):</strong> 
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><span class="highlight-yellow">Polyatomic Ion (বহুপরমাণুক আয়ন):</span> যখন একাধিক পরমাণু জোটবদ্ধ হয়ে একটি নির্দিষ্ট আধান ধারণ করে। যেমন: সালফেট (<span class="font-kalam">SO<sub>4</sub><sup>2-</sup></span>), অ্যামোনিয়াম (<span class="font-kalam">NH<sub>4</sub><sup>+</sup></span>)।</li>
+                <li>ক্যাটায়ন (<span class="font-kalam">Cation</span>) সর্বদা ধনাত্মক চার্জযুক্ত হয় এবং অ্যানায়ন (<span class="font-kalam">Anion</span>) ঋণাত্মক।</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Q963 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q963">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q963</span>
+              <button onclick="toggleStudyProgress('q963')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which of the following is a general property of ionic compounds? (নিচের কোনটি আয়নীয় যৌগের একটি সাধারণ বৈশিষ্ট্য?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) They exist as molecules with weak forces.</div>
+              <div>B) They are insoluble in water.</div>
+              <div class="highlight-green font-bold text-green-800">C) They are brittle and conduct electricity in molten/aqueous states. ✔</div>
+              <div>D) They have low melting points.</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">আয়নীয় যৌগের বৈশিষ্ট্য:</strong> আয়নীয় যৌগে বিপরীতধর্মী আয়নগুলো তীব্র <span class="highlight-yellow">স্থির-তড়িৎ বল (Electrostatic force of attraction)</span> দ্বারা পরস্পর দৃঢ়ভাবে লেগে থাকে। কঠিন অবস্থায় এরা তড়িৎ পরিবহন করতে পারে না কারণ আয়নগুলোর অবস্থান নির্দিষ্ট থাকে, তবে গলিত বা জলে দ্রবীভূত অবস্থায় মুক্ত আয়নগুলি সহজে চলাচল করতে পারে বলে তড়িৎ পরিবহন করে।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q970 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q970">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q970</span>
+              <button onclick="toggleStudyProgress('q970')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Which of the following is NOT a property associated with a compound? (নিচের কোনটি একটি যৌগের সাথে যুক্ত বৈশিষ্ট্য নয়?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) New substance has totally different properties.</div>
+              <div class="highlight-green font-bold text-green-800">B) Constituents can be separated easily by physical methods. ✔</div>
+              <div>C) Elements react to form a new component.</div>
+              <div>D) Composition is always fixed.</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500">
+              <p>
+                <strong class="marker-red">যৌগ বনাম মিশ্রণ:</strong> যৌগের উপাদান মৌলগুলো নিজেদের মধ্যে রাসায়নিক বন্ধনে আবদ্ধ থাকে, তাই এদের সাধারণ ভৌত উপায়ে (যেমন পরিশ্রাবণ, চুম্বকত্ব) আলাদা করা অসম্ভব। উপাদান আলাদা করতে গেলে অবশ্যই জটিল রাসায়নিক বা তড়িৎ-রাসায়নিক পদ্ধতির সাহায্য নিতে হয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q971 -->
+          <div class="question-block mb-10 pb-8 border-b border-dashed border-stone-200" id="q971">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q971</span>
+              <button onclick="toggleStudyProgress('q971')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Atomic number is defined as the total number of ______ present in the nucleus of an atom. (পারমাণবিক সংখ্যা পরমাণুর নিউক্লিয়াসে উপস্থিত মোট ______ সংখ্যা হিসাবে সংজ্ঞায়িত করা হয়।)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Neutrons</div>
+              <div class="highlight-green font-bold text-green-800">B) Protons ✔</div>
+              <div>C) Electrons</div>
+              <div>D) Protons and Neutrons</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500">
+              <p>
+                <strong class="marker-red">পারমাণবিক সংখ্যা (Atomic Number, Z):</strong> কোনো মৌলের পরমাণুর নিউক্লিয়াসে উপস্থিত মোট <span class="highlight-yellow">প্রোটন সংখ্যা</span>-কে ওই মৌলের পারমাণবিক সংখ্যা বা পরমাণু ক্রমাঙ্ক বলে। প্রোটন সংখ্যাই একটি মৌলের প্রকৃত রাসায়নিক পরিচয় নির্ধারণ করে।
+              </p>
+            </div>
+          </div>
+
+          <!-- Q972 -->
+          <div class="question-block mb-4" id="q972">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-bold font-kalam text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Q972</span>
+              <button onclick="toggleStudyProgress('q972')" class="progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1">
+                <i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>
+              </button>
+            </div>
+            
+            <h3 class="text-xl font-handwritten marker-red mb-3">
+              Q: Brass is an example of: (पितল বা ব্রাস কিসের উদাহরণ?)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-3 pl-4 text-sm font-handwritten">
+              <div>A) Compound</div>
+              <div>B) Element</div>
+              <div class="highlight-green font-bold text-green-800">C) Homogeneous mixture ✔</div>
+              <div>D) Heterogeneous mixture</div>
+            </div>
+
+            <div class="gel-blue pl-4 mt-4 border-l-4 border-blue-500 space-y-2">
+              <p>
+                <strong class="marker-red">অ্যালয় বা সংকর ধাতু:</strong> পিতল (Brass) হলো কপার (<span class="font-kalam">Cu ~60-70%</span>) এবং জিঙ্ক (<span class="font-kalam">Zn ~30-40%</span>)-এর একটি কঠিন দ্রবণ বা সংকর ধাতু। যেহেতু এর সমস্ত অংশের উপাদান ও ধর্ম সমান থাকে, তাই এটিকে <span class="highlight-yellow">সমসত্ত্ব মিশ্রণ (Homogeneous Mixture)</span> বলা হয়।
+              </p>
+              <p class="ink-green">
+                <i class="fa-solid fa-graduation-cap"></i> <strong>মনে রাখার ট্রিক:</strong> পিতল = পি (পিতল) + ত (তামা/কপার) + ল (দস্তা/জিঙ্ক/লতা)!
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- PAGE END: General -->
+
+    </div>
+
+    <!-- VIEW 2: INTERACTIVE REVISION QUIZ -->
+    <div id="quizContainer" class="hidden notebook-page p-6 md:p-12">
+      <div class="pl-12">
+        <div class="border-b-2 border-stone-200 pb-4 mb-8">
+          <h2 class="text-3xl font-bold font-handwritten text-teal-800">📝 Interactive Self-Evaluation Revision Quiz</h2>
+          <p class="text-xs text-stone-400 font-kalam">Test your understanding of General Science (Q947 - Q980). Immediate feedback & score provided.</p>
+        </div>
+
+        <!-- Quiz Progress and Score Card -->
+        <div class="bg-amber-50 border-2 border-amber-200 rounded-xl p-4 mb-8 flex justify-between items-center text-sm font-handwritten">
+          <div>প্রশ্ন নম্বর: <span id="quizCurrentNum" class="font-bold text-lg text-amber-700">1</span> / 15</div>
+          <div>স্কোর: <span id="quizScore" class="font-bold text-lg text-emerald-600">0</span></div>
+        </div>
+
+        <div id="quizQuestionBox" class="min-h-[250px]">
+          <!-- Active Quiz Question Rendered dynamically via JS -->
+        </div>
+
+        <div class="mt-8 flex justify-between items-center">
+          <button id="btnPrevQuiz" onclick="prevQuizQuestion()" class="bg-stone-200 hover:bg-stone-300 text-stone-700 px-4 py-2 rounded-lg font-bold transition flex items-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i> পূর্ববর্তী
+          </button>
+          <button id="btnNextQuiz" onclick="nextQuizQuestion()" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg font-bold transition flex items-center gap-2">
+            পরবর্তী <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 3: CONCEPT MINDMAPS / CHEAT SHEET -->
+    <div id="cheatSheetContainer" class="hidden space-y-8">
+      
+      <!-- Mindmap Grid 1 -->
+      <div class="notebook-page p-6 md:p-12">
+        <div class="pl-12">
+          <div class="border-b-2 border-stone-200 pb-4 mb-6">
+            <h2 class="text-3xl font-bold font-handwritten text-indigo-800">💡 Topic Cheat Sheet 1: Chlor-Alkali & Metallurgy Process</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="hand-drawn-border sketch-bg p-5 space-y-3">
+              <h3 class="text-xl font-bold font-handwritten text-emerald-700 underline">Chlor-Alkali Reaction Mindmap</h3>
+              <p class="text-sm font-handwritten gel-blue">
+                <strong>Brine Solution (NaCl + H<sub>2</sub>O):</strong> Electrolyzed to yield critical chemicals.
+              </p>
+              <div class="bg-white p-3 rounded border border-dashed border-stone-400 font-kalam text-xs space-y-1">
+                <div>⚡ <strong>At Anode (+):</strong> 2Cl<sup>-</sup> → Cl<sub>2</sub>↑ (Chlorine Gas - Used for Bleaching Powder)</div>
+                <div>⚡ <strong>At Cathode (-):</strong> 2H<sup>+</sup> + 2e<sup>-</sup> → H<sub>2</sub>↑ (Hydrogen Gas - Fuel/Margarine)</div>
+                <div>💧 <strong>In Solution:</strong> Na<sup>+</sup> + OH<sup>-</sup> → NaOH (Sodium Hydroxide - Soap/Paper)</div>
+              </div>
+            </div>
+            <div class="hand-drawn-border sketch-bg p-5 space-y-3">
+              <h3 class="text-xl font-bold font-handwritten text-red-700 underline">Metallurgy Extraction Methods</h3>
+              <p class="text-sm font-handwritten gel-blue">Based on position in Reactivity Series:</p>
+              <div class="bg-white p-3 rounded border border-dashed border-stone-400 font-kalam text-xs space-y-1">
+                <div>📈 <strong>Top (High Reactivity - K, Na, Ca, Mg):</strong> Electrolysis of Molten Chlorides.</div>
+                <div>📊 <strong>Middle (Moderate - Zn, Fe, Pb, Cu):</strong> Roasting/Calcination followed by Carbon Reduction.</div>
+                <div>📉 <strong>Bottom (Low - Au, Ag):</strong> Found in Native state, purified by simple heating.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mindmap Grid 2 -->
+      <div class="notebook-page p-6 md:p-12">
+        <div class="pl-12">
+          <div class="border-b-2 border-stone-200 pb-4 mb-6">
+            <h2 class="text-3xl font-bold font-handwritten text-purple-800">💡 Topic Cheat Sheet 2: Allotropes of Carbon</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="hand-drawn-border sketch-bg p-4 space-y-2 text-center">
+              <span class="text-lg font-bold font-handwritten text-stone-700">💎 Diamond (হীরা)</span>
+              <p class="text-xs font-handwritten gel-blue">
+                3D Tetrahedral network. Every carbon bonded to <span class="highlight-yellow">4</span> others. Extremely hard, poor electrical conductor.
+              </p>
+            </div>
+            <div class="hand-drawn-border sketch-bg p-4 space-y-2 text-center">
+              <span class="text-lg font-bold font-handwritten text-stone-700">✏️ Graphite (গ্রাফাইট)</span>
+              <p class="text-xs font-handwritten gel-blue">
+                2D Hexagonal layers. Every carbon bonded to <span class="highlight-yellow">3</span> others. Soft, slippery, <span class="highlight-green">excellent conductor</span> due to free valence electron.
+              </p>
+            </div>
+            <div class="hand-drawn-border sketch-bg p-4 space-y-2 text-center">
+              <span class="text-lg font-bold font-handwritten text-stone-700">⚽ Fullerene (ফুলারিন)</span>
+              <p class="text-xs font-handwritten gel-blue">
+                Spherical cage-like geodesic dome structure (<span class="highlight-yellow">C<sub>60</sub></span>). Used in nanotechnology and material sciences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="bg-stone-800 text-stone-400 py-8 px-4 mt-16 text-center no-print">
+    <div class="max-w-7xl mx-auto space-y-2">
+      <p class="font-handwritten text-stone-200">বিজ্ঞান প্রশ্নোত্তর বোর্ড (Q947 - Q980) • Designed with ♥ for absolute academic success.</p>
+      <p class="text-xs">This study program satisfies strict curriculum targets for competitive board exams, standard test guidelines, and medical entrance tests.</p>
+    </div>
+  </footer>
+
+  <!-- Script block implementing filters, study trackers, and interactive quiz bank -->
+  <script>
+    // Quiz Questions Dataset (Subset from Q947 - Q980)
+    const quizDatabase = [
+      {
+        qNum: "Q947",
+        question: "What noticeble change is seen when an iron nail is in copper sulphate solution?",
+        questionBn: "একটি লোহার পেরেক কপার সালফেট দ্রবণে রাখলে কী কী লক্ষণীয় পরিবর্তন দেখা যায়?",
+        options: [
+          "Iron remains as it is; blue color remains.",
+          "The iron nail becomes brownish; the blue color of the solution fades.",
+          "Blue color changes to yellow.",
+          "No reaction occurs."
+        ],
+        correct: 1,
+        explanation: "Fe displaces Cu from CuSO4 solution because Fe is more reactive than Cu. Blue CuSO4 changes to pale green FeSO4."
+      },
+      {
+        qNum: "Q956",
+        question: "Which compound is used to prepare bleaching powder?",
+        questionBn: "ব্লিচিং পাউডার তৈরি করতে কোন যৌগটি ব্যবহৃত হয়?",
+        options: [
+          "Sodium carbonate",
+          "Calcium hydroxide",
+          "Calcium chloride",
+          "Ammonium hydroxide"
+        ],
+        correct: 1,
+        explanation: "Dry slaked lime [Calcium hydroxide, Ca(OH)2] reacts with Chlorine gas to produce Bleaching powder (CaOCl2)."
+      },
+      {
+        qNum: "Q957",
+        question: "Which of the following statements about ions is correct?",
+        questionBn: "আয়ন সম্পর্কে নিচের কোন উক্তিটি সঠিক?",
+        options: [
+          "A group of atoms carrying a net charge is called a polyatomic ion.",
+          "A cation is negatively charged.",
+          "Ions are formed only from non-metal atoms.",
+          "Sodium chloride consists of neutral atoms."
+        ],
+        correct: 0,
+        explanation: "A group of atoms with a fixed charge behaves as a single unit called a polyatomic ion (e.g. SO4 2-)."
+      },
+      {
+        qNum: "Q958",
+        question: "The reaction between Sodium sulphate and Barium chloride is an example of:",
+        questionBn: "সোডিয়াম সালফেট এবং বেরিয়াম ক্লোরাইডের মধ্যে বিক্রিয়াটি কিসের উদাহরণ?",
+        options: [
+          "Combination reaction",
+          "Precipitation reaction",
+          "Decomposition reaction",
+          "Displacement reaction"
+        ],
+        correct: 1,
+        explanation: "It forms an insoluble white precipitate of Barium sulphate (BaSO4)."
+      },
+      {
+        qNum: "Q959",
+        question: "What is common between sodium carbonate/bicarbonate reaction with hydrochloric acid?",
+        questionBn: "সোডিয়াম কার্বনেট এবং সোডিয়াম বাইকার্বনেটের সাথে হাইড্রোক্লোরিক অ্যাসিডের বিক্রিয়ার মধ্যে মিল কী?",
+        options: [
+          "Release of Hydrogen gas",
+          "Release of Carbon monoxide",
+          "Release of Carbon dioxide and formation of Sodium chloride",
+          "Formation of Hydrogen carbonate"
+        ],
+        correct: 2,
+        explanation: "Both carbonates and bicarbonates yield NaCl, water, and bubble out carbon dioxide gas (CO2)."
+      },
+      {
+        qNum: "Q960",
+        question: "Which of the following is an example of a reduction reaction?",
+        questionBn: "নিচের কোনটি বিজারণ বিক্রিয়ার উদাহরণ?",
+        options: [
+          "NaOH + HCl -> NaCl + H2O",
+          "Mg + O2 -> MgO",
+          "Zn + H2SO4 -> ZnSO4 + H2",
+          "CuO + H2 -> Cu + H2O"
+        ],
+        correct: 3,
+        explanation: "Copper oxide (CuO) loses its oxygen to turn into metallic Copper (Cu). Loss of oxygen is Reduction."
+      },
+      {
+        qNum: "Q961",
+        question: "Which ores are converted into their respective oxides by the process of Roasting?",
+        questionBn: "কোন আকরিককে 'রোস্টিং' প্রক্রিয়ার মাধ্যমে অক্সাইডে রূপান্তরিত করা হয়?",
+        options: [
+          "Carbonate ores",
+          "Oxide ores",
+          "Chloride ores",
+          "Sulphide ores"
+        ],
+        correct: 3,
+        explanation: "Roasting heats concentrated sulphide ores strongly in excess oxygen/air to yield metal oxides."
+      },
+      {
+        qNum: "Q963",
+        question: "Which of the following is a general property of ionic compounds?",
+        questionBn: "নিচের কোনটি আয়নীয় যৌগের একটি সাধারণ বৈশিষ্ট্য?",
+        options: [
+          "They exist as molecules with weak forces.",
+          "They are insoluble in water.",
+          "They are brittle and conduct electricity in molten/aqueous states.",
+          "They have low melting points."
+        ],
+        correct: 2,
+        explanation: "Ionic compounds are rigid crystalline, brittle, and have free ions to conduct power only when dissolved/molten."
+      },
+      {
+        qNum: "Q964",
+        question: "In which carbon allotrope are atoms arranged in hexagonal layers with weak forces?",
+        questionBn: "কার্বনের কোন রূপভেদে পরমাণুগুলি ষড়ভুজাকার স্তরে সাজানো থাকে এবং স্তরগুলির মধ্যে দুর্বল বল থাকে?",
+        options: [
+          "Diamond",
+          "Fullerene",
+          "Graphite",
+          "Charcoal"
+        ],
+        correct: 2,
+        explanation: "Graphite features layer-wise arrangements held together by weak physical Van der Waals attraction."
+      },
+      {
+        qNum: "Q965",
+        question: "Which process is used to prepare Sodium hydroxide from Brine?",
+        questionBn: "ব্রাইন থেকে সোডিয়াম হাইড্রোক্সাইড তৈরি করতে কোন পদ্ধতি ব্যবহৃত হয়?",
+        options: [
+          "Solvay process",
+          "Haber process",
+          "Chlor-alkali process",
+          "Calcination"
+        ],
+        correct: 2,
+        explanation: "Electrolysis of brine (aqueous NaCl) produces Chlorine, Hydrogen, and Sodium Hydroxide."
+      },
+      {
+        qNum: "Q968",
+        question: "Why does carbon form covalent bonds instead of ionic bonds?",
+        questionBn: "কার্বন কেন আয়নীয় বন্ধনের পরিবর্তে সমযোজী বন্ধন গঠন করে?",
+        options: [
+          "It is energetically unfavorable to lose or gain four electrons.",
+          "It can easily gain four electrons.",
+          "It has a very large atomic radius.",
+          "It has only two valence electrons."
+        ],
+        correct: 0,
+        explanation: "Gaining or losing 4 electrons requires massive amounts of electrical energy, hence carbon shares electrons."
+      },
+      {
+        qNum: "Q972",
+        question: "Brass is an example of:",
+        questionBn: "পিতল কিসের উদাহরণ?",
+        options: [
+          "Compound",
+          "Element",
+          "Homogeneous mixture",
+          "Heterogeneous mixture"
+        ],
+        correct: 2,
+        explanation: "Brass is a solid solution (alloy) of Copper and Zinc. All alloys behave as homogeneous mixtures."
+      },
+      {
+        qNum: "Q973",
+        question: "Which of the following allotropes of carbon has a cage-like structure?",
+        questionBn: "কার্বনের নিচের কোন রূপভেদে খাঁচার মতো গঠন রয়েছে?",
+        options: [
+          "Diamond",
+          "Fullerene",
+          "Graphite",
+          "Charcoal"
+        ],
+        correct: 1,
+        explanation: "Fullerene (C60) consists of carbon atoms arranged beautifully in spherical, football-shaped cages."
+      },
+      {
+        qNum: "Q978",
+        question: "How are metals like gold and silver, which have low reactivity, extracted?",
+        questionBn: "সোনা এবং রূপার মতো ধাতু যাদের সক্রিয়তা কম, তাদের কীভাবে নিষ্কাশন করা হয়?",
+        options: [
+          "Electrolysis",
+          "Simple heating or found in native state",
+          "Roasting followed by reduction",
+          "Reaction with highly reactive metals"
+        ],
+        correct: 1,
+        explanation: "Least reactive elements stay unbound in nature as free native metals, requiring only basic heating/wash."
+      },
+      {
+        qNum: "Q979",
+        question: "In the Chlor-alkali process, what is released at the anode?",
+        questionBn: "ক্লোর-অ্যালকালি পদ্ধতিতে অ্যানোডে কী নির্গত হয়?",
+        options: [
+          "Hydrogen gas",
+          "Sodium hydroxide",
+          "Chlorine gas",
+          "Oxygen gas"
+        ],
+        correct: 2,
+        explanation: "Negative Chloride ions migrate to the anode where they discharge electrons and emit as Chlorine gas."
+      }
+    ];
+
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+    const answeredTracker = {}; // track answers to prevent multi-scoring
+
+    // Active study progress state
+    const progressState = {
+      totalQuestions: 26,
+      completedList: new Set()
+    };
+
+    // Initialize application states
+    window.onload = function() {
+      setupViewSwitchers();
+      updateProgressUI();
+      renderQuizQuestion();
+    };
+
+    function setupViewSwitchers() {
+      const btnNotes = document.getElementById('btnNotes');
+      const btnQuiz = document.getElementById('btnQuiz');
+      const btnCheatSheet = document.getElementById('btnCheatSheet');
+
+      const containerNotes = document.getElementById('notesContainer');
+      const containerQuiz = document.getElementById('quizContainer');
+      const containerCheatSheet = document.getElementById('cheatSheetContainer');
+
+      btnNotes.onclick = () => {
+        containerNotes.classList.remove('hidden');
+        containerQuiz.classList.add('hidden');
+        containerCheatSheet.classList.add('hidden');
+        setActiveBtn(btnNotes);
+      };
+
+      btnQuiz.onclick = () => {
+        containerNotes.classList.add('hidden');
+        containerQuiz.classList.remove('hidden');
+        containerCheatSheet.classList.add('hidden');
+        setActiveBtn(btnQuiz);
+      };
+
+      btnCheatSheet.onclick = () => {
+        containerNotes.classList.add('hidden');
+        containerQuiz.classList.add('hidden');
+        containerCheatSheet.classList.remove('hidden');
+        setActiveBtn(btnCheatSheet);
+      };
+    }
+
+    function setActiveBtn(activeBtn) {
+      const buttons = [document.getElementById('btnNotes'), document.getElementById('btnQuiz'), document.getElementById('btnCheatSheet')];
+      buttons.forEach(btn => {
+        if (btn === activeBtn) {
+          btn.className = "bg-amber-500 hover:bg-amber-600 text-stone-900 font-bold px-4 py-2 rounded-lg transition shadow flex items-center gap-2";
+        } else {
+          btn.className = "bg-stone-800 hover:bg-stone-700 text-white font-semibold px-4 py-2 rounded-lg transition shadow border border-stone-600 flex items-center gap-2";
+        }
+      });
+    }
+
+    // Toggle single-question completion state
+    function toggleStudyProgress(qId) {
+      const checkbox = document.querySelector(`#${qId} .progress-checkbox`);
+      if (progressState.completedList.has(qId)) {
+        progressState.completedList.delete(qId);
+        checkbox.innerHTML = '<i class="fa-regular fa-circle-check"></i> <span>আয়ত্ত করেছি</span>';
+        checkbox.className = "progress-checkbox no-print text-stone-400 hover:text-emerald-500 transition text-sm flex items-center gap-1";
+      } else {
+        progressState.completedList.add(qId);
+        checkbox.innerHTML = '<i class="fa-solid fa-circle-check"></i> <span class="font-bold">আয়ত্ত করেছি!</span>';
+        checkbox.className = "progress-checkbox no-print text-emerald-600 font-bold transition text-sm flex items-center gap-1";
+      }
+      updateProgressUI();
+    }
+
+    function updateProgressUI() {
+      const completedCount = progressState.completedList.size;
+      const total = progressState.totalQuestions;
+      const percentage = (completedCount / total) * 100;
+
+      document.getElementById('txtProgress').innerText = `${completedCount} / ${total} সম্পন্ন`;
+      document.getElementById('barProgress').style.width = `${percentage}%`;
+    }
+
+    // Category filtering
+    function filterCategory(category) {
+      // Toggle button styles
+      const buttons = document.querySelectorAll('.cat-btn');
+      buttons.forEach(btn => {
+        btn.className = "cat-btn bg-stone-200 hover:bg-stone-300 text-stone-700 px-3 py-1.5 rounded-full text-xs font-semibold transition";
+      });
+      event.target.className = "cat-btn bg-emerald-600 text-white px-3 py-1.5 rounded-full text-xs font-bold transition shadow-sm";
+
+      // Show/Hide pages
+      const pages = document.querySelectorAll('.notebook-page[data-category]');
+      pages.forEach(page => {
+        if (category === 'all' || page.getAttribute('data-category') === category) {
+          page.classList.remove('hidden');
+        } else {
+          page.classList.add('hidden');
+        }
+      });
+    }
+
+    // Live search inside study page
+    function searchQuestions() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const questions = document.querySelectorAll('.question-block');
+      
+      questions.forEach(q => {
+        const text = q.innerText.toLowerCase();
+        if (text.includes(query)) {
+          q.style.display = 'block';
+        } else {
+          q.style.display = 'none';
+        }
+      });
+    }
+
+    // Interactive Quiz Engine
+    function renderQuizQuestion() {
+      const qBox = document.getElementById('quizQuestionBox');
+      const qData = quizDatabase[currentQuizIndex];
+      document.getElementById('quizCurrentNum').innerText = currentQuizIndex + 1;
+
+      let optionsHTML = "";
+      qData.options.forEach((opt, idx) => {
+        optionsHTML += `
+          <button onclick="submitQuizAnswer(${idx})" class="quiz-opt-btn w-full text-left p-4 rounded-xl border-2 border-stone-200 hover:border-teal-500 hover:bg-teal-50 transition font-handwritten text-base flex justify-between items-center">
+            <span>${idx + 1}. ${opt}</span>
+            <span class="icon-holder"></span>
+          </button>
+        `;
+      });
+
+      qBox.innerHTML = `
+        <div class="space-y-4">
+          <div class="text-xs font-bold text-teal-700 tracking-wider">${qData.qNum} - REVISION QUESTION</div>
+          <h3 class="text-2xl font-handwritten text-stone-800 font-semibold mb-6">
+            Q: ${qData.question} <br>
+            <span class="text-emerald-700 text-xl font-normal block mt-2">${qData.questionBn}</span>
+          </h3>
+          <div class="space-y-3">
+            ${optionsHTML}
+          </div>
+          <div id="quizExplanationBox" class="hidden mt-6 bg-stone-50 border-2 border-dashed border-stone-300 rounded-xl p-4 font-handwritten gel-blue">
+            <strong>ব্যাখ্যা:</strong> ${qData.explanation}
+          </div>
+        </div>
+      `;
+    }
+
+    function submitQuizAnswer(selectedIdx) {
+      if (answeredTracker[currentQuizIndex] !== undefined) return; // prevent multiple answers
+      
+      const qData = quizDatabase[currentQuizIndex];
+      const optButtons = document.querySelectorAll('.quiz-opt-btn');
+      
+      answeredTracker[currentQuizIndex] = selectedIdx;
+
+      optButtons.forEach((btn, idx) => {
+        btn.disabled = true;
+        const iconHolder = btn.querySelector('.icon-holder');
+        if (idx === qData.correct) {
+          btn.className = "quiz-opt-btn w-full text-left p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 font-handwritten text-base flex justify-between items-center text-emerald-800 font-bold";
+          iconHolder.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>';
+        } else if (idx === selectedIdx) {
+          btn.className = "quiz-opt-btn w-full text-left p-4 rounded-xl border-2 border-red-500 bg-red-50 font-handwritten text-base flex justify-between items-center text-red-800 font-bold";
+          iconHolder.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-600 text-xl"></i>';
+        }
+      });
+
+      if (selectedIdx === qData.correct) {
+        quizScore++;
+        document.getElementById('quizScore').innerText = quizScore;
+      }
+
+      document.getElementById('quizExplanationBox').classList.remove('hidden');
+    }
+
+    function nextQuizQuestion() {
+      if (currentQuizIndex < quizDatabase.length - 1) {
+        currentQuizIndex++;
+        renderQuizQuestion();
+      } else {
+        // Quiz completed
+        document.getElementById('quizQuestionBox').innerHTML = `
+          <div class="text-center py-12 space-y-4">
+            <i class="fa-solid fa-trophy text-6xl text-yellow-500"></i>
+            <h3 class="text-3xl font-handwritten font-bold text-stone-800">কুইজ সম্পন্ন হয়েছে!</h3>
+            <p class="text-lg font-handwritten text-stone-600">আপনার প্রাপ্ত স্কোর: <span class="font-bold text-emerald-600">${quizScore} / ${quizDatabase.length}</span></p>
+            <button onclick="resetQuiz()" class="bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 py-2.5 rounded-lg transition shadow">আবার পরীক্ষা দিন</button>
+          </div>
+        `;
+      }
+    }
+
+    function prevQuizQuestion() {
+      if (currentQuizIndex > 0) {
+        currentQuizIndex--;
+        renderQuizQuestion();
+      }
+    }
+
+    function resetQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      // Clear answers tracker
+      for (let key in answeredTracker) {
+        delete answeredTracker[key];
+      }
+      document.getElementById('quizScore').innerText = "0";
+      renderQuizQuestion();
+    }
+  </script>
+</body>
+</html>
