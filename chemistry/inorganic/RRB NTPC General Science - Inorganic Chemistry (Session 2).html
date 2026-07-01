@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Science: Inorganic Chemistry Essentials (Q929 - Q955)</title>
+    
+    <!-- External Fonts & Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;600;700&family=Caveat:wght@400;700&family=Hind+Siliguri:wght@400;600;700&family=Architects+Daughter&family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Variables for Realistic Ink Colors */
+        :root {
+            --paper-bg: #fcfbf9;
+            --ink-blue: #1d4ed8;       /* Blue Gel Pen */
+            --ink-red: #dc2626;        /* Red Marker */
+            --ink-green: #15803d;      /* Green Ink for Tricks */
+            --highlight-yellow: rgba(254, 240, 138, 0.75); /* Yellow Highlighter */
+            --pencil-grey: #4b5563;    /* Pencil sketch */
+        }
+
+        /* Handwritten Font Fallbacks */
+        .font-handwritten-en {
+            font-family: 'Caveat', 'Architects Daughter', cursive;
+        }
+        
+        .font-handwritten-bn {
+            font-family: 'Atma', 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: #121314;
+            font-family: 'Hind Siliguri', sans-serif;
+            color: #1e293b;
+        }
+
+        /* Paper Sheet Layout */
+        .paper-sheet {
+            background: var(--paper-bg);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3), 0 8px 10px -6px rgba(0,0,0,0.3);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 100% 2.2rem;
+            line-height: 2.2rem;
+        }
+
+        .paper-sheet::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 3rem;
+            width: 2px;
+            background-color: rgba(239, 68, 68, 0.3); /* Notebook Red Line */
+            pointer-events: none;
+        }
+
+        /* Ink styles */
+        .ink-red {
+            color: var(--ink-red);
+            font-weight: 700;
+        }
+
+        .ink-blue {
+            color: var(--ink-blue);
+        }
+
+        .ink-green {
+            color: var(--ink-green);
+            font-family: 'Atma', cursive;
+            font-weight: 600;
+        }
+
+        .highlight {
+            background-color: var(--highlight-yellow);
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            display: inline-block;
+            line-height: 1.4;
+        }
+
+        /* Sketchy Borders */
+        .sketch-box {
+            border: 2px solid var(--pencil-grey);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            padding: 1.5rem;
+            position: relative;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Print Media Style */
+        @media print {
+            body {
+                background: white;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .paper-sheet {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                padding: 1cm;
+                page-break-after: always;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            .sidebar-nav {
+                display: none;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col lg:flex-row antialiased">
+
+    <!-- SIDE NAVIGATION BAR (No-Print) -->
+    <aside class="sidebar-nav w-full lg:w-80 bg-slate-900 text-slate-200 p-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-700 no-print">
+        <div>
+            <div class="flex items-center gap-3 mb-6">
+                <div class="bg-red-500 text-white p-2.5 rounded-lg">
+                    <i class="fa-solid fa-flask-vial text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-white tracking-wide">রেলওয়ে সায়েন্স নোট</h1>
+                    <span class="text-xs text-slate-400">Inorganic Chemistry Essentials</span>
+                </div>
+            </div>
+
+            <!-- Fast Search & Shortcuts -->
+            <div class="mb-6">
+                <label class="block text-xs text-slate-400 mb-2 uppercase tracking-wider font-semibold">দ্রুত প্রশ্ন খোঁজুন</label>
+                <div class="relative">
+                    <input id="search-box" type="text" placeholder="Q929 - Q955 টাইপ করুন..." class="w-full bg-slate-800 text-slate-100 pl-9 pr-4 py-2 rounded-md border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all text-sm">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-500 text-xs"></i>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <span class="block text-xs text-slate-400 mb-3 uppercase tracking-wider font-semibold">সূচিপত্র (Questions Map)</span>
+                <div class="grid grid-cols-4 gap-2 overflow-y-auto max-h-80 pr-2" id="nav-grid">
+                    <!-- Javascript will dynamically inject keys -->
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 border-t border-slate-800 pt-6">
+            <button onclick="window.print()" class="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-red-900/30">
+                <i class="fa-solid fa-print"></i>
+                <span>ডাউনলোড / প্রিন্ট করুন (PDF)</span>
+            </button>
+            <p class="text-[11px] text-slate-500 text-center mt-3 font-handwritten-en">Handwritten Style AI Engine</p>
+        </div>
+    </aside>
+
+    <!-- STUDY CANVAS MAIN WORKSPACE -->
+    <main class="flex-1 overflow-y-auto p-4 lg:p-8 flex flex-col items-center justify-start bg-zinc-950">
+        
+        <!-- Controls Header for Easy Customization -->
+        <div class="w-full max-w-4xl mb-4 flex items-center justify-between no-print text-slate-300">
+            <div class="flex items-center gap-4 text-sm bg-slate-900 px-4 py-2 rounded-xl border border-slate-800">
+                <span class="font-semibold text-slate-400"><i class="fa-solid fa-palette mr-2"></i>কালার কোড নির্দেশিকা:</span>
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-red-600"></span>লাল মার্কার: হেডলাইন ও থিম</span>
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-blue-600"></span>নীল পেন: ব্যাখ্যা</span>
+                <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-green-600"></span>সবুজ কালি: ট্রিক ও সমীকরণ</span>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="toggleGrid()" class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 hover:bg-slate-800 text-slate-300 transition-all" title="গ্রিড লাইন টগল">
+                    <i class="fa-solid fa-border-all"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- PHYSICAL A4 PAGES CONTAINER -->
+        <div id="pages-container" class="w-full max-w-4xl flex flex-col gap-10">
+            
+            <!-- PAGE 1 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-1">
+                <div>
+                    <!-- Notebook Title Block -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 01</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-graduation-cap"></i> রেলওয়ে স্পেশাল সায়েন্স স্টাডি বোর্ড
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q929 - Q936)</p>
+                    </div>
+
+                    <!-- Questions List starts here -->
+                    <div class="space-y-10 pl-6 md:pl-10">
+                        
+                        <!-- Q929 -->
+                        <div class="question-card" id="q929">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q929</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Lead nitrate reacts with potassium iodide to form a yellow precipitate of compound 'X'. Identify X. <br>
+                                    <span class="ink-red font-handwritten-bn">লেড নাইট্রেট পটাশিয়াম আয়োডাইডের সাথে বিক্রিয়া করে 'X' নামক একটি হলুদ অধঃক্ষেপ তৈরি করে। X শনাক্ত করুন।</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Potassium nitrate</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Lead oxide</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Potassium iodide</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Lead iodide (লেড আয়োডাইড) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">উত্তর বিশ্লেষণ:</strong> এটি একটি দ্বি-প্রতিস্থাপন বিক্রিয়া (Double Displacement Reaction)।</p>
+                                <div class="text-sm ink-green">
+                                    <span class="highlight font-bold">化学 সমীকরণ:</span> <br>
+                                    <span class="text-base font-handwritten-en">$Pb(NO_3)_2 (aq) + 2KI (aq) \rightarrow PbI_2 \downarrow (\text{হলুদ অধঃক্ষেপ}) + 2KNO_3 (aq)$</span>
+                                </div>
+                                <p class="text-xs italic text-slate-500 font-handwritten-bn">👉 মনে রাখার ট্রিক: লেড (Pb) আর আয়োডিন (I) জুটি বাঁধলেই বাসন্তী হলুদ রং বের হয়!</p>
+                            </div>
+                        </div>
+
+                        <!-- Q930 -->
+                        <div class="question-card" id="q930">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q930</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which of the following metals is purified by the distillation process? <br>
+                                    <span class="ink-red font-handwritten-bn">নিচের কোন ধাতুটি পাতন (Distillation) পদ্ধতির মাধ্যমে বিশুদ্ধ করা হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">A) Zinc (জিঙ্ক) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">B) Silver</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Copper</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Iron</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">মূল নীতি:</strong> পাতন (Distillation) পদ্ধতি মূলত সেই সব ধাতুর ক্ষেত্রে প্রয়োগ করা হয় যাদের <span class="highlight font-bold">স্ফুটনাঙ্ক খুব কম (Low Boiling Point)</span>, যেমন- জিঙ্ক (Zn), পারদ (Hg) এবং ক্যাডমিয়াম (Cd)।</p>
+                                <p class="text-xs ink-green">💡 শর্টকাট মনে রাখার কৌশল: "আজকে পারদ জিংকিয়ে উড়বে" (Hg & Zn এর কম স্ফুটনাঙ্ক তাই পাতন)।</p>
+                            </div>
+                        </div>
+
+                        <!-- Q931 -->
+                        <div class="question-card" id="q931">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q931</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Anodizing is typically performed on which metal to protect it from corrosion? <br>
+                                    <span class="ink-red font-handwritten-bn">ক্ষয় থেকে রক্ষা করার জন্য সাধারণত কোন ধাতুর ওপর অ্যানোডাইজিং (Anodizing) করা হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Steel</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Copper</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Iron</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Aluminum (অ্যালুমিনিয়াম) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">ব্যাখ্যা:</strong> অ্যানোডাইজিং হলো একটি তড়িৎ বিশ্লেষণ প্রক্রিয়া যার মাধ্যমে অ্যালুমিনিয়াম (Al)-এর উপরিভাগে প্রাকৃতিকভাবে গঠিত প্রতিরক্ষামূলক <span class="highlight font-bold">অক্সাইড স্তর ($Al_2O_3$)</span> আরও মোটা ও মজবুত করা হয়। এটি ধাতুকে দীর্ঘস্থায়ী মরিচা এবং স্ক্র্যাচ থেকে বাঁচায়।</p>
+                            </div>
+                        </div>
+
+                        <!-- Q932 -->
+                        <div class="question-card" id="q932">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q932</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Pyrite is which type of ore? <br>
+                                    <span class="ink-red font-handwritten-bn">পাইরাইট (Pyrite) কোন ধরনের আকরিক?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Halide</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Oxide</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Nitrate</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Sulfide (সালফাইড) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">আকরিক প্রোফাইল:</strong> পাইরাইট হলো সালফাইড খনিজ। যেমন- আয়রন পাইরাইট (<span class="highlight font-bold">$FeS_2$</span> - একে "Fool's Gold" বা বোকার সোনাও বলা হয়) এবং কপার পাইরাইট (<span class="highlight font-bold">$CuFeS_2$</span>)।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Page Footer -->
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    Inorganic Chemistry Quick Revision Bullet - Indian Railways Exam Engine (2026)
+                </div>
+            </div>
+
+            <!-- PAGE 2 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-2">
+                <div>
+                    <!-- Header -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 02</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-dna"></i> সক্রিয়তা সিরিজ ও প্রতিস্থাপন গতিবিদ্যা
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q933 - Q939)</p>
+                    </div>
+
+                    <div class="space-y-10 pl-6 md:pl-10">
+
+                        <!-- Q933 -->
+                        <div class="question-card" id="q933">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q933</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which metal is placed just above Copper in the reactivity series? <br>
+                                    <span class="ink-red font-handwritten-bn">সক্রিয়তা সিরিজে কপারের ঠিক উপরে কোন ধাতুটি অবস্থিত?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Aluminum</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Iron</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Zinc</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Lead (লেড) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">সক্রিয়তার মেমরি ট্রিক:</strong> কে না কে ম্যাকগাইভার যেন ফিরে পাবে হায় কুলাঙ্গার হজী আজি পেটাবে আমায়। <br>
+                                এখানে: <span class="ink-green">...পাবে (Pb) $\rightarrow$ হায় (H) $\rightarrow$ কুলাঙ্গার (Cu) $\rightarrow$ হজী (Hg)...</span> <br>
+                                অর্থাৎ, <span class="highlight">Lead (Pb) হাইড্রোজেন (H)-এর ঠিক ওপরে</span> এবং হাইড্রোজেন কপারের ঠিক ওপরে অবস্থান করে। অপশনগুলোর মধ্যে লেড (Lead) কপারের ওপরে সবচেয়ে নিকটবর্তী।
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q934 -->
+                        <div class="question-card" id="q934">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q934</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which of the following statements is correct regarding Zinc? <br>
+                                    <span class="ink-red font-handwritten-bn">জিঙ্ক সম্পর্কে নিচের কোন বিবৃতিটি সঠিক?</span><br>
+                                    <span class="text-sm text-slate-600 block mt-1">
+                                        (A) Zinc granules react with dil. $H_2SO_4$ to evolve $H_2$ gas.<br>
+                                        (B) Zinc granules react with $NaOH$ to form Zinc hydroxide.<br>
+                                        (C) Zinc granules react with $NaOH$ to form Sodium zincate.
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Only A</div>
+                                <div class="p-2 border border-slate-200 rounded">B) A and B</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">C) A and C <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">D) Only C</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">বিক্রিয়ার সত্যতা যাচাই:</strong> <br>
+                                (A) $Zn + H_2SO_4 \rightarrow ZnSO_4 + H_2 \uparrow$ (সঠিক)<br>
+                                (C) $Zn + 2NaOH \rightarrow \text{Sodium Zincate } (Na_2ZnO_2) + H_2 \uparrow$ (সঠিক)<br>
+                                <span class="text-rose-600 font-bold">⚠️ মনে রাখবেন:</span> জিঙ্ক ক্ষারকের সাথে বিক্রিয়া করে হাইড্রোক্সাইড নয়, বরং <span class="highlight font-bold">জিঙ্কেট লবণ</span> গঠন করে।
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q935 -->
+                        <div class="question-card" id="q935">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q935</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which metal does NOT react with dilute hydrochloric acid under normal conditions? <br>
+                                    <span class="ink-red font-handwritten-bn">স্বাভাবিক অবস্থায় নিচের কোন ধাতুটি লঘু হাইড্রোক্লোরিক অ্যাসিডের সাথে বিক্রিয়া করে না?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Zinc</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Aluminum</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Iron</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Copper (কপার) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">বৈজ্ঞানিক সত্য:</strong> কপার (Cu) সক্রিয়তা সিরিজে <span class="highlight">হাইড্রোজেনের নিচে</span> অবস্থান করায় এটি অ্যাসিড ($HCl$) থেকে হাইড্রোজেনকে প্রতিস্থাপিত করতে পারে না। তাই সাধারণ তাপমাত্রায় লঘু অ্যাসিডের সাথে কপারের কোনো বিক্রিয়া ঘটে না।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Page Footer -->
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    Science Prep Desk - Focus on Quality & Concept
+                </div>
+            </div>
+
+            <!-- PAGE 3 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-3">
+                <div>
+                    <!-- Header -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 03</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-fire-burner"></i> ক্লোর-অ্যালকালি ও থার্মিট টেকনোলজি
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q936 - Q941)</p>
+                    </div>
+
+                    <div class="space-y-10 pl-6 md:pl-10">
+
+                        <!-- Q936 -->
+                        <div class="question-card" id="q936">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q936</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    How are metals in the middle of the activity series (like Iron, Zinc, Lead) usually extracted? <br>
+                                    <span class="ink-red font-handwritten-bn">সক্রিয়তা সিরিজের মাঝখানে থাকা ধাতুগুলো (যেমন আয়রন, জিঙ্ক, লেড) সাধারণত কীভাবে নিষ্কাশন করা হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">A) Reduction using Carbon (কার্বন বিজারণ) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">B) Electrolysis</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Heating alone</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Dissolving in water</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">নিষ্কাশন কৌশল:</strong> মধ্যম সক্রিয় ধাতুগুলির অক্সাইডকে <span class="highlight">কোক বা কার্বন (C)</span> দ্বারা বিজারণ ঘটিয়ে ধাতু নিষ্কাশন করা হয়। <br>
+                                যেমন: $ZnO + C \rightarrow Zn + CO \uparrow$
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q937 -->
+                        <div class="question-card" id="q937">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q937</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    In a reactivity series, how are the metals arranged? <br>
+                                    <span class="ink-red font-handwritten-bn">সক্রিয়তা সিরিজে ধাতুগুলোকে কীভাবে সাজানো হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Increasing reactivity</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">B) Decreasing reactivity (ক্রমহ্রাসমান সক্রিয়তা) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">C) First increasing then decreasing</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Random order</div>
+                            </div>
+                        </div>
+
+                        <!-- Q938 -->
+                        <div class="question-card" id="q938">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q938</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    In the Chlor-alkali process, which of the following is NOT formed? <br>
+                                    <span class="ink-red font-handwritten-bn">ক্লোর-অ্যালকালি পদ্ধতিতে নিচের কোনটি উৎপন্ন হয় না?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Chlorine gas</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Hydrogen gas</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Sodium hydroxide</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Sodium carbonate (সোডিয়াম কার্বোনেট) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">Chlor-alkali বিক্রিয়া ছক:</strong> ব্রাইনের ($NaCl$ এর জলীয় দ্রবণ) তড়িৎ বিশ্লেষণের ফলে <span class="highlight">$Cl_2$ গ্যাস, $H_2$ গ্যাস এবং $NaOH$</span> উৎপন্ন হয়। সোডিয়াম কার্বোনেট এই বিক্রিয়ার অংশ নয়।</p>
+                            </div>
+                        </div>
+
+                        <!-- Q939 -->
+                        <div class="question-card" id="q939">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q939</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which oxide is typically used with Aluminum in a Thermite reaction? <br>
+                                    <span class="ink-red font-handwritten-bn">থার্মিট বিক্রিয়ায় অ্যালুমিনিয়ামের সাথে সাধারণত কোন অক্সাইড ব্যবহার করা হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Copper oxide</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Magnesium oxide</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">C) Iron oxide (আয়রন অক্সাইড) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">D) Zinc oxide</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">থার্মিট অ্যাপ্লিকেশন:</strong> রেললাইনের ফাটল জুড়তে <span class="highlight">আয়রন(III) অক্সাইড ($Fe_2O_3$)</span> এবং অ্যালুমিনিয়াম পাউডারের তীব্র তাপমোচী বিক্রিয়া ব্যবহার করে গলিত লোহা তৈরি করা হয়।</p>
+                                <p class="text-xs ink-green font-handwritten-bn">⚙️ $Fe_2O_3 + 2Al \rightarrow Al_2O_3 + 2Fe (\text{গলিত}) + \text{তীব্র তাপ}$</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    Supercharge Your Concepts - Railway General Science Desk
+                </div>
+            </div>
+
+            <!-- PAGE 4 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-4">
+                <div>
+                    <!-- Header -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 04</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-vial"></i> রাসায়নিক শনাক্তকরণ ও তীব্র জারক অ্যাসিড
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q940 - Q946)</p>
+                    </div>
+
+                    <div class="space-y-10 pl-6 md:pl-10">
+
+                        <!-- Q940 -->
+                        <div class="question-card" id="q940">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q940</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    When dilute HCl is added to Copper oxide while stirring, what is the result? <br>
+                                    <span class="ink-red font-handwritten-bn">নাড়াচাড়া করার সময় কপার অক্সাইডে লঘু HCl যোগ করলে ফলাফল কী হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Formation of reddish-brown Copper</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">B) Blue-green solution due to $CuCl_2$ <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">C) No reaction occurs</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Formation of Copper sulfate</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">বিক্রিয়া:</strong> $CuO (\text{কালো}) + 2HCl \rightarrow CuCl_2 (\text{নীলচে-সবুজ}) + H_2O$. উৎপন্ন কপার(II) ক্লোরাইডের কারণেই দ্রবণের রং নীলচে-সবুজ হয়ে যায়।</p>
+                            </div>
+                        </div>
+
+                        <!-- Q941 -->
+                        <div class="question-card" id="q941">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q941</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    A white solid reacts with dilute HCl to produce a gas that turns lime water milky. The solid is likely: <br>
+                                    <span class="ink-red font-handwritten-bn">একটি সাদা কঠিন পদার্থ লঘু HCl-এর সাথে বিক্রিয়া করে এমন একটি গ্যাস তৈরি করে যা চুনজলকে ঘোলাটে করে। কঠিন পদার্থটি সম্ভবত:</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">A) A carbonate or bicarbonate <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">B) A chloride</div>
+                                <div class="p-2 border border-slate-200 rounded">C) A hydroxide</div>
+                                <div class="p-2 border border-slate-200 rounded">D) A sulfate</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">শনাক্তকরণ বিজ্ঞান:</strong> কার্বোনেট ($CO_3^{2-}$) বা বাইকার্বোনেট ($HCO_3^-$) লঘু অ্যাসিডের সংস্পর্শে এলে <span class="highlight">কার্বন ডাই-অক্সাইড ($CO_2$)</span> গ্যাস নির্গত হয়, যা স্বচ্ছ চুনজলকে ক্যালসিয়াম কার্বোনেটের সাদা অধঃক্ষেপে পরিণত করে মিল্কি করে তোলে।</p>
+                            </div>
+                        </div>
+
+                        <!-- Q942 -->
+                        <div class="question-card" id="q942">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q942</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which element does NOT exist as a molecule (multi-atom) in nature? <br>
+                                    <span class="ink-red font-handwritten-bn">নিচের কোন মৌলটি প্রকৃতিতে অণু (বহু-পরমাণু) হিসেবে থাকে না?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Iodine</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Chlorine</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Hydrogen</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Helium (হিলিয়াম) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">মৌল প্রোফাইল:</strong> হিলিয়াম (He) হলো একটি <span class="highlight">নিষ্ক্রিয় গ্যাস (Noble Gas)</span>। এর যোজ্যতা কক্ষ ইলেকট্রন দ্বারা পূর্ণ থাকায় এটি একা একক পরমাণু হিসেবেই প্রকৃতিতে সুস্থিত অবস্থায় থাকে ($He$), যেখানে অন্যরা বহুপারমাণবিক বা দ্বিপরমাণবিক অণু গঠন করে ($I_2, Cl_2, H_2$)।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    Handwritten Science Revision Board - Complete Chemistry Syllabus coverage
+                </div>
+            </div>
+
+            <!-- PAGE 5 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-5">
+                <div>
+                    <!-- Header -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 05</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-calculator"></i> জারণ-বিজারণ ও লবণ রসায়ন
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q943 - Q949)</p>
+                    </div>
+
+                    <div class="space-y-10 pl-6 md:pl-10">
+
+                        <!-- Q943 -->
+                        <div class="question-card" id="q943">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q943</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    In the reaction: $MnO_2 + 4HCl \rightarrow MnCl_2 + 2H_2O + Cl_2$, which substance is oxidized? <br>
+                                    <span class="ink-red font-handwritten-bn">এই বিক্রিয়ায় কোন পদার্থটি জারিত (Oxidized) হয়েছে?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) $MnO_2$</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">B) $HCl$ <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">C) $MnCl_2$</div>
+                                <div class="p-2 border border-slate-200 rounded">D) $H_2O$</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">জারণ ও বিজারণ বিশ্লেষণ:</strong> <br>
+                                🧪 $HCl$ থেকে হাইড্রোজেন অপসারিত হয়ে $Cl_2$ গঠিত হয়েছে। হাইড্রোজেন অপসারণ মানেই <span class="highlight font-bold">জারণ (Oxidation)</span>। অতএব, $HCl$ জারিত হয়েছে। আর $MnO_2$ অক্সিজেন হারিয়ে বিজারিত হয়েছে।
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q944 -->
+                        <div class="question-card" id="q944">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q944</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    What is the color of the precipitate formed when Silver nitrate reacts with Sodium chloride? <br>
+                                    <span class="ink-red font-handwritten-bn">সিলভার নাইট্রেট সোডিয়াম ক্লোরাইডের সাথে বিক্রিয়া করলে উৎপন্ন অধঃক্ষেপের রঙ কী?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Yellow</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">B) White (সাদা) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">C) Red</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Black</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">বিক্রিয়া:</strong> $AgNO_3 (aq) + NaCl (aq) \rightarrow AgCl \downarrow (\text{সাদা অধঃক্ষেপ}) + NaNO_3 (aq)$ <br>
+                                উৎপন্ন সিলভার ক্লোরাইড ($AgCl$) অদ্রবণীয় এবং এর বর্ণ তীব্র <span class="highlight font-bold">সাদা (White)</span>।
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q945 -->
+                        <div class="question-card" id="q945">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q945</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which acid does NOT usually give Hydrogen gas when treated with metals because of its strong oxidizing nature? <br>
+                                    <span class="ink-red font-handwritten-bn">তীব্র জারক ধর্মের কারণে কোন অ্যাসিডটি সাধারণত ধাতুর সাথে বিক্রিয়ায় হাইড্রোজেন গ্যাস দেয় না?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Hydrochloric acid</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Sulfuric acid</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">C) Nitric acid (নাইট্রিক অ্যাসিড) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">D) Acetic acid</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">রসায়ন রহস্য:</strong> নাইট্রিক অ্যাসিড ($HNO_3$) একটি অত্যন্ত তীব্র জারক পদার্থ। এটি বিক্রিয়ায় উৎপন্ন হাইড্রোজেনকে ($H_2$) অবিলম্বে <span class="highlight">জারণ ঘটিয়ে জলে ($H_2O$) পরিণত করে</span> এবং নিজে নাইট্রোজেনের বিভিন্ন অক্সাইডে ($NO, NO_2, N_2O$) বিজারিত হয়।</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    Smart Board Prep - Success Awaits!
+                </div>
+            </div>
+
+            <!-- PAGE 6 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-6">
+                <div>
+                    <!-- Header -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 06</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-atom"></i> পিএইচ স্কেল ও আণবিক ভর গণনা
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q946 - Q950)</p>
+                    </div>
+
+                    <div class="space-y-10 pl-6 md:pl-10">
+
+                        <!-- Q946 -->
+                        <div class="question-card" id="q946">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q946</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Non-metallic oxides are acidic. What is the approximate pH of a salt formed when a non-metallic oxide reacts with a strong base? <br>
+                                    <span class="ink-red font-handwritten-bn">অধাতব অক্সাইড আম্লিক। একটি অধাতব অক্সাইড যখন তীব্র ক্ষারের সাথে বিক্রিয়া করে, তখন উৎপন্ন লবণের pH কত হতে পারে?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) $pH < 7$</div>
+                                <div class="p-2 border border-slate-200 rounded">B) $pH = 7$</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">C) $pH > 7$ <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">D) $pH = 0$</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">লবণ চরিত্র বিশ্লেষণ:</strong> <br>
+                                অধাতব অক্সাইড = মৃদু আম্লিক (Weak Acid)<br>
+                                বিক্রিয়ক = তীব্র ক্ষার (Strong Base)<br>
+                                <span class="highlight">মৃদু অ্যাসিড + তীব্র ক্ষার = ক্ষারকীয় লবণ (Basic Salt)</span>। আর আমরা জানি, ক্ষারকীয় দ্রবণের $pH$ সর্বদা <span class="highlight font-bold">৭-এর বেশি ($pH > 7$)</span> হয়।
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q947 -->
+                        <div class="question-card" id="q947">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q947</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    What is the formula unit mass of Zinc oxide (ZnO)? (Atomic mass: Zn = 65, O = 16) <br>
+                                    <span class="ink-red font-handwritten-bn">জিঙ্ক অক্সাইডের (ZnO) ফর্মুলা ইউনিট ভর কত?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">A) 81 units <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">B) 49 units</div>
+                                <div class="p-2 border border-slate-200 rounded">C) 97 units</div>
+                                <div class="p-2 border border-slate-200 rounded">D) 71 units</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">সহজ হিসাব:</strong> <br>
+                                <span class="ink-green">Formula Mass of $ZnO$ = Atomic mass of $Zn$ ($65$) + Atomic mass of $O$ ($16$) = $81$ units.</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q948 -->
+                        <div class="question-card" id="q948">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q948</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    What color change is observed when an Iron nail is placed in a Copper sulfate solution? <br>
+                                    <span class="ink-red font-handwritten-bn">কপার সালফেট দ্রবণে লোহার পেরেক রাখলে রঙের কী পরিবর্তন দেখা যায়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Green to Blue</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">B) Blue to Green <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">C) Colorless to Blue</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Blue to Colorless</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">প্রতিস্থাপন বিক্রিয়া:</strong> লোহা (Fe) কপার (Cu)-এর চেয়ে বেশি সক্রিয় হওয়ায় কপার সালফেট দ্রবণের কপারকে প্রতিস্থাপিত করে নিজে <span class="highlight">সবুজ রঙের আয়রন সালফেট ($FeSO_4$)</span> তৈরি করে। <br>
+                                <span class="ink-green font-handwritten-en">$Fe (\text{ধূসর}) + CuSO_4 (\text{নীল}) \rightarrow FeSO_4 (\text{হালকা সবুজ}) + Cu (\text{লালচে বাদামী})$</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    Easy Memorizing Hacks Inside! - Board 6
+                </div>
+            </div>
+
+            <!-- PAGE 7 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-7">
+                <div>
+                    <!-- Header -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 07</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-scale-balanced"></i> আইসোটোপ ও ক্লোর-অ্যালকালি মেরু বিক্রিয়া
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q949 - Q955)</p>
+                    </div>
+
+                    <div class="space-y-10 pl-6 md:pl-10">
+
+                        <!-- Q949 -->
+                        <div class="question-card" id="q949">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q949</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Sodium hydroxide is commercially formed by: <br>
+                                    <span class="ink-red font-handwritten-bn">সোডিয়াম হাইড্রোক্সাইড বাণিজ্যিকভাবে কীভাবে তৈরি করা হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">A) Passing electricity through brine (ব্রাইন) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">B) Heating sodium carbonate</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Reacting sodium with water</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Adding acid to salt</div>
+                            </div>
+                        </div>
+
+                        <!-- Q950 -->
+                        <div class="question-card" id="q950">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q950</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    The fractional atomic mass of Chlorine (35.5) is due to the: <br>
+                                    <span class="ink-red font-handwritten-bn">ক্লোরিনের পারমাণবিক ভর ভগ্নাংশ (৩৫.৫) হওয়ার কারণ কী?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Presence of neutrons</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Presence of electrons</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Presence of impurities</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">D) Presence of isotopes (আইসোটোপের উপস্থিতি) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">গড় পারমাণবিক ভর গণনা:</strong> <br>
+                                প্রকৃতিতে ক্লোরিনের দুটি আইসোটোপ $Cl-35$ (প্রায় 75%) এবং $Cl-37$ (প্রায় 25%) অনুপাতে পাওয়া যায়। এদের <span class="highlight">গড় প্রাকৃতিক প্রাচুর্যতার (Natural Abundance)</span> ওপর ভিত্তি করেই ভরটি ভগ্নাংশ ৩টি অর্থাৎ $35.5$ হয়।
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q951 -->
+                        <div class="question-card" id="q951">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q951</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    In the Chlor-alkali process, where are Chlorine and Hydrogen produced? <br>
+                                    <span class="ink-red font-handwritten-bn">ক্লোর-অ্যালকালি পদ্ধতিতে ক্লোরিন এবং হাইড্রোজেন কোথায় উৎপন্ন হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Anode: $H_2$, Cathode: $Cl_2$</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">B) Anode: $Cl_2$, Cathode: $H_2$ <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">C) Both at Anode</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Both at Cathode</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">মেরু বিক্রিয়ার ট্রিক (Pencil Sketch Box):</strong></p>
+                                <div class="sketch-box text-xs space-y-1 font-mono text-slate-700 my-2">
+                                    <div class="font-bold text-red-600">⚡ ELECTROLYSIS CHAMBER:</div>
+                                    <div>• ANODE (ধনাত্মক মেরু): $2Cl^- \rightarrow Cl_2 \uparrow (\text{গ্যাস}) + 2e^-$ [জারণ]</div>
+                                    <div>• CATHODE (ঋণাত্মক মেরু): $2H^+ + 2e^- \rightarrow H_2 \uparrow (\text{গ্যাস})$ [বিজারণ]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    Handwritten Science Revision Board - Page 7
+                </div>
+            </div>
+
+            <!-- PAGE 8 -->
+            <div class="paper-sheet p-8 md:p-12 min-h-[297mm] flex flex-col justify-between" id="page-8">
+                <div>
+                    <!-- Header -->
+                    <div class="border-b-4 border-double border-red-400 pb-4 mb-8 text-center relative">
+                        <div class="absolute right-0 top-0 text-slate-400 text-xs font-handwritten-en">Page: 08</div>
+                        <h2 class="text-3xl font-extrabold text-red-600 tracking-wider font-handwritten-bn mb-1">
+                            <i class="fa-solid fa-circle-nodes"></i> নিউক্লিয়াস ও পরমাণুর প্রতীক রহস্য
+                        </h2>
+                        <p class="text-sm text-slate-500 font-semibold tracking-widest uppercase">Inorganic Chemistry Essentials (Q952 - Q955)</p>
+                    </div>
+
+                    <div class="space-y-10 pl-6 md:pl-10">
+
+                        <!-- Q952 -->
+                        <div class="question-card" id="q952">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q952</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    When solid Lead(II) nitrate is heated, which two gases are evolved? <br>
+                                    <span class="ink-red font-handwritten-bn">কঠিন লেড(II) নাইট্রেট উত্তপ্ত করলে কোন দুটি গ্যাস নির্গত হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">A) Nitrogen dioxide and Oxygen ($NO_2$ & $O_2$) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">B) Nitrogen and Hydrogen</div>
+                                <div class="p-2 border border-slate-200 rounded">C) Nitric oxide and Oxygen</div>
+                                <div class="p-2 border border-slate-200 rounded">D) Ammonia and Oxygen</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">তাপীয় বিয়োজন বিক্রিয়া:</strong> <br>
+                                <span class="ink-green font-handwritten-en">$2Pb(NO_3)_2 (s) \xrightarrow{\Delta} 2PbO (s) + 4NO_2 \uparrow (\text{বাদামী ধোঁয়া}) + O_2 \uparrow (\text{বর্ণহীন})$</span> <br>
+                                এটি একটি অত্যন্ত গুরুত্বপূর্ণ বিক্রিয়া যা থেকে লালচে-বাদামী বর্ণের নাইট্রোজেন ডাই-অক্সাইড ($NO_2$) এবং জ্বলনে সাহায্যকারী অক্সিজেন ($O_2$) নির্গত হয়।
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Q953 -->
+                        <div class="question-card" id="q953">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q953</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Which roasting operation burns out Sulfur from sulfide ores? <br>
+                                    <span class="ink-red font-handwritten-bn">কোন রোস্টিং (Roasting) প্রক্রিয়ায় সালফাইড আকরিক থেকে সালফার পুড়িয়ে বের করা হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2 border border-slate-200 rounded">A) Smelting</div>
+                                <div class="p-2 border border-slate-200 rounded">B) Volatilizing</div>
+                                <div class="p-2 border border-red-500 bg-red-50 text-red-800 rounded">C) Oxidizing (অক্সিডাইজিং) <i class="fa-solid fa-check float-right mt-1"></i></div>
+                                <div class="p-2 border border-slate-200 rounded">D) Chloridizing</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">রোস্টিং বিজ্ঞান:</strong> অতিরিক্ত বাতাসের উপস্থিতিতে উত্তপ্ত করার ফলে সালফাইড আকরিকের সালফার অক্সিজেনের সাথে যুক্ত হয়ে জারিত (Oxidize) হয় এবং গ্যাসীয় সালফার ডাই-অক্সাইড ($SO_2$) হিসেবে বাতাসে মিশে উড়ে যায়।</p>
+                            </div>
+                        </div>
+
+                        <!-- Q954 & Q955 -->
+                        <div class="question-card" id="q954">
+                            <div class="flex items-start gap-2">
+                                <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full mt-1">Q954 & 955</span>
+                                <h3 class="font-bold text-lg text-slate-800 leading-relaxed">
+                                    Why are all atoms of an element represented by the same symbol? / একই চিহ্ন দ্বারা প্রকাশ করার কারণ:<br>
+                                    <span class="ink-red font-handwritten-bn">নিচের কোন বিবৃতিটি সবচেয়ে ভালোভাবে ব্যাখ্যা করে যে কেন একটি মৌলের সমস্ত পরমাণুকে একই চিহ্ন দ্বারা প্রকাশ করা হয়?</span>
+                                </h3>
+                            </div>
+                            <div class="grid grid-cols-1 gap-2.5 my-4 pl-10 text-sm font-semibold">
+                                <div class="p-2.5 border border-red-500 bg-red-50 text-red-800 rounded">
+                                    A) They have the same number of protons in their nucleus. (তাদের নিউক্লিয়াসে প্রোটন সংখ্যা সমান।) <i class="fa-solid fa-check float-right mt-1"></i>
+                                </div>
+                                <div class="p-2 border border-slate-200 rounded">B) They have the same mass number. (ভর সংখ্যা সমান নয়, যেমন- আইসোটোপ)।</div>
+                                <div class="p-2 border border-slate-200 rounded">C) They have the same number of neutrons. (নিউট্রন সংখ্যা ভিন্ন হতে পারে)।</div>
+                            </div>
+                            <div class="pl-10 border-l-2 border-dashed border-blue-300 space-y-1.5 text-slate-700">
+                                <p class="text-sm ink-blue"><strong class="ink-red">পরম সত্য:</strong> <br>
+                                একটি মৌলের মূল পরিচয়পত্র হলো তার <span class="highlight">পারমাণবিক সংখ্যা বা প্রোটন সংখ্যা</span>। মৌলের বিভিন্ন আইসোটোপে নিউট্রন সংখ্যা বা ভর সংখ্যা আলাদা হতে পারলেও প্রোটন সংখ্যা সর্বদা অপরিবর্তিত থাকে। এই কারণেই মডার্ন পর্যায় সারণী প্রোটন সংখ্যার ওপর ভিত্তি করে গড়ে উঠেছে।
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center text-xs text-slate-400 mt-6 border-t pt-2 font-handwritten-en">
+                    END OF Inorganic Chemistry Study Board (Q929 - Q955) • Compiled by AI Study Partner (2026)
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Interactive Navigation Logic & Quick Actions -->
+    <script>
+        // Generate navigation grid items
+        const navGrid = document.getElementById('nav-grid');
+        for (let q = 929; q <= 955; q++) {
+            if(q === 955) continue; // Combine 954 & 955
+            const btn = document.createElement('button');
+            btn.className = "bg-slate-800 hover:bg-red-600 text-xs font-bold py-1.5 rounded text-center transition-all";
+            btn.innerText = `Q${q}`;
+            btn.onclick = () => {
+                const targetId = q === 954 || q === 955 ? 'q954' : `q${q}`;
+                document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            };
+            navGrid.appendChild(btn);
+        }
+
+        // Live Search Filter
+        const searchBox = document.getElementById('search-box');
+        searchBox.addEventListener('keyup', (e) => {
+            const val = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.question-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if(text.includes(val)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+
+        // Toggle Grid Background Paper
+        let gridState = false;
+        function toggleGrid() {
+            const sheets = document.querySelectorAll('.paper-sheet');
+            sheets.forEach(sheet => {
+                if(!gridState) {
+                    sheet.style.backgroundImage = `
+                        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px)
+                    `;
+                    sheet.style.backgroundSize = "2.2rem 2.2rem";
+                } else {
+                    sheet.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px)`;
+                    sheet.style.backgroundSize = "100% 2.2rem";
+                }
+            });
+            gridState = !gridState;
+        }
+    </script>
+</body>
+</html>
